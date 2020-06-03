@@ -1,0 +1,7 @@
+body{background-color: $uni-bg-color-grey;font-size: $uni-font-size-base;}
+.bgfff{background-color: #fff;}
+.title{padding:20rpx 0 20rpx 4%;font-weight: bold;}
+.price-normal{font-size: $uni-font-size-base;font-weight: bold;}
+.price-big{font-size: $uni-font-size-base + 12;font-weight: bold;}
+.common-line{display: flex;padding: 20rpx 0;}
+.common-line .label{color: #999;width: 150rpx;}
