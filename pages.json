@@ -1,0 +1,124 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationBarTitleText": "知识付费",
+				"app-plus": {
+				  "bounce": "none",
+				  "titleNView": false,
+				  "pullToRefresh": {
+				    "support": true,
+				    "color": "#fa436a",
+				    "style": "default"
+				  }
+				}
+			}
+		},
+		{
+			"path": "pages/product/detail",
+			"style": {
+				"navigationBarTitleText": "课程详情"
+			}
+		},
+		{
+			"path": "pages/product/buy",
+			"style": {
+				"navigationBarTitleText": "课程购买"
+			}
+		},
+		{
+			"path": "pages/product/list",
+			"style": {
+				"navigationBarTitleText": "课程列表"
+			}
+		},
+		{
+			"path": "pages/product/content-detail",
+			"style": {
+				"navigationBarTitleText": "章节详情"
+			}
+		},
+		{
+			"path": "pages/public/login",
+			"style": {
+				"navigationBarTitleText": "账号登录"
+			}
+		},
+		{
+			"path": "pages/public/register",
+			"style": {
+				"navigationBarTitleText": "账号注册"
+			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"app-plus": {
+				  "bounce": "none",
+				  "titleNView": false,
+				  "pullToRefresh": {
+				    "support": true,
+				    "color": "#fa436a",
+				    "style": "default"
+				  }
+				}
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "我购买的课程"
+			}
+		},
+		{
+			"path": "pages/user/vipbuy",
+			"style": {
+				"navigationBarTitleText": "购买会员",
+				"app-plus": {
+				  "bounce": "none",
+				  "titleNView": false,
+				  "pullToRefresh": {
+				    "support": true,
+				    "color": "#fa436a",
+				    "style": "default"
+				  }
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "知识付费",
+		"navigationBarBackgroundColor": "#ef7c38",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+	  "color": "#C0C4CC",
+	  "selectedColor": "#ef7c38",
+	  "borderStyle": "black",
+	  "backgroundColor": "#ffffff",
+	  "list": [
+	    {
+	      "pagePath": "pages/index/index",
+	      "iconPath": "static/tab-home.png",
+	      "selectedIconPath": "static/tab-home-on.png",
+	      "text": "首页"
+	    },
+	    {
+	      "pagePath": "pages/product/list",
+	      "iconPath": "static/tab-product.png",
+	      "selectedIconPath": "static/tab-product-on.png",
+	      "text": "课程"
+	    },
+	    {
+	      "pagePath": "pages/user/user",
+	      "iconPath": "static/tab-my.png",
+	      "selectedIconPath": "static/tab-my-on.png",
+	      "text": "我的"
+	    }
+	  ]
+	}
+}
