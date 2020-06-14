@@ -43,6 +43,31 @@ Vue.prototype.objParseParam = function(obj) {
 	return paramsStr.substring(0, paramsStr.length - 1);
 }
 /*
+ * obj 转 params字符串参数
+ * 例子：{a:1,b:2} => a=1&b=2
+ */
+Vue.prototype.goto = function(url='',e='') {
+	console.log(url);
+	if(Array.isArray(url)){
+		url = url[0];
+	}
+	if(!url){
+		url = e.currentTarget.dataset.url;
+	}
+	console.log(url);
+	if (url.indexOf('/pages/user/user') !== -1
+		|| url.indexOf('/pages/product/list') !== -1
+		|| url.indexOf('/pages/index/index') !== -1){
+		uni.switchTab({
+			url:url
+		})
+	} else {
+		uni.navigateTo({
+			url:url
+		})
+	}
+}
+/*
  * 判断用户是否是vip
  */
 Vue.prototype.isVip = function() {

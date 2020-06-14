@@ -19,20 +19,21 @@ export default {
 	// wxjssdk
 	async wxConfigH5() {
 		if (this.isWechat()) {
-			const jsApiList = JSON.stringify(['chooseWXPay']);
+			const wxApiList = ['chooseWXPay','updateAppMessageShareData','updateTimelineShareData'];
+			const jsApiList = JSON.stringify(wxApiList);
 			var param = {
 				url: location.href.split('#')[0],
 				jsApiList,  // 需要调用微信的原生方法
-				debug: true    // 是否打开调试
+				debug: false    // 是否打开调试
 			};
 			wx.sdkConfig(param,(data) => {
 				var c = {
-					debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+					debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 					appId: data.data.appId, // 必填，公众号的唯一标识
 					timestamp: data.data.timestamp, // 必填，生成签名的时间戳
 					nonceStr: data.data.nonceStr, // 必填，生成签名的随机串
 					signature: data.data.signature,// 必填，签名
-					jsApiList: ['chooseWXPay'] // 必填，需要使用的JS接口列表
+					jsApiList: data.data.jsApiList // 必填，需要使用的JS接口列表
 				}
 				jweixin.config(c);
 			})
@@ -115,8 +116,16 @@ export default {
 				jweixin.chooseWXPay({
 					...order_info,
 					success() {
-						mHelper.toast('支付成功');
-						mRouter.push({ route: '/pages/user/money/success' });
+						uni.showToast({
+							title: '支付成功',
+							icon: 'success',
+							duration: 1000
+						})
+						setTimeout(() => {
+							uni.switchTab({
+								url: "/pages/user/user",
+							});
+						}, 800);
 					},
 					fail(res) {
 						uni.showToast({

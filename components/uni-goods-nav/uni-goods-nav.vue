@@ -6,7 +6,7 @@
 			<view class="flex uni-tab__cart-sub-left">
 				<view v-for="(item,index) in options" :key="index" class="flex uni-tab__cart-button-left uni-tab__shop-cart" @click="onClick(index,item)">
 					<view class="uni-tab__icon">
-						<uni-icons :type="item.icon" size="20" color="#646566"></uni-icons>
+						<uni-icons :type="item.icon" size="20" :class="item.class"></uni-icons>
 						<!-- <image class="image" :src="item.icon" mode="widthFix" /> -->
 					</view>
 					<text class="uni-tab__text">{{ item.text }}</text>
@@ -111,7 +111,8 @@
 		flex: 1;
 		flex-direction: row;
 	}
-
+	.normal{color: #666 !important;}
+	.active{color: red !important;}
 	.uni-tab__cart-box {
 		flex: 1;
 		height: 50px;
@@ -147,7 +148,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		margin: 0 10px;
+		margin: 0 30rpx;
 	}
 
 	.uni-tab__icon {

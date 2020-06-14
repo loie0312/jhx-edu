@@ -84,5 +84,5 @@
 	.col-2 .product-left{padding: 8rpx 0rpx;}
 	.price{color: $uni-color-price;}
 	.price span{font-size: $uni-font-size-base+2rpx;}
-	.del-price{font-size: 20rpx;text-decoration:line-through;}
+	.del-price{font-size: 20rpx;text-decoration:line-through;margin-right: 20rpx;}
 </style>

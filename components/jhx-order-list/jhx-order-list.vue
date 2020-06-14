@@ -1,6 +1,6 @@
 <template>
 	<view class="order-product-box">
-		<view class="order-product-item col-1"   @tap="toDetail" :data-id="order.id" v-for="order in orderList">
+		<view class="order-product-item col-1"   @tap="toDetail" :data-id="order.product.product_id" v-for="order in orderList">
 				<view>
 					<image mode="widthFix" class="product-img" :src="order['product'].picture"></image>
 				</view>

@@ -31,6 +31,7 @@
 		props: {
 			products:Array,
 			is_vip:Boolean,
+			buyed:Boolean,
 			column:Number
 		},
 		data() {
@@ -67,7 +68,7 @@
 	.padding{padding: 0 4%;}
 	.product-box{display: flex;box-sizing: border-box;flex-wrap: wrap;}
 	.product-item{box-sizing: border-box;}
-	.product-sale{display: flex;justify-content: flex-end;color: #999;font-size: 24rpx;margin-top: 30rpx;width: 100%;}
+	.product-sale{display: flex;justify-content: flex-end;color: #999;margin-top: 30rpx;width: 100%;}
 	.product-left{width: 100%;box-sizing: border-box;}
 	.product-name{color: #333;font-size: $uni-font-size-base;overflow: hidden;}
 	.product-desc{color: #999;font-size: 26rpx;margin-top: 10rpx;}

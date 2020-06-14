@@ -4,7 +4,7 @@
 			"path": "pages/index/index",
 			"style": {
 				"enablePullDownRefresh": true,
-				"navigationBarTitleText": "知识付费",
+				"navigationBarTitleText": "以墨文化",
 				"app-plus": {
 				  "bounce": "none",
 				  "titleNView": false,
@@ -35,9 +35,24 @@
 			}
 		},
 		{
+			"path": "pages/product/search",
+			"style": {
+				"navigationBarTitleText": "课程列表"
+			}
+		},
+		{
 			"path": "pages/product/content-detail",
 			"style": {
-				"navigationBarTitleText": "章节详情"
+				"navigationBarTitleText": "章节详情",
+				"app-plus": {
+				  "bounce": "none",
+				  "titleNView": false,
+				  "pullToRefresh": {
+				    "support": true,
+				    "color": "#fa436a",
+				    "style": "default"
+				  }
+				}
 			}
 		},
 		{
@@ -68,11 +83,30 @@
 			}
 		},
 		{
+			"path": "pages/user/footprint",
+			"style": {
+				"navigationBarTitleText": "我的足迹"
+			}
+		},
+		{
+			"path": "pages/user/distribute",
+			"style": {
+				"navigationBarTitleText": "分销记录"
+			}
+		},
+		{
+			"path": "pages/user/collect",
+			"style": {
+				"navigationBarTitleText": "收藏记录"
+			}
+		},
+		{
 			"path": "pages/order/order",
 			"style": {
 				"navigationBarTitleText": "我购买的课程"
 			}
 		},
+		
 		{
 			"path": "pages/user/vipbuy",
 			"style": {

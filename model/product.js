@@ -64,6 +64,30 @@ class Product extends Base{
 		}
 		this.request(params);
 	}
+	// ’≤ÿ
+	collectCreate(param,callback) {
+		var params = {
+		  url:'common/collect/create',
+		  data:param,
+		  method:'post',
+		  sCallback:function(data){
+			callback && callback(data);
+		  }
+		}
+		this.request(params);
+	}
+	//…æ≥˝ ’≤ÿ
+	collectDelete(param,callback) {
+		var params = {
+		  url:'common/collect/delete?id='+param.id,
+		  data:param,
+		  method:'DELETE',
+		  sCallback:function(data){
+			callback && callback(data);
+		  }
+		}
+		this.request(params);
+	}
 };
 
 export { Product };

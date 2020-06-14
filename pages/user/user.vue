@@ -8,8 +8,8 @@
 			</view>
 		</view>
 		<view class="account">
-			<view @tap="goto" data-url="/pages/order/order">
-				<view class="num">0</view>
+			<view @tap="goto('/pages/order/order')">
+				<view class="num">{{userInfo.buyed_num}}</view>
 				<view class="text">已购课程</view>
 			</view>
 			<view>
@@ -17,27 +17,35 @@
 				<view class="text">优惠券</view>
 			</view>
 			<view>
-				<view class="num">0</view>
+				<view class="num">{{userInfo.account.fenxiao_money}}</view>
 				<view class="text">我的佣金</view>
 			</view>
 		</view>
 		<uni-grid :column="3" :show-border="false"  >
-		    <uni-grid-item>
-				<view class="iconfont icon icon-VIP"></view>
-		        <text class="text">vip权益</text>
-		    </uni-grid-item>
-		    <uni-grid-item>
-				<view class="iconfont icon icon-fenxiaoshang"></view>
-		        <text class="text">分销记录</text>
-		    </uni-grid-item>
-		    <uni-grid-item>
-				<view class="iconfont icon icon-kecheng"></view>
-		        <text class="text">学习记录</text>
-		    </uni-grid-item>
-			<uni-grid-item>
-				<view class="iconfont icon icon-shoucang"></view>
-			    <text class="text">收藏记录</text>
-			</uni-grid-item>
+			<view @click="goto('/pages/user/vipbuy')">
+				<uni-grid-item>
+					<view class="iconfont icon icon-VIP"></view>
+					<text class="text">vip权益</text>
+				</uni-grid-item>
+			</view>
+			<view @click="goto('/pages/user/distribute')">
+				<uni-grid-item>
+					<view class="iconfont icon icon-fenxiaoshang"></view>
+					<text class="text">分销记录</text>
+				</uni-grid-item>
+			</view>
+			<view @click="goto('/pages/user/footprint')">
+				<uni-grid-item>
+					<view class="iconfont icon icon-kecheng"></view>
+					<text class="text">学习记录</text>
+				</uni-grid-item>
+			</view>
+			<view @click="goto('/pages/user/collect')">
+				<uni-grid-item>
+					<view class="iconfont icon icon-shoucang"></view>
+					<text class="text">收藏记录</text>
+				</uni-grid-item>
+			</view>
 			<uni-grid-item>
 				<view class="iconfont icon icon-kefu"></view>
 			    <text class="text">联系客服</text>
@@ -46,8 +54,10 @@
 	</view>
 </template>
 <script>
-	import uniGrid from "@/components/uni-grid/uni-grid.vue"
-	import uniGridItem from "@/components/uni-grid-item/uni-grid-item.vue"
+	import uniGrid from "@/components/uni-grid/uni-grid.vue";
+	import uniGridItem from "@/components/uni-grid-item/uni-grid-item.vue";
+	import {User} from '@/model/user.js';
+	var user = new User();
 	export default {
 		components: {uniGrid,uniGridItem},
 		data() {
@@ -58,16 +68,17 @@
 		},
 		onLoad() {
 			this.$data.userInfo = uni.getStorageSync('userInfo');
-			console.log(this.$data.userInfo);
+			this.index();
 		},
 		methods: {
-			goto:function(e){
-				var url = e.currentTarget.dataset.url;
-				console.log(url);
-				uni.navigateTo({
-					url:url
-				})
-			}
+			//详情
+			index:function(){
+				var that = this;
+				var param = {};
+				user.index(param,(data) => {
+					this.$data.userInfo = data.data;
+				});
+			},
 		},
 	}
 </script>

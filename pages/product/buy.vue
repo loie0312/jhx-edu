@@ -46,6 +46,9 @@
 			//创建订单
 			create(){
 				var that = this;
+				uni.showLoading({
+					title:'正在下单...'
+				})
 				if(Config.payList.length == 1 && Config.payList[0] == 'wxpay'){
 					//如果仅使用微信支付，需要先确定当前用户是否已经进行小程序或微信授权
 					var bind_param = {
@@ -71,12 +74,14 @@
 								// #endif//
 								openid : data.data.openid,
 								products_id : products_id,
-								order_type : 1
+								order_type : 1,
+								pid:uni.getStorageSync('pid')
 							};
 							order.create(param,(data) => {
 								if(data.data){
 									data.data.config.timestamp = data.timestamp;
 									payment.weixinPay(data.data.config);
+									uni.hideLoading();
 								}
 							});
 						}
@@ -88,7 +93,7 @@
 </script>
 
 <style lang="scss">
-	.pay-foot{position: fixed;bottom: 0;background-color: #fff;display: flex;width: 100%;padding: 20rpx 3%;justify-content: space-between;box-sizing: border-box;align-items: center;}
-	.pay-btn{background-color: #4CD964;color: #fff;border-radius: 30px;padding: 15rpx 50rpx;}
+	.pay-foot{position: fixed;bottom: 0;background-color: #fff;display: flex;width: 100%;padding: 20rpx 3%;justify-content: space-between;box-sizing: border-box;align-items: center;font-size: $uni-font-size-base+4rpx;}
+	.pay-btn{background-color: #4CD964;color: #fff;border-radius: 30px;padding: 15rpx 60rpx;}
 	.total-money{color: $uni-color-price;}
 </style>

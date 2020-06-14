@@ -13,10 +13,12 @@
             </view>
         </view>
 		<uni-grid class="nav-box bgfff" :column="4" :show-border="false"  :square="false">
-		    <uni-grid-item v-for="item in nav">
-				<image mode="widthFix" class="nav" :src="item.icon"></image>
-		        <text class="text">{{item.label}}</text>
-		    </uni-grid-item>
+			<view v-for="item in nav" @click="goto(item.url)" :data-url="item.url">
+				<uni-grid-item>
+					<image  mode="widthFix" class="nav" :src="item.icon"></image>
+					<text class="text">{{item.label}}</text>
+				</uni-grid-item>
+			</view>
 		</uni-grid>
 		<view class="title">推荐课程</view>
 		<jhx-product-list  :productList="productList" :column="2"></jhx-product-list>

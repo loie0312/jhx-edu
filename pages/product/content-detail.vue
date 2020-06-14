@@ -43,7 +43,9 @@
 					<view class="content-title">课程目录</view>
 					<view></view>
 				</view>
-				<jhx-product-content  :contents="content" :is_vip="is_vip" :column="1"></jhx-product-content>
+				<scroll-view scroll-y="true" @scrolltolower="next" class="content-items">
+					<jhx-product-content  :contents="content" :is_vip="is_vip" :buyed="buyed" :status="contentStatus" :column="1"></jhx-product-content>
+				</scroll-view>
 				<view style="height: 50px;width: 100%;"></view>
 				<view class="close-content" @click="closeContent">关闭</view>
 			</view>
@@ -66,6 +68,9 @@
 		components: {uniIcons,tabControl},
 	    data() {
 	        return {
+				page : 1, //目录页码
+				buyed:false,
+				contentStatus:'more',
 				items: ['详情'],
 				id:'',
 				must_vip:false,
@@ -82,6 +87,7 @@
 			this.getDetail();
 			this.$data.is_vip = this.isVip();
 	    },
+		
 		filters: {
 		    /**
 			 * 处理富文本里的图片宽度自适应
@@ -152,12 +158,28 @@
 			//目录
 			getContent:function(id){
 				var that = this;
-				var param = {'product_id':id,'page_size':10};
+				var page_size = 10;
+				var param = {'product_id':id,'page_size':page_size,'page':this.page};
+				that.$data.contentStatus = 'loading';
 				productModel.content(param,(data) => {
-					that.$data.content = data.data;
+					this.$data.buyed = data.data.buyed;
+					var items = that.content.concat(data.data.contents);
+					that.$data.content = items
+					if(data.data.contents.length < page_size){
+						that.$data.contentStatus = 'noMore';
+					}else{
+						that.$data.contentStatus = 'more';
+					}
 				});
 			},
-			
+			//加载更多目录
+			next() {
+				if(this.contentStatus == 'noMore'){
+					return false;
+				}
+				this.page++;
+				this.getContent();
+			},
 			//去购买
 			buttonClick (e) {
 				if(e.index == 0){
@@ -200,4 +222,5 @@
 	.content-head view{flex: 1;}
 	.content-title{text-align: center;}
 	.close-content{border-top: 1px solid #ececec;text-align: center; padding: 25rpx 0;position: fixed;bottom: 0;z-index: 9;width: 100%;background-color: #fff;color: #999;}
+	.content-items{max-height: 50vh;}
 </style>
