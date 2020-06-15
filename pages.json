@@ -5,6 +5,9 @@
 			"style": {
 				"enablePullDownRefresh": true,
 				"navigationBarTitleText": "以墨文化",
+				"h5": {
+					"titleNView": false
+				},
 				"app-plus": {
 				  "bounce": "none",
 				  "titleNView": false,

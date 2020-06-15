@@ -8,7 +8,7 @@
 			</view>
 			<view class="sub-title">服务类型</view>
 			<view class="vip-items">
-				<view class="vip-item" v-for="(item,index) in vips" :class="index == currentIndex ? 'active' : ''">
+				<view class="vip-item" v-for="(item,index) in vips" :class="index == currentIndex ? 'active' : ''" :data-index="index" @click="change">
 					<view>{{item.name}}</view>
 					<view><span class="money-label">￥</span><span class="money">{{item.price | money}}</span></view>
 					<view class="market-price">￥{{item.market_price | money}}</view>
@@ -110,6 +110,12 @@
 					});
 				}
 			},
+			//切换会员卡
+			change:function(e){
+				var index = e.currentTarget.dataset.index;
+				this.$data.currentIndex = index;
+				this.$data.price = this.$data.vips[index].price;
+			}
 		}
 	}
 </script>

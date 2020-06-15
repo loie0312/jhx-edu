@@ -216,7 +216,7 @@
 				productModel.content(param,(data) => {
 					this.$data.buyed = data.data.buyed;
 					var items = that.content.concat(data.data.contents);
-					that.$data.content = items
+					that.$data.content = items;
 					if(data.data.contents.length < page_size){
 						that.$data.contentStatus = 'noMore';
 					}else{

@@ -21,20 +21,23 @@
 			</view>
 		</uni-grid>
 		<view class="title">推荐课程</view>
-		<jhx-product-list  :productList="productList" :column="2"></jhx-product-list>
+		<jhx-product-list :status="recomandStatus" :productList="productList" :column="2"></jhx-product-list>
 		<view class="cate-box" v-for="cate in productCate">
 			<view class="title">{{cate[0] ? cate[0].cate.title : '' }}</view>
-			<jhx-product-list  :productList="cate" :column="1"></jhx-product-list>
+			<jhx-product-list :status='nostatus' :productList="cate" :column="1"></jhx-product-list>
 		</view>
     </view>
 	
 </template>
 
 <script>
+	import  payment  from '@/utils/payment.js';
 	import { Config } from '../../config.js';
 	import {Adv} from '@/model/adv.js';
 	import {System} from '@/model/system.js';
 	import {Product} from '@/model/product.js';
+	import {Public} from '@/model/public.js';
+	var publicModel = new Public();
 	var jweixin = require('jweixin-module');
 	var adv = new Adv();
 	var system = new System();
@@ -49,7 +52,9 @@
                 banner:[],
 				nav:[],
 				productList:[],
-				productCate:[]
+				productCate:[],
+				recomandStatus:'more',
+				nostatus:'nostatus'
             }
         },
         onLoad() {
@@ -57,6 +62,8 @@
             this.getBanner();
 			this.getProduct(); 
 			this.indexCate();
+			this.getConfig();
+			this.config();
 			var that = this;
         },
 		methods: {
@@ -80,7 +87,9 @@
 			getProduct:function(){
 				var that = this;
 				var param = {is_top:1};
+				this.$data.recomandStatus = 'loading';
 				product.lists(param,(data) => {
+					that.$data.recomandStatus = 'nostatus';
 					that.$data.productList=data.data;
 				});
 			},
@@ -92,6 +101,41 @@
 					that.$data.productCate=data.data;
 				});
 			},
+			getConfig:function(){
+				var that = this;
+				var param = {};
+				publicModel.config(param,(data) => {
+					this.config = data.data;
+					wx.setStorageSync('config',this.config);
+				});
+			},
+			//分享配置
+			config:function(){
+				var that = this;
+				// #ifdef H5
+				payment.wxConfigH5();
+				// #endif
+				jweixin.ready(() => {
+					//自定义“分享给朋友”及“分享到QQ”按钮的分享内容（1.4.0）
+					jweixin.updateAppMessageShareData({
+					    title: this.config ? this.config.share_title: '以墨文化',// 分享标题
+					    desc: this.config ? this.config.share_desc: '以墨文化', // 分享描述
+					    link: Config.domain+'/pages/index/index', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+					    imgUrl: this.config ? this.config.share_cover : '', // 分享图标
+					    success: function () {
+					    }
+					})
+					//自定义“分享到朋友圈”及“分享到QQ空间”按钮的分享内容（1.4.0）
+					jweixin.updateTimelineShareData({
+						title: this.config ? this.config.share_title: '以墨文化',// 分享标题
+						link: Config.domain+'/pages/index/index', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+						imgUrl: this.config ? this.config.share_cover : '', // 分享图标
+						success: function () {
+						  // 设置成功
+						}
+					})
+				})
+			},
 		}
     }
 </script>
@@ -101,7 +145,7 @@
 	.nav{width: 80rpx;height: 80rpx !important;margin: 0 auto;}
 	.nav-box{padding: 0 0 40rpx 0;margin-bottom: 15rpx;}
 	.uni-grid-item{text-align: center;margin-top: 40rpx;}
-	.nav-box .text{font-size: 26rpx;margin-top: 8rpx;}
+	.nav-box .text{margin-top: 8rpx;}
 	.title{background-color: #fff;padding: 20rpx 0 0 4%;}
 	.cate-box{margin-top: 15rpx;}
 </style>

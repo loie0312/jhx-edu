@@ -62,6 +62,7 @@
         "domain" : "wx.qzlhslgy.com",
         "router" : {
             "mode" : "history"
-        }
+        },
+        "template" : "h5.html"
     }
 }

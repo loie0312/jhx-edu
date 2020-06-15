@@ -1,36 +1,40 @@
 <template>
-	<view class="product-box" :class="column == 2 ? 'bgfff padding' : 'bg-gray'">
-		<view class="product-item"  @tap="toDetail" :data-id="product.id" :class="col" v-for="product in productList">
-				<view>
-					<image mode="widthFix" class="product-img" :src="product.picture"></image>
-				</view>
-				<view class="product-left">
-					<view class="product-name">{{product.name}}</view>
-					<!-- <view class="product-desc" v-if="column == 1">课程描述</view> -->
-					<view class="product-sale">
-						<view>{{product.virtual_sale}}人购买</view>
-						<view>
-							<span class="del-price" v-if="column == 1">￥{{product.market_price}}</span>
-							<span class="price">￥<span>{{product.real_price}}</span></span>
+	<view>
+		<view class="product-box" :class="column == 2 ? 'bgfff padding' : 'bg-gray'">
+			<view class="product-item"  @tap="toDetail" :data-id="product.id" :class="col" v-for="product in productList">
+					<view>
+						<image mode="widthFix" class="product-img" :src="product.picture"></image>
+					</view>
+					<view class="product-left">
+						<view class="product-name">{{product.name}}</view>
+						<!-- <view class="product-desc" v-if="column == 1">课程描述</view> -->
+						<view class="product-sale">
+							<view>{{product.virtual_sale}}人购买</view>
+							<view>
+								<span class="del-price" v-if="column == 1">￥{{product.market_price}}</span>
+								<span class="price">￥<span>{{product.real_price}}</span></span>
+							</view>
 						</view>
 					</view>
-				</view>
+			</view>
 		</view>
+		<uni-load-more :status="status"></uni-load-more>
 	</view>
 </template>
 
 <script>
+	import uniLoadMore from "@/components/uni-load-more/uni-load-more.vue"
 	/**
-	 * GridItem 宫格
-	 * @description 宫格组件
-	 * @tutorial https://ext.dcloud.net.cn/plugin?id=27
-	 * @property {Number} index 子组件的唯一标识 ，点击gird会返回当前的标识
+	 * GridItem 课程列表
+	 * @description 课程列表组件
 	 */
 	export default {
+		components: {uniLoadMore},
 		name: 'JhxProductList',
 		props: {
 			productList:Array,
-			column:Number
+			column:Number,
+			status:String
 		},
 		data() {
 			return {
@@ -73,7 +77,7 @@
 	.product-desc{color: #999;font-size: 26rpx;margin-top: 10rpx;}
 	.col-1 {width: 100%;background-color: #fff;display: flex;padding: 15rpx 4%;box-sizing: border-box;}
 	.col-1 .product-item{display: flex;}
-	.col-1 .product-img{width: 200rpx;height: 133rpx;margin-right: 20rpx;}
+	.col-1 .product-img{width: 250rpx;height: 166rpx;margin-right: 20rpx;}
 	.col-1 .product-name{line-height: $uni-font-size-base + 15;height:($uni-font-size-base+15) * 2;}
 	.col-1 .product-sale{margin-top: 10rpx;}
 	.col-2 {width: 48.5%;margin: 30rpx 0 0 0;background-color: #fff;border-radius: 5px;}

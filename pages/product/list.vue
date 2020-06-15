@@ -4,7 +4,7 @@
 		<swiper class="swiper detail-swiper" style="height:100vh;" @change='scollSwiper' :current='current'>
 			<swiper-item class="detail-box" v-for="(cate,index) in cates">
 				<scroll-view scroll-y="true" style="height:auto;">
-					<jhx-product-list  :productList="productList[index]" :column="1"></jhx-product-list>
+					<jhx-product-list :status="loadStatus" :productList="productList[index]" :column="1"></jhx-product-list>
 				</scroll-view>
 			</swiper-item>
 		</swiper>
@@ -28,6 +28,7 @@
 				], //完整的分类对象
 				cates:['全部'], //分类名称数组
 				productList:[],
+				loadStatus:'more'
 	        }
 	    },
 	    onLoad() {
@@ -52,11 +53,27 @@
 			//产品
 			getProduct:function(){
 				var that = this;
+				var page_size = 10;
 				var param = {
-					cate_id : that.$data.category[this.$data.current] ? that.$data.category[this.$data.current].id : ''
+					cate_id : that.$data.category[this.$data.current] ? that.$data.category[this.$data.current].id : '',
+					'page_size':page_size
 				};
+				that.$data.loadStatus = 'loadding';
+				
 				product.lists(param,(data) => {
-					this.$set(that.$data.productList,this.$data.current,data.data);
+					if(that.$data.productList[that.$data.current]){
+						var items = that.$data.productList[that.$data.current].concat(data.data);
+					}else{
+						var items = data.data;
+					}
+					
+					this.$set(that.$data.productList,this.$data.current,items);
+					
+					if(data.data.length < page_size){
+						that.$data.loadStatus = 'noMore';
+					}else{
+						that.$data.loadStatus = 'more';
+					}
 				});
 			},
 			//分类切换

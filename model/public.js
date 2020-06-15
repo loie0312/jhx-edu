@@ -27,6 +27,18 @@ class Public extends Base{
 		}
 		this.request(params);
 	}
+	//系统配置
+	config(param,callback) {
+		var params = {
+		  url:'site/config',
+		  data:param,
+		  method:'post',
+		  sCallback:function(data){
+			callback && callback(data);
+		  }
+		}
+		this.request(params);
+	}
 };
 
 export { Public };
