@@ -1,10 +1,10 @@
 <template>
 	<view>
-		<tabControl class="detail-tab" :current="current" :values="cates" bgc="#fff" :fixed="false" :scrollFlag='true' :isEqually='true' @clickItem="onClickItem" ></tabControl>
+		<tabControl class="detail-tab" :current="current" :values="cates" bgc="#fff" :fixed="false" :scrollFlag='true' :isEqually='false' @clickItem="onClickItem" ></tabControl>
 		<swiper class="swiper detail-swiper" style="height:100vh;" @change='scollSwiper' :current='current'>
 			<swiper-item class="detail-box" v-for="(cate,index) in cates">
 				<scroll-view scroll-y="true" style="height:auto;">
-					<jhx-product-list :status="loadStatus" :productList="productList[index]" :column="1"></jhx-product-list>
+					<jhx-product-list :status="loadStatus" :productList="productList[index]" :column="2"></jhx-product-list>
 				</scroll-view>
 			</swiper-item>
 		</swiper>

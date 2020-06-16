@@ -24,7 +24,7 @@
 		<jhx-product-list :status="recomandStatus" :productList="productList" :column="2"></jhx-product-list>
 		<view class="cate-box" v-for="cate in productCate">
 			<view class="title">{{cate[0] ? cate[0].cate.title : '' }}</view>
-			<jhx-product-list :status='nostatus' :productList="cate" :column="1"></jhx-product-list>
+			<jhx-product-list :status='nostatus' :productList="cate" :column="2"></jhx-product-list>
 		</view>
     </view>
 	
