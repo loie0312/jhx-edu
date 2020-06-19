@@ -10,7 +10,7 @@
 					</view>
 			   </view>
 			   <view v-else-if="info.type == 3">
-			   		<view><video class="video" :src="info.video"></video></view>
+			   		<view><video class="video" controls="controls"   poster=''   src=''   preload="auto"    x5-playsinline="" playsinline="true" webkit-playsinline="true" :src="info.video"></video></view>
 			   </view>
 	        </view>
 	    </view>

@@ -20,10 +20,16 @@
 				</uni-grid-item>
 			</view>
 		</uni-grid>
-		<view class="title">推荐课程</view>
+		<view class="title-line">
+			<view class="title">推荐课程</view>
+			<view @click="goto('/pages/product/search?is_top=1')" class="more">更多></view>
+		</view>
 		<jhx-product-list :status="recomandStatus" :productList="productList" :column="2"></jhx-product-list>
 		<view class="cate-box" v-for="cate in productCate">
-			<view class="title">{{cate[0] ? cate[0].cate.title : '' }}</view>
+			<view class="title-line">
+				<view class="title">{{cate[0] ? cate[0].cate.title : '' }}</view>
+				<view @click="toCate" :data-cate_id="cate[0] ? cate[0].cate.id : '' " class="more">更多></view>
+			</view>
 			<jhx-product-list :status='nostatus' :productList="cate" :column="2"></jhx-product-list>
 		</view>
     </view>
@@ -109,6 +115,12 @@
 					wx.setStorageSync('config',this.config);
 				});
 			},
+			toCate(e) {
+				var cate_id = e.currentTarget.dataset.cate_id ;    
+				uni.navigateTo({
+					url: '/pages/product/search?cate_id='+cate_id,
+				});
+			},
 			//分享配置
 			config:function(){
 				var that = this;
@@ -139,13 +151,14 @@
 		}
     }
 </script>
-<style>
+<style lang="scss">
 	.swiper{height: 375rpx;}
 	.swiper-item{width: 100%;}
 	.nav{width: 80rpx;height: 80rpx !important;margin: 0 auto;}
 	.nav-box{padding: 0 0 40rpx 0;margin-bottom: 15rpx;}
 	.uni-grid-item{text-align: center;margin-top: 40rpx;}
 	.nav-box .text{margin-top: 8rpx;}
-	.title{background-color: #fff;padding: 20rpx 0 0 4%;}
 	.cate-box{margin-top: 15rpx;}
+	.title-line{display: flex;width: 100%;justify-content: space-between;background-color: #fff;padding: 0rpx 4% 0 0%;box-sizing: border-box;align-items: center;}
+	.more{color: #999;font-size: $uni-font-size-sm;}
 </style>

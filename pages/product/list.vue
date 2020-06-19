@@ -1,13 +1,15 @@
 <template>
 	<view>
 		<tabControl class="detail-tab" :current="current" :values="cates" bgc="#fff" :fixed="false" :scrollFlag='true' :isEqually='false' @clickItem="onClickItem" ></tabControl>
-		<swiper class="swiper detail-swiper" style="height:100vh;" @change='scollSwiper' :current='current'>
+		<swiper class="swiper detail-swiper" style="height:90vh;" @change='scollSwiper' :current='current'>
 			<swiper-item class="detail-box" v-for="(cate,index) in cates">
-				<scroll-view scroll-y="true" style="height:auto;">
+				<scroll-view scroll-y="true" style="height: 100%;">
 					<jhx-product-list :status="loadStatus" :productList="productList[index]" :column="2"></jhx-product-list>
+					<view style="height: 80rpx;width: 100%;"></view>
 				</scroll-view>
 			</swiper-item>
 		</swiper>
+		
 	</view>
 </template>
 
@@ -28,13 +30,22 @@
 				], //完整的分类对象
 				cates:['全部'], //分类名称数组
 				productList:[],
-				loadStatus:'more'
+				loadStatus:'more',
+				page : 1
 	        }
 	    },
 	    onLoad() {
 			this.getCate();
 			this.getProduct(); 
 	    },
+		//加载更多
+		onReachBottom() {
+			if(this.loadStatus == 'noMore'){
+				return false;
+			}
+			this.page++;
+			this.getProduct();
+		},
 		methods: {
 			//分类
 			getCate:function(){
@@ -56,7 +67,8 @@
 				var page_size = 10;
 				var param = {
 					cate_id : that.$data.category[this.$data.current] ? that.$data.category[this.$data.current].id : '',
-					'page_size':page_size
+					'page_size':page_size,
+					'page':this.page
 				};
 				that.$data.loadStatus = 'loadding';
 				
