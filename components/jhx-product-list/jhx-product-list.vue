@@ -3,7 +3,7 @@
 		<view class="product-box" :class="column == 2 ? 'bgfff padding' : 'bg-gray'">
 			<view class="product-item"  @tap="toDetail" :data-id="product.id" :class="col" v-for="product in productList">
 					<view>
-						<image mode="widthFix" class="product-img" :src="product.picture"></image>
+						<image mode="widthFix" class="product-img" :src="thumb && product.thumb ? product.thumb : product.picture"></image>
 					</view>
 					<view class="product-left">
 						<view class="product-name">{{product.name}}</view>
@@ -34,7 +34,11 @@
 		props: {
 			productList:Array,
 			column:Number,
-			status:String
+			status:String,
+			thumb:{
+				type:Boolean,
+				value:true
+			}
 		},
 		data() {
 			return {
