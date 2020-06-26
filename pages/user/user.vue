@@ -70,6 +70,13 @@
 			this.$data.userInfo = uni.getStorageSync('userInfo');
 			this.index();
 		},
+		onPullDownRefresh() {
+			this.$data.userInfo = uni.getStorageSync('userInfo');
+			this.index();
+		},
+		onShow() {
+			this.index();
+		},
 		methods: {
 			//详情
 			index:function(){
@@ -77,6 +84,7 @@
 				var param = {};
 				user.index(param,(data) => {
 					this.$data.userInfo = data.data;
+					uni.stopPullDownRefresh();
 				});
 			},
 		},

@@ -64,15 +64,20 @@
             }
         },
         onLoad() {
-			this.getNav();
-            this.getBanner();
-			this.getProduct(); 
-			this.indexCate();
-			this.getConfig();
-			this.config();
-			var that = this;
+			this.init();
         },
+		onPullDownRefresh() {
+			this.init();
+		},
 		methods: {
+			init:function(){
+				this.getNav();
+				this.getBanner();
+				this.getProduct(); 
+				this.indexCate();
+				this.getConfig();
+				this.config();
+			},
 			//幻灯片
 			getBanner:function(){
 				var that = this;
@@ -97,6 +102,7 @@
 				product.lists(param,(data) => {
 					that.$data.recomandStatus = 'nostatus';
 					that.$data.productList=data.data;
+					uni.stopPullDownRefresh();
 				});
 			},
 			//分类产品
@@ -111,7 +117,7 @@
 				var that = this;
 				var param = {};
 				publicModel.config(param,(data) => {
-					this.config = data.data;
+					that.config = data.data;
 					wx.setStorageSync('config',this.config);
 				});
 			},
