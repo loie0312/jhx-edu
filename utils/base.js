@@ -64,6 +64,7 @@ class Base {
 			//获取微信用户信息
 	        this.wxAuth(params.code,(res)=>{
 				uni.setStorageSync('onLogin',false);
+				//直接使用微信号注册
 				if (res.data.wx_register == 1) {
 					const userInfo = res.data.user.original;
 					//保存token信息
@@ -88,6 +89,23 @@ class Base {
 						uni.setStorageSync('accessToken', userInfo.access_token);
 						uni.setStorageSync('refreshToken', userInfo.refresh_token);
 						uni.setStorageSync('userInfo', userInfo.member);
+					}else{
+						const userInfo = res.data.user_info;
+						uni.setStorageSync('userInfo', userInfo.original);
+						uni.showModal({
+						    title: '提示',
+						    content: '当前微信尚未绑定手机号，请先绑定',
+						    success: function (res) {
+						        if (res.confirm) {
+						            uni.redirectTo({
+						            	url:'/pages/public/register'
+						            })
+						        } else if (res.cancel) {
+						            console.log('用户点击取消');
+						        }
+						    }
+						});
+						
 					}
 				}
 				

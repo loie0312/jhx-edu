@@ -88,16 +88,6 @@ export default {
 			checkType: 'phoneno',
 			checkRule: '',
 			errorMsg: '手机号格式不正确'
-		}, {
-			name: 'code',
-			checkType: 'string',
-			checkRule: '4',
-			errorMsg: '请输入4位验证码'
-		}, {
-			name: 'password',
-			checkType: 'string',
-			checkRule: '6,18',
-			errorMsg: '请输入6-18位密码'
 		}
 	],
 

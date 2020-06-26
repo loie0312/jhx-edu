@@ -6,7 +6,8 @@
     <!-- 设置白色背景防止软键盘把下部绝对定位元素顶上来盖住输入框等 -->
     <view class="wrapper">
       <view class="welcome">
-        账号注册！
+        <image class="logo" src="../../static/tab-home-on.png"></image>
+		<view>以墨文化</view>
       </view>
       <view class="input-content">
           <view class="input-item">
@@ -37,7 +38,7 @@
 
             </view>
           </view>
-          <view class="input-item">
+          <view class="input-item" v-if="config['register_require_pass'] == 1">
             <text class="tit">密码</text>
             <input
                 type="password"
@@ -46,7 +47,7 @@
                 maxlength="18"
             />
           </view>
-          <view class="input-item">
+          <view class="input-item" v-if="config['register_require_pass'] == 1">
             <text class="tit">确认密码</text>
             <input
                 type="password"
@@ -83,11 +84,13 @@
 				reqBody: {},
 				codeSeconds: 0, // 验证码发送时间间隔
 				smsCodeBtnDisabled: true,
-				sendCodeTime:60
+				sendCodeTime:60,
+				config:{}
 			}
 			
 		},
 		onLoad(options) {
+			
 			const time = moment().valueOf() / 1000 - uni.getStorageSync('registerSmsCodeTime');
 			if (time < 60) {
 				this.codeSeconds = this.$data.sendCodeTime - parseInt(time, 10);
@@ -98,6 +101,7 @@
 				uni.removeStorageSync('registerSmsCodeTime')
 			}
 			this.registerParams.promoCode = options.promo_code;
+			this.getConfig();
 		},
 		methods: {
 			...mapMutations(['login']),
@@ -108,6 +112,15 @@
 				uni.navigateTo({
 					url:url
 				})
+			},
+			//获取配置信息
+			getConfig:function(){
+				var that = this;
+				var param = {};
+				publicModel.config(param,(data) => {
+					that.$data.config = data.data;
+					wx.setStorageSync('config',this.config);
+				});
 			},
 			// 获取手机验证码
 			getSmsCode() {
@@ -141,10 +154,11 @@
 			},
 			// 注册账号
 			async toRegister() {
+				var userInfo = uni.getStorageSync('userInfo');
 				this.reqBody['mobile'] = this.registerParams['mobile'];
 				this.reqBody['password'] = this.registerParams['password'];
-				this.reqBody['code'] = this.registerParams['code'];
-				this.reqBody['nickname'] = this.registerParams['nickname'];
+				this.reqBody['code'] = this.registerParams['code']
+				
 				const cheRes = this.$mGraceChecker.check(this.reqBody, this.$mFormRule.registerRule);
 				if (!cheRes) {
 					uni.showToast({
@@ -161,12 +175,12 @@
 					return;
 				}
 				this.reqBody['password_repetition'] = this.registerParams['password_repetition'];
-				this.reqBody['promoCode'] = this.registerParams['promoCode'];
 				/*  #ifdef  APP-PLUS  */
 				this.reqBody.group = 'jhxEduApp'
 				/*  #endif  */
 				/*  #ifdef H5  */
 				this.reqBody.group = 'jhxEduH5'
+				this.reqBody.oauth_client = 'wechat'
 				/*  #endif  */
 				/*  #ifdef  MP-WEIXIN  */
 				this.reqBody.group = 'jhxEduWechatMq'
@@ -175,16 +189,33 @@
 				this.reqBody.group = 'jhxEduQqMq'
 				/*  #endif  */
 				this.btnLoading = true;
-				publicModel.register(this.reqBody,(res) => {
+				if(userInfo){
+					var param = {
+						...userInfo,
+						...this.reqBody,
+						gender: userInfo.sex || userInfo.gender,
+						oauth_client_user_id: userInfo.openid || userInfo.openId,
+						head_portrait: userInfo.headimgurl || userInfo.avatarUrl
+					}
+				}else{
+					var param = {
+						...this.reqBody
+					}
+				}
+				
+				publicModel.register(param,(res) => {
 					this.btnLoading = false;
-					const userInfo = res.data.member;
-					//保存token信息
-					uni.setStorageSync('accessToken', res.data.access_token);
-					uni.setStorageSync('refreshToken', res.data.refresh_token);
-					uni.setStorageSync('userInfo', userInfo);
-					uni.navigateBack({
-						
-					})
+					if(res.code == 200){
+						const userInfo = res.data.member;
+						//保存token信息
+						uni.setStorageSync('accessToken', res.data.access_token);
+						uni.setStorageSync('refreshToken', res.data.refresh_token);
+						uni.setStorageSync('userInfo', userInfo);
+						uni.navigateBack({
+							
+						})
+					}
+					
 				});
 			}
 		}
@@ -193,6 +224,7 @@
 </script>
 
 <style lang='scss'>
+  page{background-color: #fff;}
   .container {
     padding-top: 60px;
     position: relative;
@@ -210,11 +242,9 @@
 
       .welcome {
         position: relative;
-        left: 50upx;
         top: -90upx;
-        font-size: 46upx;
         color: #555;
-        text-shadow: 1px 0px 1px rgba(0, 0, 0, .3);
+		text-align: center;
       }
 
       .input-content {
@@ -293,28 +323,6 @@
       top: 80upx;
       right: -30upx;
       z-index: 95;
-
-      &:before, &:after {
-        display: block;
-        content: "";
-        width: 400upx;
-        height: 80upx;
-        background: #b4f3e2;
-      }
-
-      &:before {
-        transform: rotate(50deg);
-        border-radius: 0 50px 0 0;
-      }
-
-      &:after {
-        position: absolute;
-        right: -198upx;
-        top: 0;
-        transform: rotate(-50deg);
-        border-radius: 50px 0 0 0;
-        /* background: pink; */
-      }
     }
 
     .register-section {
@@ -337,4 +345,6 @@
       margin: 0 10upx;
     }
   }
+  .confirm-btn{width: 80%;background-color: $uni-color-base;margin-top: 50rpx;color: #fff;border-radius: 30px;}
+  .logo{width: 80rpx;height: 80rpx;border-radius: 50%;margin-bottom: 15rpx;}
 </style>

@@ -24,7 +24,7 @@
 			<view class="title">推荐课程</view>
 			<view @click="goto('/pages/product/search?is_top=1')" class="more">更多></view>
 		</view>
-		<jhx-product-list :status="recomandStatus" :thumb="true" :productList="productList" :column="2"></jhx-product-list>
+		<jhx-product-list :status="recomandStatus" :thumb="false" :productList="productList" :column="2"></jhx-product-list>
 		<view class="cate-box" v-for="cate in productCate">
 			<view class="title-line">
 				<view class="title">{{cate[0] ? cate[0].cate.title : '' }}</view>
