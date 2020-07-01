@@ -1,12 +1,15 @@
 class Common {
 	//是否是微信浏览器 h5
 	isWechat() {
+		// #ifdef H5
 		const ua = window.navigator.userAgent.toLowerCase();
 		if (ua.match(/micromessenger/i) == 'micromessenger') {
 			return true;
 		} else {
 			return false;
 		}
+		// #endif
+		return false;
 	}
 	//章节类型
 	contentType(type){

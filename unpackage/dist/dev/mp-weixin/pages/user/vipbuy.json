@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "购买会员",
+  "usingComponents": {
+    "uni-icons": "/components/uni-icons/uni-icons"
+  }
+}

@@ -21,7 +21,7 @@
 	import {Cate} from '@/model/cate.js';
 	var cate = new Cate();
 	export default {
-		components: {tabControl},
+		components: {tabControl,jhxProductList},
 	    data() {
 	        return {
 				current:0,  //当前分类

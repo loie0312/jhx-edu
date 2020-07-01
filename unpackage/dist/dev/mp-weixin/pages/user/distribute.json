@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "分销记录",
+  "usingComponents": {
+    "uni-load-more": "/components/uni-load-more/uni-load-more"
+  }
+}

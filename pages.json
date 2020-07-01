@@ -65,6 +65,12 @@
 			}
 		},
 		{
+			"path": "pages/public/logintype",
+			"style": {
+				"navigationBarTitleText": "登录方式"
+			}
+		},
+		{
 			"path": "pages/public/register",
 			"style": {
 				"navigationBarTitleText": "账号注册"

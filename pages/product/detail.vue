@@ -75,7 +75,9 @@
 	import moment from '@/utils/moment';
 	import uniGoodsNav from '@/components/uni-goods-nav/uni-goods-nav.vue';
 	import  payment  from '@/utils/payment.js';
+	// #ifdef H5
 	var jweixin = require('jweixin-module');
+	// #endif
 	import { Config } from '../../config.js';
 	export default {
 		components: {uniIcons,uniGoodsNav},
@@ -239,7 +241,7 @@
 				var that = this;
 				// #ifdef H5
 				payment.wxConfigH5();
-				// #endif
+				
 				jweixin.ready(() => {
 					var uid = this.user && this.user.id ? this.user.id : '';
 					//自定义“分享给朋友”及“分享到QQ”按钮的分享内容（1.4.0）
@@ -261,6 +263,7 @@
 						}
 					})
 				})
+				// #endif
 			},
 			// 收藏
 			async toFavorite() {

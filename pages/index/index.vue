@@ -12,14 +12,16 @@
                 </view>
             </view>
         </view>
-		<uni-grid class="nav-box bgfff" :column="4" :show-border="false"  :square="false">
-			<view v-for="item in nav" @click="goto(item.url)" :data-url="item.url">
-				<uni-grid-item>
-					<image  mode="widthFix" class="nav" :src="item.icon"></image>
-					<text class="text">{{item.label}}</text>
-				</uni-grid-item>
-			</view>
-		</uni-grid>
+		<view class="nav-box bgfff">
+			<uni-grid :column="4" :show-border="false"  :square="false">
+				<view class="" v-for="item in nav" @click="goto(item.url)" :data-url="item.url">
+					<uni-grid-item>
+						<image  mode="widthFix" class="nav" :src="item.icon"></image>
+						<text class="text">{{item.label}}</text>
+					</uni-grid-item>
+				</view>
+			</uni-grid>
+		</view>
 		<view class="title-line">
 			<view class="title">推荐课程</view>
 			<view @click="goto('/pages/product/search?is_top=1')" class="more">更多></view>
@@ -44,7 +46,9 @@
 	import {Product} from '@/model/product.js';
 	import {Public} from '@/model/public.js';
 	var publicModel = new Public();
+	// #ifdef H5
 	var jweixin = require('jweixin-module');
+	// #endif
 	var adv = new Adv();
 	var system = new System();
 	var product = new Product();
@@ -52,7 +56,7 @@
 	import jhxProductList from "@/components/jhx-product-list/jhx-product-list.vue"
 	import uniGridItem from "@/components/uni-grid-item/uni-grid-item.vue"
     export default {
-		components: {uniGrid,uniGridItem},
+		components: {uniGrid,uniGridItem,jhxProductList},
         data() {
             return {
                 banner:[],
@@ -132,7 +136,6 @@
 				var that = this;
 				// #ifdef H5
 				payment.wxConfigH5();
-				// #endif
 				jweixin.ready(() => {
 					//自定义“分享给朋友”及“分享到QQ”按钮的分享内容（1.4.0）
 					jweixin.updateAppMessageShareData({
@@ -153,6 +156,7 @@
 						}
 					})
 				})
+				// #endif
 			},
 		}
     }
@@ -167,4 +171,5 @@
 	.cate-box{margin-top: 15rpx;}
 	.title-line{display: flex;width: 100%;justify-content: space-between;background-color: #fff;padding: 0rpx 4% 0 0%;box-sizing: border-box;align-items: center;}
 	.more{color: #999;font-size: $uni-font-size-sm;}
+	.bgfff{background-color: #fff;}
 </style>

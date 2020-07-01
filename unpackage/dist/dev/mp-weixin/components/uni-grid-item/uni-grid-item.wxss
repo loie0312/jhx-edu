@@ -41,8 +41,7 @@
 		border-top-width: 1px;
 
 		height: 100%;
-		-webkit-box-sizing: border-box;
-		        box-sizing: border-box;
+		box-sizing: border-box;
 }
 .uni-highlight.data-v-c40716e8:active {
 		background-color: #f1f1f1;

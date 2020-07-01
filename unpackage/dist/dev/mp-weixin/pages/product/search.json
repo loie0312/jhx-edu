@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "课程列表",
+  "usingComponents": {
+    "jhx-product-list": "/components/jhx-product-list/jhx-product-list"
+  }
+}

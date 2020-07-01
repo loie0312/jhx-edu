@@ -6,7 +6,7 @@
     <!-- 设置白色背景防止软键盘把下部绝对定位元素顶上来盖住输入框等 -->
     <view class="wrapper">
       <view class="welcome">
-        <image class="logo" src="../../static/tab-home-on.png"></image>
+        <image class="logo" src="../../static/logo.png"></image>
 		<view>以墨文化</view>
       </view>
       <view class="input-content">

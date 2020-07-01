@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "收藏记录",
+  "usingComponents": {
+    "uni-load-more": "/components/uni-load-more/uni-load-more"
+  }
+}

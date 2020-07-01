@@ -1,0 +1,1 @@
+<view><jhx-order-product vue-id="88ec4bae-1" products="{{products}}" is_vip="{{is_vip}}" bind:__l="__l"></jhx-order-product><view class="pay-foot"><view>合计金额：<label class="total-money _span">{{"￥"+money}}</label></view><view data-event-opts="{{[['tap',[['create']]]]}}" class="pay-btn" bindtap="__e">立即支付</view></view></view>

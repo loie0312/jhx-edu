@@ -9,6 +9,7 @@
 	import {Product} from '@/model/product.js';
 	var product = new Product();
 	export default {
+		components: {jhxProductList},
 	    data() {
 	        return {
 				productList:[],

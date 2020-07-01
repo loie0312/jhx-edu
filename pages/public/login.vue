@@ -100,7 +100,7 @@
 				this.smsCodeBtnDisabled = false;
 				uni.removeStorageSync('loginSmsCodeTime')
 			}
-			this.userInfo = uni.getStorageSync('wechatUserInfo');
+			this.userInfo = uni.getStorageSync('userInfo');
 		},
 		methods: {
 			loginTest(mobile, password) {

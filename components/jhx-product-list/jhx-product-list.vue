@@ -32,9 +32,18 @@
 		components: {uniLoadMore},
 		name: 'JhxProductList',
 		props: {
-			productList:Array,
-			column:Number,
-			status:String,
+			productList:{
+				type:Array,
+				value:[]
+			},
+			column:{
+				type:Number,
+				value:1
+			},
+			status:{
+				type:String,
+				value:''
+			},
 			thumb:{
 				type:Boolean,
 				value:true
@@ -42,7 +51,7 @@
 		},
 		data() {
 			return {
-				col:'col-'+this.column
+				col : 'col-'+this.column
 			}
 		},
 		created() {
@@ -52,13 +61,6 @@
 			
 		},
 		methods: {
-			_onClick() {
-				this.grid.change({
-					detail: {
-						index: this.index
-					}
-				})
-			},
 			toDetail(e) {
 				console.log(e)
 				var id = e.currentTarget.dataset.id ;    

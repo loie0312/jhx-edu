@@ -24,6 +24,7 @@ class Base {
 						break;
 					case 401:
 						if(!uni.getStorageSync('onLogin')){
+							uni.setStorageSync('userInfo', {});
 							that.reLogin();
 						}
 						break;
@@ -64,7 +65,6 @@ class Base {
 			//获取微信用户信息
 	        this.wxAuth(params.code,(res)=>{
 				uni.setStorageSync('onLogin',false);
-				//直接使用微信号注册
 				if (res.data.wx_register == 1) {
 					const userInfo = res.data.user.original;
 					//保存token信息
@@ -175,7 +175,7 @@ class Base {
 			this.auth();
 		}else{
 			uni.navigateTo({
-				url:'/pages/public/login'
+				url:'/pages/public/logintype'
 			})
 		}
 	}
