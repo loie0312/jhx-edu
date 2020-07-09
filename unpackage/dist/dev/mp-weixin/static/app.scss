@@ -9,3 +9,4 @@ body{background-color: $uni-bg-color-grey;font-size: $uni-font-size-base;}
 .common-line{display: flex;padding: 25rpx 0;}
 .common-line .label{color: #999;width: 150rpx;}
 .hide{display: none;}
+.copyright{position: absolute;border-bottom: 30rpx;color: #999;font-size: $uni-font-size-base;text-align: center;margin-top: 30rpx;width: 100%;}

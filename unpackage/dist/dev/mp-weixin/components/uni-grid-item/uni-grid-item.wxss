@@ -5,6 +5,10 @@
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: flex;
+		text-align: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		        align-items: center;
 }
 .uni-grid-item__box.data-v-c40716e8 {
 

@@ -41,7 +41,7 @@
 }
 .uni-grid-item {
   text-align: center;
-  margin-top: 40rpx;
+  margin-top: 20rpx;
 }
 .nav-box .text {
   margin-top: 8rpx;

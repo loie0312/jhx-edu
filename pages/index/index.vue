@@ -34,6 +34,7 @@
 			</view>
 			<jhx-product-list :status='nostatus' :productList="cate" :column="2"></jhx-product-list>
 		</view>
+		<view class="copyright">版权所有：广西几何线科技有限公司</view>
     </view>
 	
 </template>
@@ -166,7 +167,7 @@
 	.swiper-item{width: 100%;}
 	.nav{width: 80rpx;height: 80rpx !important;margin: 0 auto;}
 	.nav-box{padding: 0 0 40rpx 0;margin-bottom: 15rpx;}
-	.uni-grid-item{text-align: center;margin-top: 40rpx;}
+	.uni-grid-item{text-align: center;margin-top: 20rpx;}
 	.nav-box .text{margin-top: 8rpx;}
 	.cate-box{margin-top: 15rpx;}
 	.title-line{display: flex;width: 100%;justify-content: space-between;background-color: #fff;padding: 0rpx 4% 0 0%;box-sizing: border-box;align-items: center;}

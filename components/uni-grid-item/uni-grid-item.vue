@@ -71,7 +71,10 @@
 		/* #ifndef APP-NVUE */
 		height: 100%;
 		display: flex;
+		text-align: center;
+		align-items: center;
 		/* #endif */
+		
 	}
 
 	.uni-grid-item__box {
