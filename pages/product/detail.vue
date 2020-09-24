@@ -206,6 +206,7 @@
 					that.$data.product=data.data;
 					that.favorite = data.data.myCollect ? true : false;
 					that.$data.options[1].class = that.favorite ? 'active' : 'normal';
+					that.current = data.data.show_type == 2 ? 1 : 0;
 					that.config();
 				});
 			},
