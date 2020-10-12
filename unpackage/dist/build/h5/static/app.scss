@@ -9,3 +9,13 @@ body{background-color: $uni-bg-color-grey;font-size: $uni-font-size-base;}
 .common-line{display: flex;padding: 25rpx 0;}
 .common-line .label{color: #999;width: 150rpx;}
 .hide{display: none;}
+.copyright{position: absolute;border-bottom: 30rpx;color: #999;font-size: $uni-font-size-base;text-align: center;margin-top: 30rpx;width: 100%;}
+.maskLayer{width:100%;height: 100vh; position: fixed;top:0;z-index:9;background: rgba(0, 0, 0,.5);-webkit-animation: spin-opacity .2s linear ;animation: spin-opacity .5s linear;}
+@keyframes spin-opacity {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}

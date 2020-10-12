@@ -21,17 +21,15 @@
 				<span class="market-price">原价{{product.market_price}}</span>
 				<!--  分享 -->
 				<view class="share-section" v-if="product.name">
-					<!-- <view class="share-icon">
-						<text class="iconfont iconxingxing"></text>
-						 返
+					<view class="share-icon" @click="paintPoster">
+						海报
 					</view>
-					<text open-type="contact" class="tit">分享该商品给你的朋友们</text> -->
-					<!--#ifndef H5-->
+					<!-- #ifdef MP-WEIXIN -->
 					<button :disabled="!!product" class="share-btn" open-type="share">
 						立即分享
 						<i class="iconfont iconyou"></i>
 					</button>
-					<!--#endif-->
+					<!-- #endif -->
 				</view>
 			</view>
 			<view class="common-line border-top">
@@ -60,6 +58,20 @@
 		</view>
 		<view style="height: 50px;width: 100%;"></view>
 		<uni-goods-nav :fill="true"  :options="options" :buttonGroup="buttonGroup"  @click="onClick" @buttonClick="buttonClick" />
+		<view class="show-box" :class="showPoster ? '' : 'hide'" id="post-box" data-loaded="0">
+			<!-- canvas浏览，点击生成海报先绘画成canvas，然后canvas再储存为图片 -->
+			<view :class="showSave ? 'hide' : ''">
+				<canvas canvas-id="shareCanvas" id="shareCanvas" width="300" height="400" class="poster"></canvas>
+				<view class="iconfont icon-cuowu close" :class="showPoster ? '' : 'hide'" @click='hiddenShare'>x</view>
+				<view class="canvas-img"></view>
+			</view>
+			<view :class="showSave ? '' : 'hide'">
+				<img style="width: 100%;" :src="posterImg" />
+			</view>
+			<view class="save">{{showSave ? '长按图片保存到相册' : '正在生成...'}}</view>
+			
+		</view>
+		<view class='maskLayer' :class="showPoster ? '' : 'hide'" @click='hiddenShare'></view>
 	</view>
 </template>
 
@@ -112,7 +124,10 @@
 						backgroundColor: '#ffa200',
 						color: '#fff'
 					}
-				]     
+				],
+				showPoster:false,
+				showSave:false,
+				posterImg:''
 	        }
 	    },
 	    onLoad(option) {
@@ -327,7 +342,244 @@
 					url:'/pages/user/vipbuy'
 				})
 			},
+			//画海报
+			paintPoster() {
+				const _this = this
+				_this.showPoster = true;
+				if (this.isPosted) {
+					_this.showShare = false;
+					_this.showSave = true;
+					return false;
+				}
+				var goods_name = this.product ? this.product.name: '以墨文化';
+				var productImage = this.product ? this.product.cover[0] : '';
+				var qrcode = "http://ymwh.qzlhslgy.com/site_code.png";
+				if (!goods_name || !productImage) {
+					uni.showToast({
+						title: "分享信息正在加载，请稍后重试",
+						icon:'loading'
+					})
+					return false;
+				}
+				uni.showLoading({
+					title: '生成图片中~',
+					mask: true
+				})
+				_this.$data.showShare = false;
+				_this.isShare = true
+				const wxGetImageInfo = _this.promisify(uni.getImageInfo)
+				Promise.all([
+					wxGetImageInfo({
+						src: productImage
+					}),
+					wxGetImageInfo({
+						src: qrcode
+					})
+				]).then(res => {
+					var sWidth = uni.getSystemInfoSync().windowWidth;
+					var sHeight = uni.getSystemInfoSync().windowHeight;
+					const ctx = uni.createCanvasContext('shareCanvas');
+					var width = parseInt(sWidth * 0.8);
+					var height = parseInt(sHeight * 0.8);
+					//二维码  必须先画一张图片然后才能填充背景，不知道为什么
+					ctx.drawImage(res[1].path, 20, width + 40, 90, 90);
+					//画布白色背景
+					ctx.setFillStyle('white')
+					ctx.fillRect(0, 0, width, height)
+					
+					
+					//网站标题
+					ctx.setFontSize(14);
+					ctx.setFillStyle('#ff6600');
+					var num = parseInt((width - 110) / 14) * 2;
+					var desc =  '以墨文化';
+					var rs = _this.textByteLength(desc, num);
+					rs[1].forEach((item, index) => {
+						ctx.fillText(item, 20, 30 + 20 * index);
+					})
+					//商品图片
+					ctx.drawImage(res[0].path, 20, 50, width, width - 40);
+					//商品名称
+					ctx.setFontSize(14);
+					ctx.setFillStyle('#333');
+					var num = parseInt((width - 40) / 14) * 2
+					var rs = _this.textByteLength(goods_name, num);
+					var baseHeight = width+40;
+					rs[1].forEach((item, index) => {
+						ctx.fillText(item, 20, baseHeight + 20 * index);
+					})
+					//价格
+					ctx.setFontSize(12);
+					ctx.setFillStyle('#ff6600');
+					var num = parseInt((width - 40) / 14) * 2
+					var rs = _this.textByteLength("￥", num);
+					var baseHeight = width+80;
+					rs[1].forEach((item, index) => {
+						ctx.fillText(item, 20, baseHeight + 20 * index);
+					})
+					//价格
+					ctx.setFontSize(16);
+					ctx.setFillStyle('#ff6600');
+					var num = parseInt((width - 40) / 14) * 2
+					var rs = _this.textByteLength(this.product?this.product.real_price:'', num);
+					var baseHeight = width+80;
+					rs[1].forEach((item, index) => {
+						ctx.fillText(item, 30, baseHeight + 20 * index);
+					})
+					//原价
+					ctx.setFontSize(12);
+					ctx.setFillStyle('#999');
+					var num = parseInt((width - 40) / 14) * 2
+					var market = this.product?this.product.market_price:'';
+					market = '原价：'+ market;
+					var rs = _this.textByteLength(market, num);
+					var baseHeight = width+80;
+					rs[1].forEach((item, index) => {
+						ctx.fillText(item, 90, baseHeight + 20 * index);
+					})
+					//二维码
+					ctx.drawImage(res[1].path, 120, width + 100, 100, 100);
+					//描述
+					// ctx.setFontSize(14);
+					// ctx.setFillStyle('#ff6600');
+					// var num = parseInt((width - 110) / 14) * 2;
+					// var desc = _this.configData ? _this.configData.share_desc : '课程火热抢购中';
+					// var rs = _this.textByteLength(desc, num);
+					// var baseHeight = width+100;
+					// rs[1].forEach((item, index) => {
+					// 	ctx.fillText(item, 115, baseHeight + 20 * index);
+					// })
+					
+					
+					ctx.draw(true, function() {
 			
+						// 不延迟图片可能会是半透明状态
+						setTimeout(function() {
+							//canvas转为图片
+							uni.canvasToTempFilePath({
+								x: 0,
+								y: 0,
+								// width: 375,
+								// height: 600,
+								// destWidth: 750 * 750 / uni.getSystemInfoSync().windowWidth, //防止图片模糊
+								// destHeight: 1200 * 750 / uni.getSystemInfoSync().windowWidth,
+								canvasId: 'shareCanvas',
+								success(res) {
+									_this.isShare = false
+									_this.isPosted = true;
+									_this.showSave = true;
+									console.log(_this.showSave);
+									_this.posterImg = res.tempFilePath;
+									
+								},
+								fail(res){
+									
+									console.log(res);
+									uni.showToast({
+										title:'海报生成失败'
+									})
+								},complete(res) {
+									uni.hideLoading();
+									console.log(res);
+								}
+							})
+						}, 1000)
+					})
+				})
+			},
+			promisify: api => {
+			
+				//return一个匿名函数 options对象中是src图片路径传入的路径
+			
+				return (options) => {
+			
+					return new Promise((resolve, reject) => {
+			
+						const extras = {
+			
+							success: resolve,
+			
+							fail: reject
+			
+						}
+			
+						//调用api api中options是传入的图片路径，extras是api执行的成功和失败的函数
+			
+						api({ ...options,
+							...extras
+						})
+			
+					})
+			
+				}
+			
+			},
+			//保存图片
+			saveImage() {
+			
+				const _this = this
+			
+				uni.showLoading({
+			
+					title: '保存中~'
+			
+				})
+			
+				uni.saveImageToPhotosAlbum({
+			
+					filePath: _this.posterImg,
+			
+					success() {
+			
+						uni.showToast({
+			
+							title: '保存成功！',
+			
+							icon: 'none'
+			
+						})
+			
+					},
+			
+					complete() {
+			
+						uni.hideLoading()
+			
+					}
+			
+				})
+			},
+			// text为传入的文本  num为单行显示的字节长度
+			textByteLength: function(text, num) {
+				let strLength = 0; // text byte length
+				let rows = 1;
+				let str = 0;
+				let arr = [];
+				for (let j = 0; j < text.length; j++) {
+					if (text.charCodeAt(j) > 255) {
+						strLength += 2;
+						if (strLength > rows * num) {
+							strLength++;
+							arr.push(text.slice(str, j));
+							str = j;
+							rows++;
+						}
+					} else {
+						strLength++;
+						if (strLength > rows * num) {
+							arr.push(text.slice(str, j));
+							str = j;
+							rows++;
+						}
+					}
+				}
+				arr.push(text.slice(str, text.length));
+				return [strLength, arr, rows] //  [处理文字的总字节长度，每行显示内容的数组，行数]
+			},
+			//画海报
+			getSharePoster: function() {
+				this.paintPoster();
+			}
 		}
 	}
 </script>
@@ -349,4 +601,51 @@
 	.attr-line span{margin-right: 40rpx;}
 	.open-vip{background-color: #f9e5bf;padding: 20rpx 3%;display: flex;justify-content: space-between;}
 	.border-top{border-top:1px solid $uni-border-color;margin-top: 20rpx;}
+	.share-icon{position: fixed;right: 0; top:650rpx;background-color: rgba(#ececec,0.6);padding: 10rpx 20rpx;border-top-left-radius: 30rpx;border-bottom-left-radius: 30rpx;}
+	/*分享*/
+	
+	#post-box {
+		width: 80%;
+		left: 10%;
+		top: 10%;
+		background-color: #fff;
+		position: fixed;
+		z-index: 1001;
+	}
+	.poster {
+		width: 600rpx;
+		height: 900rpx;
+		border: 1px solid none;
+		margin: 0 auto;
+	}
+	.maskLayer {
+		left: 0;
+		z-index: 1000;
+	}
+	.close {
+		text-align: right;
+		color: #999;
+		font-size: 22px;
+		background-color: #fff;
+		border: 1px solid #ececec;
+		position: absolute;
+		top: -17px;
+		right: -17px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		border-radius: 50%;
+		text-align: center;
+	}
+	
+	.save {
+		background-color: #f9f9f9;
+		color: #333;
+		text-align: center;
+		border-radius: 30px;
+		padding: 15px 0;
+		margin-top: 10px;
+		line-height: 1;
+		font-size: 28rpx;
+	}
 </style>
