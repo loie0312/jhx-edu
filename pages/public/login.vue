@@ -163,7 +163,10 @@
 					cheRes = this.$mGraceChecker.check(this.reqBody, this.$mFormRule.loginByCodeRule);
 				}
 				if (!cheRes) {
-					this.$mHelper.toast(this.$mGraceChecker.error);
+					uni.showToast({
+						icon:'none',
+						title:this.$mGraceChecker.error
+					})
 					return;
 				}
 				/*  #ifdef  APP-PLUS  */
@@ -194,7 +197,8 @@
 					uni.setStorageSync('refreshToken', res.data.refresh_token);
 					uni.setStorageSync('userInfo', userInfo);
 					//绑定
-					if (this.userInfo) {
+					console.log(this.userInfo);
+					if (this.userInfo && (this.userInfo.openid || this.userInfo.openId)) {
 						const oauthClientParams = {}
 						/*  #ifdef MP-WEIXIN */
 						oauthClientParams.oauth_client = 'wechatMp';

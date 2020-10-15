@@ -15,24 +15,32 @@
 					</view>
 				</view>
 		</view>
+		<uni-load-more :status="status"></uni-load-more>
 	</view>
 </template>
 
 <script>
+	import uniLoadMore from "@/components/uni-load-more/uni-load-more.vue"
 	import moment from '@/utils/moment';
 	/**
 	 * JhxOrderList 订单列表
 	 * @description 订单列表组件
 	 */
 	export default {
+		components: {
+			uniLoadMore
+		},
 		name: 'JhxOrderList',
 		props: {
 			orderList:Array,
-			column:Number
+			column:Number,
+			status:{
+				type:String,
+				value:''
+			}
 		},
 		data() {
 			return {
-				
 			}
 		},
 		created() {

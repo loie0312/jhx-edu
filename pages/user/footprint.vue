@@ -116,7 +116,7 @@
 				}
 				user.footPrint(params, (data) => {
 					this.loading = false;
-					this.loadingType = data.data.length === 10 ? 'more' : 'nomore';
+					this.loadingType = data.data.length === 10 ? 'more' : 'noMore';
 					this.footPrintList = [...this.footPrintList, ...data.data];
 				})
 			},

@@ -1,5 +1,5 @@
 <template>
-	<jhx-order-list  :orderList="orderList" :column="1"></jhx-order-list>
+	<jhx-order-list  :orderList="orderList" :column="1" :status="status"></jhx-order-list>
 </template>
 
 <script>
@@ -12,6 +12,7 @@
 	    data() {
 	        return {
 				orderList:[], 
+				status:"more"
 	        }
 	    },
 	    onLoad() {
@@ -22,8 +23,14 @@
 			getOrder:function(){
 				var that = this;
 				var param = {pay_status:1};
+				this.status = 'loading';
 				order.list(param,(data) => {
 					that.$data.orderList = that.$data.orderList.concat(data.data);
+					if(data.data.length < 10){
+						that.status = 'noMore';
+					}else{
+						that.status = 'more';
+					}
 				});
 			},			
 		},

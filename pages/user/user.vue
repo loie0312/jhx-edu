@@ -16,7 +16,7 @@
 				<view class="num">0</view>
 				<view class="text">优惠券</view>
 			</view>
-			<view>
+			<view @click="goto('/pages/user/distribute')">
 				<view class="num">{{userInfo.account.fenxiao_money}}</view>
 				<view class="text">我的佣金</view>
 			</view>
@@ -51,6 +51,7 @@
 			    <text class="text">联系客服</text>
 			</uni-grid-item>
 		</uni-grid>
+		<view class="copyright" @click="goto('/pages/copyright/support')">版权所有：广西几何线科技有限公司</view>
 	</view>
 </template>
 <script>
@@ -101,4 +102,5 @@
 	.uni-grid-wrap{background-color: #fff;margin-top: 20rpx;}
 	.uni-grid-item{text-align: center;align-items: center;}
 	.uni-grid-item .iconfont{font-size: 50rpx;margin-bottom: 20rpx;}
+	.copyright{color: #999;text-align: center;margin-top: 40rpx;}
 </style>

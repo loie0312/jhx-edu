@@ -579,7 +579,17 @@
 			//画海报
 			getSharePoster: function() {
 				this.paintPoster();
-			}
+			},
+			/**
+			 * 隐藏分享弹框
+			 */
+			hiddenShare: function() {
+				this.$data.showShare = false;
+				this.$data.showFriend = false;
+				this.$data.showPoster = false;
+				this.showSave = false;
+				uni.hideLoading();
+			},
 		}
 	}
 </script>

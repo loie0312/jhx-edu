@@ -21,6 +21,7 @@
 		</view>
 		<!-- #endif -->
 		<text class="uni-load-more__text" :style="{color: color}" v-if="status === 'more'">{{contentText.contentdown}}</text>
+		<text class="uni-load-more__text" :style="{color: color}" v-else-if="status === 'noMore'">{{contentText.contentnomore}}</text>
 		<text class="uni-load-more__text" :style="{color: color}" v-else-if="status === 'loading'">{{contentText.contentrefresh}}</text>
 	</view>
 </template>
@@ -68,7 +69,7 @@
 			},
 			color: {
 				type: String,
-				default: '#777777'
+				default: '#999'
 			},
 			contentText: {
 				type: Object,
@@ -133,6 +134,7 @@
 
 	.uni-load-more__text {
 		font-size: 15px;
+		margin-top: 20rpx;
 	}
 
 	.uni-load-more__img {
