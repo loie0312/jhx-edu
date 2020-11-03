@@ -17,7 +17,7 @@
 	import  payment  from '@/utils/payment.js';
 	import { Config } from '@/config.js';
 	export default {
-		components: {},
+		components: {jhxOrderProductList},
 	    data() {
 	        return {
 				products:[],

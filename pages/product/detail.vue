@@ -21,7 +21,7 @@
 				<span class="market-price">原价{{product.market_price}}</span>
 				<!--  分享 -->
 				<view class="share-section" v-if="product.name">
-					<view class="share-icon" @click="paintPoster">
+					<view class="share-icon" @click="getSharePoster">
 						海报
 					</view>
 					<!-- #ifdef MP-WEIXIN -->
@@ -61,13 +61,14 @@
 		<view class="show-box" :class="showPoster ? '' : 'hide'" id="post-box" data-loaded="0">
 			<!-- canvas浏览，点击生成海报先绘画成canvas，然后canvas再储存为图片 -->
 			<view :class="showSave ? 'hide' : ''">
-				<canvas canvas-id="shareCanvas" id="shareCanvas" width="300" height="400" class="poster"></canvas>
-				<view class="iconfont icon-cuowu close" :class="showPoster ? '' : 'hide'" @click='hiddenShare'>x</view>
+				<canvas canvas-id="shareCanvas" id="shareCanvas" width="300" height="500" class="poster"></canvas>
+				
 				<view class="canvas-img"></view>
 			</view>
-			<view :class="showSave ? '' : 'hide'">
+			<view :class="showSave ? 'img' : 'hide'">
 				<img style="width: 100%;" :src="posterImg" />
 			</view>
+			<view class="iconfont icon-cuowu close" :class="showPoster ? '' : 'hide'" @click='hiddenShare'>x</view>
 			<view class="save">{{showSave ? '长按图片保存到相册' : '正在生成...'}}</view>
 			
 		</view>
@@ -87,12 +88,13 @@
 	import moment from '@/utils/moment';
 	import uniGoodsNav from '@/components/uni-goods-nav/uni-goods-nav.vue';
 	import  payment  from '@/utils/payment.js';
+	import QRCode from "@/utils/wxqrcode.js" // 二维码生成器
 	// #ifdef H5
 	var jweixin = require('jweixin-module');
 	// #endif
 	import { Config } from '../../config.js';
 	export default {
-		components: {uniIcons,uniGoodsNav},
+		components: {uniIcons,uniGoodsNav,jhxProductContent},
 	    data() {
 	        return {
 				page : 1, // 目录页码
@@ -127,7 +129,9 @@
 				],
 				showPoster:false,
 				showSave:false,
-				posterImg:''
+				posterImg:'',
+				qrcodeImg:'',
+				productImage:''
 	        }
 	    },
 	    onLoad(option) {
@@ -353,7 +357,6 @@
 				}
 				var goods_name = this.product ? this.product.name: '以墨文化';
 				var productImage = this.product ? this.product.cover[0] : '';
-				var qrcode = "http://ymwh.qzlhslgy.com/site_code.png";
 				if (!goods_name || !productImage) {
 					uni.showToast({
 						title: "分享信息正在加载，请稍后重试",
@@ -361,33 +364,27 @@
 					})
 					return false;
 				}
-				uni.showLoading({
-					title: '生成图片中~',
-					mask: true
-				})
+				// uni.showLoading({
+				// 	title: '生成图片中~',
+				// 	mask: true
+				// })
 				_this.$data.showShare = false;
 				_this.isShare = true
 				const wxGetImageInfo = _this.promisify(uni.getImageInfo)
 				Promise.all([
 					wxGetImageInfo({
 						src: productImage
-					}),
-					wxGetImageInfo({
-						src: qrcode
 					})
 				]).then(res => {
 					var sWidth = uni.getSystemInfoSync().windowWidth;
 					var sHeight = uni.getSystemInfoSync().windowHeight;
 					const ctx = uni.createCanvasContext('shareCanvas');
-					var width = parseInt(sWidth * 0.8);
-					var height = parseInt(sHeight * 0.8);
-					//二维码  必须先画一张图片然后才能填充背景，不知道为什么
-					ctx.drawImage(res[1].path, 20, width + 40, 90, 90);
+					var width = parseInt(sWidth*0.8);
+					var height = 500;
+					ctx.drawImage(this.qrcodeImg, 100, width + 80, 100, 100);
 					//画布白色背景
-					ctx.setFillStyle('white')
-					ctx.fillRect(0, 0, width, height)
-					
-					
+					ctx.setFillStyle('#FFFFFF')
+					ctx.fillRect(0, 0, width, height);
 					//网站标题
 					ctx.setFontSize(14);
 					ctx.setFillStyle('#ff6600');
@@ -398,13 +395,13 @@
 						ctx.fillText(item, 20, 30 + 20 * index);
 					})
 					//商品图片
-					ctx.drawImage(res[0].path, 20, 50, width, width - 40);
+					ctx.drawImage(_this.productImage, 20, 50, width-40, width - 60);
 					//商品名称
 					ctx.setFontSize(14);
 					ctx.setFillStyle('#333');
 					var num = parseInt((width - 40) / 14) * 2
 					var rs = _this.textByteLength(goods_name, num);
-					var baseHeight = width+40;
+					var baseHeight = width+20;
 					rs[1].forEach((item, index) => {
 						ctx.fillText(item, 20, baseHeight + 20 * index);
 					})
@@ -413,7 +410,7 @@
 					ctx.setFillStyle('#ff6600');
 					var num = parseInt((width - 40) / 14) * 2
 					var rs = _this.textByteLength("￥", num);
-					var baseHeight = width+80;
+					var baseHeight = width+60;
 					rs[1].forEach((item, index) => {
 						ctx.fillText(item, 20, baseHeight + 20 * index);
 					})
@@ -422,7 +419,7 @@
 					ctx.setFillStyle('#ff6600');
 					var num = parseInt((width - 40) / 14) * 2
 					var rs = _this.textByteLength(this.product?this.product.real_price:'', num);
-					var baseHeight = width+80;
+					var baseHeight = width+60;
 					rs[1].forEach((item, index) => {
 						ctx.fillText(item, 30, baseHeight + 20 * index);
 					})
@@ -433,12 +430,12 @@
 					var market = this.product?this.product.market_price:'';
 					market = '原价：'+ market;
 					var rs = _this.textByteLength(market, num);
-					var baseHeight = width+80;
+					var baseHeight = width+60;
 					rs[1].forEach((item, index) => {
 						ctx.fillText(item, 90, baseHeight + 20 * index);
 					})
-					//二维码
-					ctx.drawImage(res[1].path, 120, width + 100, 100, 100);
+					//二维码 
+					ctx.drawImage(this.qrcodeImg, 100, width + 80, 100, 100);
 					//描述
 					// ctx.setFontSize(14);
 					// ctx.setFillStyle('#ff6600');
@@ -468,19 +465,16 @@
 									_this.isShare = false
 									_this.isPosted = true;
 									_this.showSave = true;
-									console.log(_this.showSave);
 									_this.posterImg = res.tempFilePath;
 									
 								},
 								fail(res){
-									
 									console.log(res);
 									uni.showToast({
 										title:'海报生成失败'
 									})
 								},complete(res) {
 									uni.hideLoading();
-									console.log(res);
 								}
 							})
 						}, 1000)
@@ -578,7 +572,7 @@
 			},
 			//画海报
 			getSharePoster: function() {
-				this.paintPoster();
+				this._makeCode("http://wx.qzlhslgy.com/pages/product/detail?id="+this.id);
 			},
 			/**
 			 * 隐藏分享弹框
@@ -590,6 +584,37 @@
 				this.showSave = false;
 				uni.hideLoading();
 			},
+			_makeCode(content) {
+				var that = this;
+				let img = QRCode.createQrCodeImg(content, {  
+				     size: parseInt(110)//二维码大小  
+				})
+				this.qrcodeImg = img;
+				let image = new Image();
+				// 解决跨域 Canvas 污染问题
+				image.setAttribute("crossOrigin", "anonymous");
+				image.src =  this.product ? this.product.cover[0] : '';
+				uni.showLoading({
+					title:'正在加载图片...'
+				})
+				image.onload=function(){
+					var base64=that.getBase64Image(image);
+					that.productImage = base64;
+					uni.hideLoading();
+					that.paintPoster();
+				}
+				
+			},
+			getBase64Image:function(img){
+				var canvas=document.createElement("canvas");
+				canvas.width=img.width;
+				canvas.height=img.height;
+				var ctx=canvas.getContext("2d");
+				ctx.drawImage(img,0,0,img.width,img.height);
+				var ext=img.src.substring(img.src.lastIndexOf(".")+1).toLowerCase();
+				var dataUrl=canvas.toDataURL("images/"+ext);
+				return dataUrl;
+			}
 		}
 	}
 </script>
@@ -617,16 +642,17 @@
 	#post-box {
 		width: 80%;
 		left: 10%;
-		top: 10%;
+		top: 5%;
 		background-color: #fff;
 		position: fixed;
 		z-index: 1001;
 	}
 	.poster {
-		width: 600rpx;
-		height: 900rpx;
+		width: 300px;
+		height: 500px;
 		border: 1px solid none;
 		margin: 0 auto;
+		background-color: #fff;
 	}
 	.maskLayer {
 		left: 0;

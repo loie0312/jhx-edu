@@ -8,7 +8,7 @@
 	import {Order} from '@/model/order.js';
 	var order = new Order();
 	export default {
-		components: {tabControl},
+		components: {tabControl,jhxOrderList},
 	    data() {
 	        return {
 				orderList:[], 
