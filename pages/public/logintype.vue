@@ -13,7 +13,7 @@
 		</view>
 		<view class="footer">
 			登录表示同意
-			<text class="protocol" @tap="handleRfProtocolPopupShow">用户协议</text>
+			<text class="protocol" @tap="goto('/pages/article/detail?id=1')">用户协议</text>
 		</view>
 	</view>
 </template>
@@ -23,6 +23,7 @@
 		Public
 	} from '@/model/public.js';
 	var publicModel = new Public();
+		import  payment  from '@/utils/payment.js';
 	/**
 	 * @des 登录类型
 	 *
@@ -41,7 +42,7 @@
 		},
 		onLoad(options) {
 			/*  #ifdef H5  */
-			if (this.$mPayment.isWechat()) {
+			if (payment.isWechat()) {
 				this.isAuthLoginShow = true;
 			}
 			/*  #endif  */

@@ -1,10 +1,13 @@
 <template>
 	<view>
 		<view class="center-head">
-			<view><image class="avatar" :src="userInfo.head_portrait"></image></view>
+			<view>
+				<image class="avatar" :src="userInfo.head_portrait ? userInfo.head_portrait : '/static/avatar.png'"></image>
+				
+				</view>
 			<view class="name">
-				<view>{{userInfo.nickname}}</view>
-				<view class="edit">编辑个人资料</view>
+				<view>{{userInfo.nickname ? userInfo.nickname : userInfo.mobile}}</view>
+				<view class="edit" @click="">编辑个人资料</view>
 			</view>
 		</view>
 		<view class="account">
@@ -51,7 +54,7 @@
 			    <text class="text">联系客服</text>
 			</uni-grid-item>
 		</uni-grid>
-		<view class="copyright" @click="goto('/pages/copyright/support')">版权所有：广西几何线科技有限公司</view>
+		<view class="copyright" @click="goto('/pages/copyright/support')">技术支持：广西几何线科技有限公司</view>
 	</view>
 </template>
 <script>
@@ -63,16 +66,26 @@
 		components: {uniGrid,uniGridItem},
 		data() {
 		   return {
-				userInfo:{},
+				userInfo:{
+					account:{
+						fenxiao_money:0
+					}
+				},
 				tools:[]
 		   }
 		},
 		onLoad() {
-			this.$data.userInfo = uni.getStorageSync('userInfo');
+			var cacheUser =  uni.getStorageSync('userInfo');
+			if(cacheUser && cacheUser.id){
+				this.$data.userInfo = cacheUser
+			}
 			this.index();
 		},
 		onPullDownRefresh() {
-			this.$data.userInfo = uni.getStorageSync('userInfo');
+			var cacheUser =  uni.getStorageSync('userInfo');
+			if(cacheUser && cacheUser.id){
+				this.$data.userInfo = cacheUser
+			}
 			this.index();
 		},
 		onShow() {
@@ -84,7 +97,10 @@
 				var that = this;
 				var param = {};
 				user.index(param,(data) => {
-					this.$data.userInfo = data.data;
+					if(data){
+						that.$data.userInfo = data.data;
+					}
+					
 					uni.stopPullDownRefresh();
 				});
 			},

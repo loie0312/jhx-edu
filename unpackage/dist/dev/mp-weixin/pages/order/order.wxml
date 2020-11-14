@@ -1,1 +1,1 @@
-<jhx-order-list vue-id="3c50aaa2-1" orderList="{{orderList}}" column="{{1}}" bind:__l="__l"></jhx-order-list>
+<jhx-order-list vue-id="3c50aaa2-1" orderList="{{orderList}}" column="{{1}}" status="{{status}}" bind:__l="__l"></jhx-order-list>

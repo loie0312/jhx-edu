@@ -71,4 +71,106 @@
 .bgfff {
   background-color: #fff;
 }
+.shop-box {
+  padding: 20rpx 4%;
+  background-color: #fff;
+  margin-bottom: 15rpx;
+  position: relative;
+}
+.shop_info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.shop_logo {
+  width: 130rpx;
+  height: 130rpx;
+  margin-right: 30rpx;
+}
+.shop_name {
+  margin: 5rpx 0;
+  font-weight: bold;
+}
+.shop_address {
+  color: #666;
+  font-size: 26rpx;
+  margin-top: 5rpx;
+}
+.line {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  color: #666;
+}
+.tel {
+  margin-right: 20rpx;
+}
+.call {
+  color: #999;
+  border: 1px solid #999;
+  padding: 4rpx 10rpx;
+  font-size: 24rpx;
+  margin-left: 30rpx;
+  border-radius: 10rpx;
+}
+.share {
+  position: absolute;
+  top: 20rpx;
+  right: 4%;
+  border: 1px solid #ececec;
+  box-shadow: #ececec 0px 0px 2px 1px;
+  height: 70rpx;
+  width: 70rpx;
+  line-height: 70rpx;
+  border-radius: 50%;
+  text-align: center;
+  color: #4fd216;
+}
+/*分享*/
+#post-box {
+  width: 80%;
+  left: 10%;
+  top: 10%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 1001;
+}
+.poster {
+  width: 600rpx;
+  height: 900rpx;
+  border: 1px solid none;
+  margin: 0 auto;
+}
+.maskLayer {
+  left: 0;
+  z-index: 1000;
+}
+.close {
+  text-align: right;
+  color: #999;
+  font-size: 22px;
+  background-color: #fff;
+  border: 1px solid #ececec;
+  position: absolute;
+  top: -17px;
+  right: -17px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+}
+.save {
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+  border-radius: 30px;
+  padding: 15px 0;
+  margin-top: 10px;
+  line-height: 1;
+  font-size: 28rpx;
+}
 

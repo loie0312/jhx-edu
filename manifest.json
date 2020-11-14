@@ -58,7 +58,7 @@
         }
     },
     "h5" : {
-        "title" : "jhx",
+        "title" : "以墨文化",
         "domain" : "wx.qzlhslgy.com",
         "router" : {
             "mode" : "history"

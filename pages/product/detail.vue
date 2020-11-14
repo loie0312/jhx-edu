@@ -380,8 +380,8 @@
 					var sHeight = uni.getSystemInfoSync().windowHeight;
 					const ctx = uni.createCanvasContext('shareCanvas');
 					var width = parseInt(sWidth*0.8);
-					var height = 500;
-					ctx.drawImage(this.qrcodeImg, 100, width + 80, 100, 100);
+					var height = 450;
+					ctx.drawImage(this.qrcodeImg, 100, width*0.66 + 100, 100, 100);
 					//画布白色背景
 					ctx.setFillStyle('#FFFFFF')
 					ctx.fillRect(0, 0, width, height);
@@ -395,13 +395,13 @@
 						ctx.fillText(item, 20, 30 + 20 * index);
 					})
 					//商品图片
-					ctx.drawImage(_this.productImage, 20, 50, width-40, width - 60);
+					ctx.drawImage(_this.productImage, 20, 50, width-40, (width-40)*0.66);
 					//商品名称
 					ctx.setFontSize(14);
 					ctx.setFillStyle('#333');
 					var num = parseInt((width - 40) / 14) * 2
 					var rs = _this.textByteLength(goods_name, num);
-					var baseHeight = width+20;
+					var baseHeight = width*0.66+40;
 					rs[1].forEach((item, index) => {
 						ctx.fillText(item, 20, baseHeight + 20 * index);
 					})
@@ -410,7 +410,7 @@
 					ctx.setFillStyle('#ff6600');
 					var num = parseInt((width - 40) / 14) * 2
 					var rs = _this.textByteLength("￥", num);
-					var baseHeight = width+60;
+					var baseHeight = width*0.66+80;
 					rs[1].forEach((item, index) => {
 						ctx.fillText(item, 20, baseHeight + 20 * index);
 					})
@@ -419,7 +419,7 @@
 					ctx.setFillStyle('#ff6600');
 					var num = parseInt((width - 40) / 14) * 2
 					var rs = _this.textByteLength(this.product?this.product.real_price:'', num);
-					var baseHeight = width+60;
+					var baseHeight = width*0.66+80;
 					rs[1].forEach((item, index) => {
 						ctx.fillText(item, 30, baseHeight + 20 * index);
 					})
@@ -430,12 +430,12 @@
 					var market = this.product?this.product.market_price:'';
 					market = '原价：'+ market;
 					var rs = _this.textByteLength(market, num);
-					var baseHeight = width+60;
+					var baseHeight = width*0.66+80;
 					rs[1].forEach((item, index) => {
 						ctx.fillText(item, 90, baseHeight + 20 * index);
 					})
 					//二维码 
-					ctx.drawImage(this.qrcodeImg, 100, width + 80, 100, 100);
+					ctx.drawImage(this.qrcodeImg, 100, width*0.66 + 100, 100, 100);
 					//描述
 					// ctx.setFontSize(14);
 					// ctx.setFillStyle('#ff6600');

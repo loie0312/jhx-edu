@@ -24,10 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-page.data-v-3817d22b {
+page.data-v-6ebc7e42 {
   background: #ffffff;
 }
-.footprint .rf-list-item.data-v-3817d22b {
+.footprint .rf-list-item.data-v-6ebc7e42 {
   padding: 10rpx 0;
   margin: 0;
   display: -webkit-box;
@@ -37,25 +37,25 @@ page.data-v-3817d22b {
   -webkit-align-items: center;
           align-items: center;
 }
-.footprint .left.data-v-3817d22b {
+.footprint .left.data-v-6ebc7e42 {
   padding: 20rpx 20rpx 10rpx;
 }
-.footprint .left .image.data-v-3817d22b {
+.footprint .left .image.data-v-6ebc7e42 {
   width: 200rpx;
   height: 133rpx;
 }
-.footprint .mid.data-v-3817d22b {
+.footprint .mid.data-v-6ebc7e42 {
   width: calc(100vw - 350rpx);
   margin: 0 10rpx;
 }
-.footprint .mid .title.data-v-3817d22b {
+.footprint .mid .title.data-v-6ebc7e42 {
   height: 77rpx;
   font-size: 28rpx;
   color: #333;
   padding: 20rpx 0 0 0;
   font-weight: normal;
 }
-.footprint .mid .data.data-v-3817d22b {
+.footprint .mid .data.data-v-6ebc7e42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -66,24 +66,24 @@ page.data-v-3817d22b {
   font-size: 24rpx;
   color: #999;
 }
-.footprint .mid .data .item.data-v-3817d22b {
+.footprint .mid .data .item.data-v-6ebc7e42 {
   height: 50rpx;
   line-height: 50rpx;
 }
-.footprint .mid .data .iconfont.data-v-3817d22b {
+.footprint .mid .data .iconfont.data-v-6ebc7e42 {
   margin-right: 10rpx;
 }
-.footprint .mid .state-wrapper.data-v-3817d22b {
+.footprint .mid .state-wrapper.data-v-6ebc7e42 {
   height: 48rpx;
 }
-.footprint .mid .state-wrapper .state.data-v-3817d22b {
+.footprint .mid .state-wrapper .state.data-v-6ebc7e42 {
   margin: 5rpx 0;
   opacity: 0.8;
   font-size: 24rpx;
   padding: 4rpx 10rpx;
   border-radius: 6rpx;
 }
-.footprint .mid .bottom.data-v-3817d22b {
+.footprint .mid .bottom.data-v-6ebc7e42 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -96,11 +96,11 @@ page.data-v-3817d22b {
           align-items: center;
   font-size: 24rpx;
 }
-.footprint .mid .bottom .price.data-v-3817d22b {
+.footprint .mid .bottom .price.data-v-6ebc7e42 {
   color: #ef7c38;
   font-size: 32rpx;
 }
-.footprint .mid .bottom .price.data-v-3817d22b:before {
+.footprint .mid .bottom .price.data-v-6ebc7e42:before {
   content: '￥';
   font-size: 24rpx;
 }

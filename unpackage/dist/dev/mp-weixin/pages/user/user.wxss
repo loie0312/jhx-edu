@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.center-head.data-v-6ca63e1a {
+.center-head.data-v-80842834 {
   background-color: #48434d;
   display: -webkit-box;
   display: -webkit-flex;
@@ -32,22 +32,22 @@
   padding: 80rpx 4%;
   color: #fff;
 }
-.avatar.data-v-6ca63e1a {
+.avatar.data-v-80842834 {
   width: 90rpx;
   height: 90rpx;
   border-radius: 50%;
 }
-.name.data-v-6ca63e1a {
+.name.data-v-80842834 {
   margin-left: 30rpx;
 }
-.edit.data-v-6ca63e1a {
+.edit.data-v-80842834 {
   font-size: 20rpx;
   border: 1px solid #f1f1f1;
   border-radius: 30px;
   padding: 4rpx 10rpx;
   margin-top: 15rpx;
 }
-.account.data-v-6ca63e1a {
+.account.data-v-80842834 {
   background-color: #fff;
   padding: 40rpx 4%;
   display: -webkit-box;
@@ -58,26 +58,31 @@
           justify-content: space-between;
   text-align: center;
 }
-.account .num.data-v-6ca63e1a {
+.account .num.data-v-80842834 {
   font-weight: bold;
   font-size: 32rpx;
 }
-.account .text.data-v-6ca63e1a {
+.account .text.data-v-80842834 {
   color: #666;
   margin-top: 10rpx;
 }
-.uni-grid-wrap.data-v-6ca63e1a {
+.uni-grid-wrap.data-v-80842834 {
   background-color: #fff;
   margin-top: 20rpx;
 }
-.uni-grid-item.data-v-6ca63e1a {
+.uni-grid-item.data-v-80842834 {
   text-align: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
 }
-.uni-grid-item .iconfont.data-v-6ca63e1a {
+.uni-grid-item .iconfont.data-v-80842834 {
   font-size: 50rpx;
   margin-bottom: 20rpx;
+}
+.copyright.data-v-80842834 {
+  color: #999;
+  text-align: center;
+  margin-top: 40rpx;
 }
 

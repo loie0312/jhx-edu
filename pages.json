@@ -146,6 +146,24 @@
 				  }
 				}
 			}
+		},
+		{
+			"path": "pages/article/detail",
+			"style": {
+				"navigationBarTitleText": "用户协议",
+				"h5": {
+					"titleNView": true
+				},
+				"app-plus": {
+				  "bounce": "none",
+				  "titleNView": false,
+				  "pullToRefresh": {
+				    "support": true,
+				    "color": "#fa436a",
+				    "style": "default"
+				  }
+				}
+			}
 		}
 	],
 	"globalStyle": {

@@ -6,7 +6,7 @@ class Public extends Base{
 	//登录
 	login(param,callback) {
 		var params = {
-		  url:'site/login',
+		  url:param.url,
 		  data:param,
 		  method:'post',
 		  sCallback:function(data){
@@ -43,6 +43,18 @@ class Public extends Base{
 	config(param,callback) {
 		var params = {
 		  url:'site/config',
+		  data:param,
+		  method:'post',
+		  sCallback:function(data){
+			callback && callback(data);
+		  }
+		}
+		this.request(params);
+	}
+	//发送短信
+	smsSend(param,callback){
+		var params = {
+		  url:'site/sms-code',
 		  data:param,
 		  method:'post',
 		  sCallback:function(data){

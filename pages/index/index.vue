@@ -62,12 +62,13 @@
 			<!-- canvas浏览，点击生成海报先绘画成canvas，然后canvas再储存为图片 -->
 			<view :class="showSave ? 'hide' : ''">
 				<canvas canvas-id="shareCanvas" id="shareCanvas" width="300" height="400" class="poster"></canvas>
-				<view class="iconfont icon-cuowu close" :class="showPoster ? '' : 'hide'" @click='hiddenShare'>x</view>
+				
 				<view class="canvas-img"></view>
 			</view>
 			<view :class="showSave ? '' : 'hide'">
 				<img style="width: 100%;" :src="posterImg" />
 			</view>
+			<view class="iconfont icon-cuowu close" :class="showPoster ? '' : 'hide'" @click='hiddenShare'>x</view>
 			<view class="save">{{showSave ? '长按图片保存到相册' : '正在生成...'}}</view>
 			
 		</view>
@@ -93,6 +94,7 @@
 	import uniGrid from "@/components/uni-grid/uni-grid.vue"
 	import jhxProductList from "@/components/jhx-product-list/jhx-product-list.vue"
 	import uniGridItem from "@/components/uni-grid-item/uni-grid-item.vue"
+	import QRCode from "@/utils/wxqrcode.js" // 二维码生成器
     export default {
 		components: {uniGrid,uniGridItem,jhxProductList},
         data() {
@@ -106,7 +108,9 @@
 				nostatus:'nostatus',
 				showPoster:false,
 				showSave:false,
-				posterImg:''
+				posterImg:'',
+				qrcodeImg:'',
+				productImage:''
             }
         },
         onLoad() {
@@ -202,6 +206,11 @@
 			},
 			//画海报
 			paintPoster() {
+				var content = "http://wx.qzlhslgy.com"
+				let img = QRCode.createQrCodeImg(content, {
+				     size: parseInt(110)//二维码大小  
+				})
+				this.qrcodeImg = img;
 				const _this = this
 				_this.showPoster = true;
 				if (this.isPosted) {
@@ -240,17 +249,17 @@
 					var width = parseInt(sWidth * 0.8);
 					var height = parseInt(sHeight * 0.8);
 					//二维码  必须先画一张图片然后才能填充背景，不知道为什么
-					ctx.drawImage(res[1].path, 20, width + 40, 90, 90);
+					ctx.drawImage(this.qrcodeImg, 20, width + 40, 90, 90);
 					//画布白色背景
 					ctx.setFillStyle('white')
 					ctx.fillRect(0, 0, width, height)
 					//商品图片
-					ctx.drawImage(res[0].path, 20, 60, width - 40, width - 40);
+					ctx.drawImage(_this.productImage, 20, 60, width - 40, width - 40);
 					//二维码 
-					ctx.drawImage(res[1].path, 20, width + 40, 90, 90);
-					//商品名称
+					ctx.drawImage(this.qrcodeImg, 20, width + 40, 90, 90);
+					//站点名称
 					ctx.setFontSize(14);
-					ctx.setFillStyle('#444444');
+					ctx.setFillStyle('#ff6600');
 					var num = parseInt((width - 40) / 14) * 2
 					var rs = _this.textByteLength(goods_name, num);
 					rs[1].forEach((item, index) => {
@@ -283,19 +292,16 @@
 									_this.isShare = false
 									_this.isPosted = true;
 									_this.showSave = true;
-									console.log(_this.showSave);
 									_this.posterImg = res.tempFilePath;
 									
 								},
 								fail(res){
-									
 									console.log(res);
 									uni.showToast({
 										title:'海报生成失败'
 									})
 								},complete(res) {
 									uni.hideLoading();
-									console.log(res);
 								}
 							})
 						}, 1000)
@@ -393,7 +399,30 @@
 			},
 			//画海报
 			getSharePoster: function() {
-				this.paintPoster();
+				var that = this;
+				let image = new Image();
+				// 解决跨域 Canvas 污染问题
+				image.setAttribute("crossOrigin", "anonymous");
+				image.src =  this.configData ? this.configData.share_cover : '';
+				uni.showLoading({
+					title:'正在加载图片...'
+				})
+				image.onload=function(){
+					var base64=that.getBase64Image(image);
+					that.productImage = base64;
+					uni.hideLoading();
+					that.paintPoster();
+				}
+			},
+			getBase64Image:function(img){
+				var canvas=document.createElement("canvas");
+				canvas.width=img.width;
+				canvas.height=img.height;
+				var ctx=canvas.getContext("2d");
+				ctx.drawImage(img,0,0,img.width,img.height);
+				var ext=img.src.substring(img.src.lastIndexOf(".")+1).toLowerCase();
+				var dataUrl=canvas.toDataURL("images/"+ext);
+				return dataUrl;
 			},
 			call:function(mobile){
 				if(!mobile){

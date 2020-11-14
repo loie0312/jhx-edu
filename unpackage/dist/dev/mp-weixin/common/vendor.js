@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
 
 var _toString = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -144,7 +144,7 @@ function queue(hooks, data) {
   for (var i = 0; i < hooks.length; i++) {
     var hook = hooks[i];
     if (promise) {
-      promise = Promise.then(wrapperHook(hook));
+      promise = Promise.resolve(wrapperHook(hook));
     } else {
       var res = hook(data);
       if (isPromise(res)) {
@@ -346,9 +346,9 @@ function upx2px(number, newDeviceWidth) {
   result = Math.floor(result + EPS);
   if (result === 0) {
     if (deviceDPR === 1 || !isIOS) {
-      return 1;
+      result = 1;
     } else {
-      return 0.5;
+      result = 0.5;
     }
   }
   return number < 0 ? -result : result;
@@ -363,7 +363,144 @@ var baseApi = /*#__PURE__*/Object.freeze({
   upx2px: upx2px,
   addInterceptor: addInterceptor,
   removeInterceptor: removeInterceptor,
-  interceptors: interceptors });
+  interceptors: interceptors });var
+
+
+EventChannel = /*#__PURE__*/function () {
+  function EventChannel(id, events) {var _this = this;_classCallCheck(this, EventChannel);
+    this.id = id;
+    this.listener = {};
+    this.emitCache = {};
+    if (events) {
+      Object.keys(events).forEach(function (name) {
+        _this.on(name, events[name]);
+      });
+    }
+  }_createClass(EventChannel, [{ key: "emit", value: function emit(
+
+    eventName) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
+      var fns = this.listener[eventName];
+      if (!fns) {
+        return (this.emitCache[eventName] || (this.emitCache[eventName] = [])).push(args);
+      }
+      fns.forEach(function (opt) {
+        opt.fn.apply(opt.fn, args);
+      });
+      this.listener[eventName] = fns.filter(function (opt) {return opt.type !== 'once';});
+    } }, { key: "on", value: function on(
+
+    eventName, fn) {
+      this._addListener(eventName, 'on', fn);
+      this._clearCache(eventName);
+    } }, { key: "once", value: function once(
+
+    eventName, fn) {
+      this._addListener(eventName, 'once', fn);
+      this._clearCache(eventName);
+    } }, { key: "off", value: function off(
+
+    eventName, fn) {
+      var fns = this.listener[eventName];
+      if (!fns) {
+        return;
+      }
+      if (fn) {
+        for (var i = 0; i < fns.length;) {
+          if (fns[i].fn === fn) {
+            fns.splice(i, 1);
+            i--;
+          }
+          i++;
+        }
+      } else {
+        delete this.listener[eventName];
+      }
+    } }, { key: "_clearCache", value: function _clearCache(
+
+    eventName) {
+      var cacheArgs = this.emitCache[eventName];
+      if (cacheArgs) {
+        for (; cacheArgs.length > 0;) {
+          this.emit.apply(this, [eventName].concat(cacheArgs.shift()));
+        }
+      }
+    } }, { key: "_addListener", value: function _addListener(
+
+    eventName, type, fn) {
+      (this.listener[eventName] || (this.listener[eventName] = [])).push({
+        fn: fn,
+        type: type });
+
+    } }]);return EventChannel;}();
+
+
+var eventChannels = {};
+
+var eventChannelStack = [];
+
+var id = 0;
+
+function initEventChannel(events) {var cache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  id++;
+  var eventChannel = new EventChannel(id, events);
+  if (cache) {
+    eventChannels[id] = eventChannel;
+    eventChannelStack.push(eventChannel);
+  }
+  return eventChannel;
+}
+
+function getEventChannel(id) {
+  if (id) {
+    var eventChannel = eventChannels[id];
+    delete eventChannels[id];
+    return eventChannel;
+  }
+  return eventChannelStack.shift();
+}
+
+var navigateTo = {
+  args: function args(fromArgs, toArgs) {
+    var id = initEventChannel(fromArgs.events).id;
+    if (fromArgs.url) {
+      fromArgs.url = fromArgs.url + (fromArgs.url.indexOf('?') === -1 ? '?' : '&') + '__id__=' + id;
+    }
+  },
+  returnValue: function returnValue(fromRes, toRes) {
+    fromRes.eventChannel = getEventChannel();
+  } };
+
+
+function findExistsPageIndex(url) {
+  var pages = getCurrentPages();
+  var len = pages.length;
+  while (len--) {
+    var page = pages[len];
+    if (page.$page && page.$page.fullPath === url) {
+      return len;
+    }
+  }
+  return -1;
+}
+
+var redirectTo = {
+  name: function name(fromArgs) {
+    if (fromArgs.exists === 'back' && fromArgs.delta) {
+      return 'navigateBack';
+    }
+    return 'redirectTo';
+  },
+  args: function args(fromArgs) {
+    if (fromArgs.exists === 'back' && fromArgs.url) {
+      var existsPageIndex = findExistsPageIndex(fromArgs.url);
+      if (existsPageIndex !== -1) {
+        var delta = getCurrentPages().length - 1 - existsPageIndex;
+        if (delta > 0) {
+          fromArgs.delta = delta;
+        }
+      }
+    }
+  } };
 
 
 var previewImage = {
@@ -412,6 +549,8 @@ function addSafeAreaInsets(result) {
   }
 }
 var protocols = {
+  redirectTo: redirectTo,
+  navigateTo: navigateTo,
   previewImage: previewImage,
   getSystemInfo: {
     returnValue: addSafeAreaInsets },
@@ -421,7 +560,10 @@ var protocols = {
 
 
 var todos = [
-'vibrate'];
+'vibrate',
+'preloadPage',
+'unPreloadPage',
+'loadSubPackage'];
 
 var canIUses = [];
 
@@ -453,7 +595,9 @@ function processArgs(methodName, fromArgs) {var argsOption = arguments.length > 
           toArgs[keyOption.name ? keyOption.name : key] = keyOption.value;
         }
       } else if (CALLBACKS.indexOf(key) !== -1) {
-        toArgs[key] = processCallback(methodName, fromArgs[key], returnValue);
+        if (isFn(fromArgs[key])) {
+          toArgs[key] = processCallback(methodName, fromArgs[key], returnValue);
+        }
       } else {
         if (!keepFromArgs) {
           toArgs[key] = fromArgs[key];
@@ -494,7 +638,12 @@ function wrapper(methodName, method) {
       if (typeof arg2 !== 'undefined') {
         args.push(arg2);
       }
-      var returnValue = wx[options.name || methodName].apply(wx, args);
+      if (isFn(options.name)) {
+        methodName = options.name(arg1);
+      } else if (isStr(options.name)) {
+        methodName = options.name;
+      }
+      var returnValue = wx[methodName].apply(wx, args);
       if (isSyncApi(methodName)) {// 同步 api
         return processReturnValue(methodName, returnValue, options.returnValue, isContextApi(methodName));
       }
@@ -568,10 +717,6 @@ var extraApi = /*#__PURE__*/Object.freeze({
 
 
 var getEmitter = function () {
-  if (typeof getUniEmitter === 'function') {
-    /* eslint-disable no-undef */
-    return getUniEmitter;
-  }
   var Emitter;
   return function getUniEmitter() {
     if (!Emitter) {
@@ -626,7 +771,7 @@ function initTriggerEvent(mpInstance) {
     }
   }
   var oldTriggerEvent = mpInstance.triggerEvent;
-  mpInstance.triggerEvent = function (event) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
+  mpInstance.triggerEvent = function (event) {for (var _len4 = arguments.length, args = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {args[_key4 - 1] = arguments[_key4];}
     return oldTriggerEvent.apply(mpInstance, [customize(event)].concat(args));
   };
 }
@@ -639,7 +784,7 @@ function initHook(name, options) {
     };
   } else {
     options[name] = function () {
-      initTriggerEvent(this);for (var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {args[_key4] = arguments[_key4];}
+      initTriggerEvent(this);for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {args[_key5] = arguments[_key5];}
       return oldHook.apply(this, args);
     };
   }
@@ -658,6 +803,8 @@ Component = function Component() {var options = arguments.length > 0 && argument
 var PAGE_EVENT_HOOKS = [
 'onPullDownRefresh',
 'onReachBottom',
+'onAddToFavorites',
+'onShareTimeline',
 'onShareAppMessage',
 'onPageScroll',
 'onResize',
@@ -757,7 +904,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -859,6 +1006,11 @@ function initProperties(props) {var isBehavior = arguments.length > 1 && argumen
       type: String,
       value: '' };
 
+    // 用于字节跳动小程序模拟抽象节点
+    properties.generic = {
+      type: Object,
+      value: null };
+
     properties.vueSlots = { // 小程序不能直接定义 $slots 的 props，所以通过 vueSlots 转换到 $slots
       type: null,
       value: [],
@@ -944,7 +1096,18 @@ function getExtraValue(vm, dataPathsArray) {
       var propPath = dataPathArray[1];
       var valuePath = dataPathArray[3];
 
-      var vFor = dataPath ? vm.__get_value(dataPath, context) : context;
+      var vFor;
+      if (Number.isInteger(dataPath)) {
+        vFor = dataPath;
+      } else if (!dataPath) {
+        vFor = context;
+      } else if (typeof dataPath === 'string' && dataPath) {
+        if (dataPath.indexOf('#s#') === 0) {
+          vFor = dataPath.substr(3);
+        } else {
+          vFor = vm.__get_value(dataPath, context);
+        }
+      }
 
       if (Number.isInteger(vFor)) {
         context = value;
@@ -994,6 +1157,12 @@ function processEventExtra(vm, extra, event) {
         } else {
           if (dataPath === '$event') {// $event
             extraObj['$' + index] = event;
+          } else if (dataPath === 'arguments') {
+            if (event.detail && event.detail.__args__) {
+              extraObj['$' + index] = event.detail.__args__;
+            } else {
+              extraObj['$' + index] = [event];
+            }
           } else if (dataPath.indexOf('$event.') === 0) {// $event.target.value
             extraObj['$' + index] = vm.__get_value(dataPath.replace('$event.', ''), event);
           } else {
@@ -1074,7 +1243,16 @@ function isMatchEventType(eventType, optType) {
 
 }
 
-function handleEvent(event) {var _this = this;
+function getContextVm(vm) {
+  var $parent = vm.$parent;
+  // 父组件是 scoped slots 或者其他自定义组件时继续查找
+  while ($parent && $parent.$parent && ($parent.$options.generic || $parent.$parent.$options.generic || $parent.$scope._$vuePid)) {
+    $parent = $parent.$parent;
+  }
+  return $parent && $parent.$parent;
+}
+
+function handleEvent(event) {var _this2 = this;
   event = wrapper$1(event);
 
   // [['tap',[['handle',[1,2,a]],['handle1',[1,2,a]]]]]
@@ -1105,18 +1283,14 @@ function handleEvent(event) {var _this = this;
       eventsArray.forEach(function (eventArray) {
         var methodName = eventArray[0];
         if (methodName) {
-          var handlerCtx = _this.$vm;
-          if (
-          handlerCtx.$options.generic &&
-          handlerCtx.$parent &&
-          handlerCtx.$parent.$parent)
-          {// mp-weixin,mp-toutiao 抽象节点模拟 scoped slots
-            handlerCtx = handlerCtx.$parent.$parent;
+          var handlerCtx = _this2.$vm;
+          if (handlerCtx.$options.generic) {// mp-weixin,mp-toutiao 抽象节点模拟 scoped slots
+            handlerCtx = getContextVm(handlerCtx) || handlerCtx;
           }
           if (methodName === '$emit') {
             handlerCtx.$emit.apply(handlerCtx,
             processEventArgs(
-            _this.$vm,
+            _this2.$vm,
             event,
             eventArray[1],
             eventArray[2],
@@ -1135,14 +1309,17 @@ function handleEvent(event) {var _this = this;
             }
             handler.once = true;
           }
-          ret.push(handler.apply(handlerCtx, processEventArgs(
-          _this.$vm,
+          var params = processEventArgs(
+          _this2.$vm,
           event,
           eventArray[1],
           eventArray[2],
           isCustom,
-          methodName)));
+          methodName);
 
+          // 参数尾部增加原始事件对象用于复杂表达式内获取额外数据
+          // eslint-disable-next-line no-sparse-arrays
+          ret.push(handler.apply(handlerCtx, (Array.isArray(params) ? params : []).concat([,,,,,,,,,, event])));
         }
       });
     }
@@ -1161,7 +1338,9 @@ var hooks = [
 'onShow',
 'onHide',
 'onError',
-'onPageNotFound'];
+'onPageNotFound',
+'onThemeChange',
+'onUnhandledRejection'];
 
 
 function parseBaseApp(vm, _ref3)
@@ -1325,8 +1504,65 @@ function parseApp(vm) {
 }
 
 function createApp(vm) {
+  _vue.default.prototype.getOpenerEventChannel = function () {
+    if (!this.__eventChannel__) {
+      this.__eventChannel__ = new EventChannel();
+    }
+    return this.__eventChannel__;
+  };
+  var callHook = _vue.default.prototype.__call_hook;
+  _vue.default.prototype.__call_hook = function (hook, args) {
+    if (hook === 'onLoad' && args && args.__id__) {
+      this.__eventChannel__ = getEventChannel(args.__id__);
+      delete args.__id__;
+    }
+    return callHook.call(this, hook, args);
+  };
   App(parseApp(vm));
   return vm;
+}
+
+var encodeReserveRE = /[!'()*]/g;
+var encodeReserveReplacer = function encodeReserveReplacer(c) {return '%' + c.charCodeAt(0).toString(16);};
+var commaRE = /%2C/g;
+
+// fixed encodeURIComponent which is more conformant to RFC3986:
+// - escapes [!'()*]
+// - preserve commas
+var encode = function encode(str) {return encodeURIComponent(str).
+  replace(encodeReserveRE, encodeReserveReplacer).
+  replace(commaRE, ',');};
+
+function stringifyQuery(obj) {var encodeStr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : encode;
+  var res = obj ? Object.keys(obj).map(function (key) {
+    var val = obj[key];
+
+    if (val === undefined) {
+      return '';
+    }
+
+    if (val === null) {
+      return encodeStr(key);
+    }
+
+    if (Array.isArray(val)) {
+      var result = [];
+      val.forEach(function (val2) {
+        if (val2 === undefined) {
+          return;
+        }
+        if (val2 === null) {
+          result.push(encodeStr(key));
+        } else {
+          result.push(encodeStr(key) + '=' + encodeStr(val2));
+        }
+      });
+      return result.join('&');
+    }
+
+    return encodeStr(key) + '=' + encodeStr(val);
+  }).filter(function (x) {return x.length > 0;}).join('&') : null;
+  return res ? "?".concat(res) : '';
 }
 
 function parseBaseComponent(vueComponentOptions)
@@ -1451,9 +1687,15 @@ function parseBasePage(vuePageOptions, _ref6)
 
   initHooks(pageOptions.methods, hooks$1, vuePageOptions);
 
-  pageOptions.methods.onLoad = function (args) {
-    this.$vm.$mp.query = args; // 兼容 mpvue
-    this.$vm.__call_hook('onLoad', args);
+  pageOptions.methods.onLoad = function (query) {
+    this.options = query;
+    var copyQuery = Object.assign({}, query);
+    delete copyQuery.__id__;
+    this.$page = {
+      fullPath: '/' + (this.route || this.is) + stringifyQuery(copyQuery) };
+
+    this.$vm.$mp.query = query; // 兼容 mpvue
+    this.$vm.__call_hook('onLoad', query);
   };
 
   return pageOptions;
@@ -1495,7 +1737,7 @@ var uni = {};
 if (typeof Proxy !== 'undefined' && "mp-weixin" !== 'app-plus') {
   uni = new Proxy({}, {
     get: function get(target, name) {
-      if (target[name]) {
+      if (hasOwn(target, name)) {
         return target[name];
       }
       if (baseApi[name]) {
@@ -2344,28 +2586,28 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 116:
+/***/ 117:
 /*!********************************************!*\
   !*** ./node_modules/vuex/dist/vuex.esm.js ***!
   \********************************************/
-/*! exports provided: Store, install, mapState, mapMutations, mapGetters, mapActions, createNamespacedHelpers, default */
+/*! exports provided: default, Store, createNamespacedHelpers, install, mapActions, mapGetters, mapMutations, mapState */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Store", function() { return Store; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "install", function() { return install; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapState", function() { return mapState; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapMutations", function() { return mapMutations; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapGetters", function() { return mapGetters; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapActions", function() { return mapActions; });
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Store", function() { return Store; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createNamespacedHelpers", function() { return createNamespacedHelpers; });
-/**
- * vuex v3.0.1
- * (c) 2017 Evan You
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "install", function() { return install; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapActions", function() { return mapActions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapGetters", function() { return mapGetters; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapMutations", function() { return mapMutations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapState", function() { return mapState; });
+/*!
+ * vuex v3.4.0
+ * (c) 2020 Evan You
  * @license MIT
  */
-var applyMixin = function (Vue) {
+function applyMixin (Vue) {
   var version = Number(Vue.version.split('.')[0]);
 
   if (version >= 2) {
@@ -2399,11 +2641,14 @@ var applyMixin = function (Vue) {
       this.$store = options.parent.$store;
     }
   }
-};
+}
 
-var devtoolHook =
-  typeof window !== 'undefined' &&
-  window.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+var target = typeof window !== 'undefined'
+  ? window
+  : typeof global !== 'undefined'
+    ? global
+    : {};
+var devtoolHook = target.__VUE_DEVTOOLS_GLOBAL_HOOK__;
 
 function devtoolPlugin (store) {
   if (!devtoolHook) { return }
@@ -2418,7 +2663,11 @@ function devtoolPlugin (store) {
 
   store.subscribe(function (mutation, state) {
     devtoolHook.emit('vuex:mutation', mutation, state);
-  });
+  }, { prepend: true });
+
+  store.subscribeAction(function (action, state) {
+    devtoolHook.emit('vuex:action', action, state);
+  }, { prepend: true });
 }
 
 /**
@@ -2429,16 +2678,6 @@ function devtoolPlugin (store) {
  * @param {Function} f
  * @return {*}
  */
-/**
- * Deep copy the given object considering circular structure.
- * This function caches all nested objects and its copies.
- * If it detects circular structure, use cached copy to avoid infinite loop.
- *
- * @param {*} obj
- * @param {Array<Object>} cache
- * @return {*}
- */
-
 
 /**
  * forEach for object
@@ -2459,17 +2698,28 @@ function assert (condition, msg) {
   if (!condition) { throw new Error(("[vuex] " + msg)) }
 }
 
+function partial (fn, arg) {
+  return function () {
+    return fn(arg)
+  }
+}
+
+// Base data struct for store's module, package with some attribute and method
 var Module = function Module (rawModule, runtime) {
   this.runtime = runtime;
+  // Store some children item
   this._children = Object.create(null);
+  // Store the origin module object which passed by programmer
   this._rawModule = rawModule;
   var rawState = rawModule.state;
+
+  // Store the origin module's state
   this.state = (typeof rawState === 'function' ? rawState() : rawState) || {};
 };
 
-var prototypeAccessors$1 = { namespaced: { configurable: true } };
+var prototypeAccessors = { namespaced: { configurable: true } };
 
-prototypeAccessors$1.namespaced.get = function () {
+prototypeAccessors.namespaced.get = function () {
   return !!this._rawModule.namespaced
 };
 
@@ -2483,6 +2733,10 @@ Module.prototype.removeChild = function removeChild (key) {
 
 Module.prototype.getChild = function getChild (key) {
   return this._children[key]
+};
+
+Module.prototype.hasChild = function hasChild (key) {
+  return key in this._children
 };
 
 Module.prototype.update = function update (rawModule) {
@@ -2520,7 +2774,7 @@ Module.prototype.forEachMutation = function forEachMutation (fn) {
   }
 };
 
-Object.defineProperties( Module.prototype, prototypeAccessors$1 );
+Object.defineProperties( Module.prototype, prototypeAccessors );
 
 var ModuleCollection = function ModuleCollection (rawRootModule) {
   // register root module (Vuex.Store options)
@@ -2549,7 +2803,7 @@ ModuleCollection.prototype.register = function register (path, rawModule, runtim
     var this$1 = this;
     if ( runtime === void 0 ) runtime = true;
 
-  if (true) {
+  if ((true)) {
     assertRawModule(path, rawModule);
   }
 
@@ -2577,8 +2831,15 @@ ModuleCollection.prototype.unregister = function unregister (path) {
   parent.removeChild(key);
 };
 
+ModuleCollection.prototype.isRegistered = function isRegistered (path) {
+  var parent = this.get(path.slice(0, -1));
+  var key = path[path.length - 1];
+
+  return parent.hasChild(key)
+};
+
 function update (path, targetModule, newModule) {
-  if (true) {
+  if ((true)) {
     assertRawModule(path, newModule);
   }
 
@@ -2589,7 +2850,7 @@ function update (path, targetModule, newModule) {
   if (newModule.modules) {
     for (var key in newModule.modules) {
       if (!targetModule.getChild(key)) {
-        if (true) {
+        if ((true)) {
           console.warn(
             "[vuex] trying to add a new module '" + key + "' on hot reloading, " +
             'manual reload is needed'
@@ -2660,19 +2921,14 @@ var Store = function Store (options) {
     install(window.Vue);
   }
 
-  if (true) {
+  if ((true)) {
     assert(Vue, "must call Vue.use(Vuex) before creating a store instance.");
     assert(typeof Promise !== 'undefined', "vuex requires a Promise polyfill in this browser.");
-    assert(this instanceof Store, "Store must be called with the new operator.");
+    assert(this instanceof Store, "store must be called with the new operator.");
   }
 
   var plugins = options.plugins; if ( plugins === void 0 ) plugins = [];
   var strict = options.strict; if ( strict === void 0 ) strict = false;
-
-  var state = options.state; if ( state === void 0 ) state = {};
-  if (typeof state === 'function') {
-    state = state() || {};
-  }
 
   // store internal state
   this._committing = false;
@@ -2684,6 +2940,7 @@ var Store = function Store (options) {
   this._modulesNamespaceMap = Object.create(null);
   this._subscribers = [];
   this._watcherVM = new Vue();
+  this._makeLocalGettersCache = Object.create(null);
 
   // bind commit and dispatch to self
   var store = this;
@@ -2700,6 +2957,8 @@ var Store = function Store (options) {
   // strict mode
   this.strict = strict;
 
+  var state = this._modules.root.state;
+
   // init root module.
   // this also recursively registers all sub-modules
   // and collects all module getters inside this._wrappedGetters
@@ -2712,20 +2971,21 @@ var Store = function Store (options) {
   // apply plugins
   plugins.forEach(function (plugin) { return plugin(this$1); });
 
-  if (Vue.config.devtools) {
+  var useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools;
+  if (useDevtools) {
     devtoolPlugin(this);
   }
 };
 
-var prototypeAccessors = { state: { configurable: true } };
+var prototypeAccessors$1 = { state: { configurable: true } };
 
-prototypeAccessors.state.get = function () {
+prototypeAccessors$1.state.get = function () {
   return this._vm._data.$$state
 };
 
-prototypeAccessors.state.set = function (v) {
-  if (true) {
-    assert(false, "Use store.replaceState() to explicit replace store state.");
+prototypeAccessors$1.state.set = function (v) {
+  if ((true)) {
+    assert(false, "use store.replaceState() to explicit replace store state.");
   }
 };
 
@@ -2741,7 +3001,7 @@ Store.prototype.commit = function commit (_type, _payload, _options) {
   var mutation = { type: type, payload: payload };
   var entry = this._mutations[type];
   if (!entry) {
-    if (true) {
+    if ((true)) {
       console.error(("[vuex] unknown mutation type: " + type));
     }
     return
@@ -2751,10 +3011,13 @@ Store.prototype.commit = function commit (_type, _payload, _options) {
       handler(payload);
     });
   });
-  this._subscribers.forEach(function (sub) { return sub(mutation, this$1.state); });
+
+  this._subscribers
+    .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+    .forEach(function (sub) { return sub(mutation, this$1.state); });
 
   if (
-     true &&
+    ( true) &&
     options && options.silent
   ) {
     console.warn(
@@ -2775,31 +3038,70 @@ Store.prototype.dispatch = function dispatch (_type, _payload) {
   var action = { type: type, payload: payload };
   var entry = this._actions[type];
   if (!entry) {
-    if (true) {
+    if ((true)) {
       console.error(("[vuex] unknown action type: " + type));
     }
     return
   }
 
-  this._actionSubscribers.forEach(function (sub) { return sub(action, this$1.state); });
+  try {
+    this._actionSubscribers
+      .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+      .filter(function (sub) { return sub.before; })
+      .forEach(function (sub) { return sub.before(action, this$1.state); });
+  } catch (e) {
+    if ((true)) {
+      console.warn("[vuex] error in before action subscribers: ");
+      console.error(e);
+    }
+  }
 
-  return entry.length > 1
+  var result = entry.length > 1
     ? Promise.all(entry.map(function (handler) { return handler(payload); }))
-    : entry[0](payload)
+    : entry[0](payload);
+
+  return new Promise(function (resolve, reject) {
+    result.then(function (res) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.after; })
+          .forEach(function (sub) { return sub.after(action, this$1.state); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in after action subscribers: ");
+          console.error(e);
+        }
+      }
+      resolve(res);
+    }, function (error) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.error; })
+          .forEach(function (sub) { return sub.error(action, this$1.state, error); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in error action subscribers: ");
+          console.error(e);
+        }
+      }
+      reject(error);
+    });
+  })
 };
 
-Store.prototype.subscribe = function subscribe (fn) {
-  return genericSubscribe(fn, this._subscribers)
+Store.prototype.subscribe = function subscribe (fn, options) {
+  return genericSubscribe(fn, this._subscribers, options)
 };
 
-Store.prototype.subscribeAction = function subscribeAction (fn) {
-  return genericSubscribe(fn, this._actionSubscribers)
+Store.prototype.subscribeAction = function subscribeAction (fn, options) {
+  var subs = typeof fn === 'function' ? { before: fn } : fn;
+  return genericSubscribe(subs, this._actionSubscribers, options)
 };
 
 Store.prototype.watch = function watch (getter, cb, options) {
     var this$1 = this;
 
-  if (true) {
+  if ((true)) {
     assert(typeof getter === 'function', "store.watch only accepts a function.");
   }
   return this._watcherVM.$watch(function () { return getter(this$1.state, this$1.getters); }, cb, options)
@@ -2818,7 +3120,7 @@ Store.prototype.registerModule = function registerModule (path, rawModule, optio
 
   if (typeof path === 'string') { path = [path]; }
 
-  if (true) {
+  if ((true)) {
     assert(Array.isArray(path), "module path must be a string or an Array.");
     assert(path.length > 0, 'cannot register the root module by using registerModule.');
   }
@@ -2834,7 +3136,7 @@ Store.prototype.unregisterModule = function unregisterModule (path) {
 
   if (typeof path === 'string') { path = [path]; }
 
-  if (true) {
+  if ((true)) {
     assert(Array.isArray(path), "module path must be a string or an Array.");
   }
 
@@ -2844,6 +3146,16 @@ Store.prototype.unregisterModule = function unregisterModule (path) {
     Vue.delete(parentState, path[path.length - 1]);
   });
   resetStore(this);
+};
+
+Store.prototype.hasModule = function hasModule (path) {
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+  }
+
+  return this._modules.isRegistered(path)
 };
 
 Store.prototype.hotUpdate = function hotUpdate (newOptions) {
@@ -2858,11 +3170,13 @@ Store.prototype._withCommit = function _withCommit (fn) {
   this._committing = committing;
 };
 
-Object.defineProperties( Store.prototype, prototypeAccessors );
+Object.defineProperties( Store.prototype, prototypeAccessors$1 );
 
-function genericSubscribe (fn, subs) {
+function genericSubscribe (fn, subs, options) {
   if (subs.indexOf(fn) < 0) {
-    subs.push(fn);
+    options && options.prepend
+      ? subs.unshift(fn)
+      : subs.push(fn);
   }
   return function () {
     var i = subs.indexOf(fn);
@@ -2889,11 +3203,15 @@ function resetStoreVM (store, state, hot) {
 
   // bind store public getters
   store.getters = {};
+  // reset local getters cache
+  store._makeLocalGettersCache = Object.create(null);
   var wrappedGetters = store._wrappedGetters;
   var computed = {};
   forEachValue(wrappedGetters, function (fn, key) {
     // use computed to leverage its lazy-caching mechanism
-    computed[key] = function () { return fn(store); };
+    // direct inline function use will lead to closure preserving oldVm.
+    // using partial to return function with only arguments preserved in closure environment.
+    computed[key] = partial(fn, store);
     Object.defineProperty(store.getters, key, {
       get: function () { return store._vm[key]; },
       enumerable: true // for local getters
@@ -2936,6 +3254,9 @@ function installModule (store, rootState, path, module, hot) {
 
   // register in namespace map
   if (module.namespaced) {
+    if (store._modulesNamespaceMap[namespace] && ("development" !== 'production')) {
+      console.error(("[vuex] duplicate namespace " + namespace + " for the namespaced module " + (path.join('/'))));
+    }
     store._modulesNamespaceMap[namespace] = module;
   }
 
@@ -2944,6 +3265,13 @@ function installModule (store, rootState, path, module, hot) {
     var parentState = getNestedState(rootState, path.slice(0, -1));
     var moduleName = path[path.length - 1];
     store._withCommit(function () {
+      if ((true)) {
+        if (moduleName in parentState) {
+          console.warn(
+            ("[vuex] state field \"" + moduleName + "\" was overridden by a module with the same name at \"" + (path.join('.')) + "\"")
+          );
+        }
+      }
       Vue.set(parentState, moduleName, module.state);
     });
   }
@@ -2987,7 +3315,7 @@ function makeLocalContext (store, namespace, path) {
 
       if (!options || !options.root) {
         type = namespace + type;
-        if ( true && !store._actions[type]) {
+        if (( true) && !store._actions[type]) {
           console.error(("[vuex] unknown local action type: " + (args.type) + ", global type: " + type));
           return
         }
@@ -3004,7 +3332,7 @@ function makeLocalContext (store, namespace, path) {
 
       if (!options || !options.root) {
         type = namespace + type;
-        if ( true && !store._mutations[type]) {
+        if (( true) && !store._mutations[type]) {
           console.error(("[vuex] unknown local mutation type: " + (args.type) + ", global type: " + type));
           return
         }
@@ -3031,26 +3359,28 @@ function makeLocalContext (store, namespace, path) {
 }
 
 function makeLocalGetters (store, namespace) {
-  var gettersProxy = {};
+  if (!store._makeLocalGettersCache[namespace]) {
+    var gettersProxy = {};
+    var splitPos = namespace.length;
+    Object.keys(store.getters).forEach(function (type) {
+      // skip if the target getter is not match this namespace
+      if (type.slice(0, splitPos) !== namespace) { return }
 
-  var splitPos = namespace.length;
-  Object.keys(store.getters).forEach(function (type) {
-    // skip if the target getter is not match this namespace
-    if (type.slice(0, splitPos) !== namespace) { return }
+      // extract local getter type
+      var localType = type.slice(splitPos);
 
-    // extract local getter type
-    var localType = type.slice(splitPos);
-
-    // Add a port to the getters proxy.
-    // Define as getter property because
-    // we do not want to evaluate the getters in this time.
-    Object.defineProperty(gettersProxy, localType, {
-      get: function () { return store.getters[type]; },
-      enumerable: true
+      // Add a port to the getters proxy.
+      // Define as getter property because
+      // we do not want to evaluate the getters in this time.
+      Object.defineProperty(gettersProxy, localType, {
+        get: function () { return store.getters[type]; },
+        enumerable: true
+      });
     });
-  });
+    store._makeLocalGettersCache[namespace] = gettersProxy;
+  }
 
-  return gettersProxy
+  return store._makeLocalGettersCache[namespace]
 }
 
 function registerMutation (store, type, handler, local) {
@@ -3062,7 +3392,7 @@ function registerMutation (store, type, handler, local) {
 
 function registerAction (store, type, handler, local) {
   var entry = store._actions[type] || (store._actions[type] = []);
-  entry.push(function wrappedActionHandler (payload, cb) {
+  entry.push(function wrappedActionHandler (payload) {
     var res = handler.call(store, {
       dispatch: local.dispatch,
       commit: local.commit,
@@ -3070,7 +3400,7 @@ function registerAction (store, type, handler, local) {
       state: local.state,
       rootGetters: store.getters,
       rootState: store.state
-    }, payload, cb);
+    }, payload);
     if (!isPromise(res)) {
       res = Promise.resolve(res);
     }
@@ -3087,7 +3417,7 @@ function registerAction (store, type, handler, local) {
 
 function registerGetter (store, type, rawGetter, local) {
   if (store._wrappedGetters[type]) {
-    if (true) {
+    if ((true)) {
       console.error(("[vuex] duplicate getter key: " + type));
     }
     return
@@ -3104,16 +3434,14 @@ function registerGetter (store, type, rawGetter, local) {
 
 function enableStrictMode (store) {
   store._vm.$watch(function () { return this._data.$$state }, function () {
-    if (true) {
-      assert(store._committing, "Do not mutate vuex store state outside mutation handlers.");
+    if ((true)) {
+      assert(store._committing, "do not mutate vuex store state outside mutation handlers.");
     }
   }, { deep: true, sync: true });
 }
 
 function getNestedState (state, path) {
-  return path.length
-    ? path.reduce(function (state, key) { return state[key]; }, state)
-    : state
+  return path.reduce(function (state, key) { return state[key]; }, state)
 }
 
 function unifyObjectStyle (type, payload, options) {
@@ -3123,8 +3451,8 @@ function unifyObjectStyle (type, payload, options) {
     type = type.type;
   }
 
-  if (true) {
-    assert(typeof type === 'string', ("Expects string as the type, but found " + (typeof type) + "."));
+  if ((true)) {
+    assert(typeof type === 'string', ("expects string as the type, but found " + (typeof type) + "."));
   }
 
   return { type: type, payload: payload, options: options }
@@ -3132,7 +3460,7 @@ function unifyObjectStyle (type, payload, options) {
 
 function install (_Vue) {
   if (Vue && _Vue === Vue) {
-    if (true) {
+    if ((true)) {
       console.error(
         '[vuex] already installed. Vue.use(Vuex) should be called only once.'
       );
@@ -3143,8 +3471,17 @@ function install (_Vue) {
   applyMixin(Vue);
 }
 
+/**
+ * Reduce the code which written in Vue.js for getting the state.
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} states # Object's item can be a function which accept state and getters for param, you can do something for state and getters in it.
+ * @param {Object}
+ */
 var mapState = normalizeNamespace(function (namespace, states) {
   var res = {};
+  if (( true) && !isValidMap(states)) {
+    console.error('[vuex] mapState: mapper parameter must be either an Array or an Object');
+  }
   normalizeMap(states).forEach(function (ref) {
     var key = ref.key;
     var val = ref.val;
@@ -3170,8 +3507,17 @@ var mapState = normalizeNamespace(function (namespace, states) {
   return res
 });
 
+/**
+ * Reduce the code which written in Vue.js for committing the mutation
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} mutations # Object's item can be a function which accept `commit` function as the first param, it can accept anthor params. You can commit mutation and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
 var mapMutations = normalizeNamespace(function (namespace, mutations) {
   var res = {};
+  if (( true) && !isValidMap(mutations)) {
+    console.error('[vuex] mapMutations: mapper parameter must be either an Array or an Object');
+  }
   normalizeMap(mutations).forEach(function (ref) {
     var key = ref.key;
     var val = ref.val;
@@ -3180,6 +3526,7 @@ var mapMutations = normalizeNamespace(function (namespace, mutations) {
       var args = [], len = arguments.length;
       while ( len-- ) args[ len ] = arguments[ len ];
 
+      // Get the commit method from store
       var commit = this.$store.commit;
       if (namespace) {
         var module = getModuleByNamespace(this.$store, 'mapMutations', namespace);
@@ -3196,18 +3543,28 @@ var mapMutations = normalizeNamespace(function (namespace, mutations) {
   return res
 });
 
+/**
+ * Reduce the code which written in Vue.js for getting the getters
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} getters
+ * @return {Object}
+ */
 var mapGetters = normalizeNamespace(function (namespace, getters) {
   var res = {};
+  if (( true) && !isValidMap(getters)) {
+    console.error('[vuex] mapGetters: mapper parameter must be either an Array or an Object');
+  }
   normalizeMap(getters).forEach(function (ref) {
     var key = ref.key;
     var val = ref.val;
 
+    // The namespace has been mutated by normalizeNamespace
     val = namespace + val;
     res[key] = function mappedGetter () {
       if (namespace && !getModuleByNamespace(this.$store, 'mapGetters', namespace)) {
         return
       }
-      if ( true && !(val in this.$store.getters)) {
+      if (( true) && !(val in this.$store.getters)) {
         console.error(("[vuex] unknown getter: " + val));
         return
       }
@@ -3219,8 +3576,17 @@ var mapGetters = normalizeNamespace(function (namespace, getters) {
   return res
 });
 
+/**
+ * Reduce the code which written in Vue.js for dispatch the action
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} actions # Object's item can be a function which accept `dispatch` function as the first param, it can accept anthor params. You can dispatch action and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
 var mapActions = normalizeNamespace(function (namespace, actions) {
   var res = {};
+  if (( true) && !isValidMap(actions)) {
+    console.error('[vuex] mapActions: mapper parameter must be either an Array or an Object');
+  }
   normalizeMap(actions).forEach(function (ref) {
     var key = ref.key;
     var val = ref.val;
@@ -3229,6 +3595,7 @@ var mapActions = normalizeNamespace(function (namespace, actions) {
       var args = [], len = arguments.length;
       while ( len-- ) args[ len ] = arguments[ len ];
 
+      // get dispatch function from store
       var dispatch = this.$store.dispatch;
       if (namespace) {
         var module = getModuleByNamespace(this.$store, 'mapActions', namespace);
@@ -3245,6 +3612,11 @@ var mapActions = normalizeNamespace(function (namespace, actions) {
   return res
 });
 
+/**
+ * Rebinding namespace param for mapXXX function in special scoped, and return them by simple object
+ * @param {String} namespace
+ * @return {Object}
+ */
 var createNamespacedHelpers = function (namespace) { return ({
   mapState: mapState.bind(null, namespace),
   mapGetters: mapGetters.bind(null, namespace),
@@ -3252,12 +3624,36 @@ var createNamespacedHelpers = function (namespace) { return ({
   mapActions: mapActions.bind(null, namespace)
 }); };
 
+/**
+ * Normalize the map
+ * normalizeMap([1, 2, 3]) => [ { key: 1, val: 1 }, { key: 2, val: 2 }, { key: 3, val: 3 } ]
+ * normalizeMap({a: 1, b: 2, c: 3}) => [ { key: 'a', val: 1 }, { key: 'b', val: 2 }, { key: 'c', val: 3 } ]
+ * @param {Array|Object} map
+ * @return {Object}
+ */
 function normalizeMap (map) {
+  if (!isValidMap(map)) {
+    return []
+  }
   return Array.isArray(map)
     ? map.map(function (key) { return ({ key: key, val: key }); })
     : Object.keys(map).map(function (key) { return ({ key: key, val: map[key] }); })
 }
 
+/**
+ * Validate whether given map is valid or not
+ * @param {*} map
+ * @return {Boolean}
+ */
+function isValidMap (map) {
+  return Array.isArray(map) || isObject(map)
+}
+
+/**
+ * Return a function expect two param contains namespace and map. it will normalize the namespace and then the param's function will handle the new namespace and the map.
+ * @param {Function} fn
+ * @return {Function}
+ */
 function normalizeNamespace (fn) {
   return function (namespace, map) {
     if (typeof namespace !== 'string') {
@@ -3270,18 +3666,25 @@ function normalizeNamespace (fn) {
   }
 }
 
+/**
+ * Search a special module from store by namespace. if module not exist, print error message.
+ * @param {Object} store
+ * @param {String} helper
+ * @param {String} namespace
+ * @return {Object}
+ */
 function getModuleByNamespace (store, helper, namespace) {
   var module = store._modulesNamespaceMap[namespace];
-  if ( true && !module) {
+  if (( true) && !module) {
     console.error(("[vuex] module namespace not found in " + helper + "(): " + namespace));
   }
   return module
 }
 
-var index_esm = {
+var index = {
   Store: Store,
   install: install,
-  version: '3.0.1',
+  version: '3.4.0',
   mapState: mapState,
   mapMutations: mapMutations,
   mapGetters: mapGetters,
@@ -3289,9 +3692,10 @@ var index_esm = {
   createNamespacedHelpers: createNamespacedHelpers
 };
 
+/* harmony default export */ __webpack_exports__["default"] = (index);
 
-/* harmony default export */ __webpack_exports__["default"] = (index_esm);
 
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ 3)))
 
 /***/ }),
 
@@ -3757,148 +4161,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     checkType: 'string',
     checkRule: '6,18',
     errorMsg: '请输入6-18位密码' }] };exports.default = _default;
-
-/***/ }),
-
-/***/ 198:
-/*!****************************************************!*\
-  !*** C:/xcx/jhx/jhx/components/uni-icons/icons.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
-  "pulldown": "\uE588",
-  "refreshempty": "\uE461",
-  "back": "\uE471",
-  "forward": "\uE470",
-  "more": "\uE507",
-  "more-filled": "\uE537",
-  "scan": "\uE612",
-  "qq": "\uE264",
-  "weibo": "\uE260",
-  "weixin": "\uE261",
-  "pengyouquan": "\uE262",
-  "loop": "\uE565",
-  "refresh": "\uE407",
-  "refresh-filled": "\uE437",
-  "arrowthindown": "\uE585",
-  "arrowthinleft": "\uE586",
-  "arrowthinright": "\uE587",
-  "arrowthinup": "\uE584",
-  "undo-filled": "\uE7D6",
-  "undo": "\uE406",
-  "redo": "\uE405",
-  "redo-filled": "\uE7D9",
-  "bars": "\uE563",
-  "chatboxes": "\uE203",
-  "camera": "\uE301",
-  "chatboxes-filled": "\uE233",
-  "camera-filled": "\uE7EF",
-  "cart-filled": "\uE7F4",
-  "cart": "\uE7F5",
-  "checkbox-filled": "\uE442",
-  "checkbox": "\uE7FA",
-  "arrowleft": "\uE582",
-  "arrowdown": "\uE581",
-  "arrowright": "\uE583",
-  "smallcircle-filled": "\uE801",
-  "arrowup": "\uE580",
-  "circle": "\uE411",
-  "eye-filled": "\uE568",
-  "eye-slash-filled": "\uE822",
-  "eye-slash": "\uE823",
-  "eye": "\uE824",
-  "flag-filled": "\uE825",
-  "flag": "\uE508",
-  "gear-filled": "\uE532",
-  "reload": "\uE462",
-  "gear": "\uE502",
-  "hand-thumbsdown-filled": "\uE83B",
-  "hand-thumbsdown": "\uE83C",
-  "hand-thumbsup-filled": "\uE83D",
-  "heart-filled": "\uE83E",
-  "hand-thumbsup": "\uE83F",
-  "heart": "\uE840",
-  "home": "\uE500",
-  "info": "\uE504",
-  "home-filled": "\uE530",
-  "info-filled": "\uE534",
-  "circle-filled": "\uE441",
-  "chat-filled": "\uE847",
-  "chat": "\uE263",
-  "mail-open-filled": "\uE84D",
-  "email-filled": "\uE231",
-  "mail-open": "\uE84E",
-  "email": "\uE201",
-  "checkmarkempty": "\uE472",
-  "list": "\uE562",
-  "locked-filled": "\uE856",
-  "locked": "\uE506",
-  "map-filled": "\uE85C",
-  "map-pin": "\uE85E",
-  "map-pin-ellipse": "\uE864",
-  "map": "\uE364",
-  "minus-filled": "\uE440",
-  "mic-filled": "\uE332",
-  "minus": "\uE410",
-  "micoff": "\uE360",
-  "mic": "\uE302",
-  "clear": "\uE434",
-  "smallcircle": "\uE868",
-  "close": "\uE404",
-  "closeempty": "\uE460",
-  "paperclip": "\uE567",
-  "paperplane": "\uE503",
-  "paperplane-filled": "\uE86E",
-  "person-filled": "\uE131",
-  "contact-filled": "\uE130",
-  "person": "\uE101",
-  "contact": "\uE100",
-  "images-filled": "\uE87A",
-  "phone": "\uE200",
-  "images": "\uE87B",
-  "image": "\uE363",
-  "image-filled": "\uE877",
-  "location-filled": "\uE333",
-  "location": "\uE303",
-  "plus-filled": "\uE439",
-  "plus": "\uE409",
-  "plusempty": "\uE468",
-  "help-filled": "\uE535",
-  "help": "\uE505",
-  "navigate-filled": "\uE884",
-  "navigate": "\uE501",
-  "mic-slash-filled": "\uE892",
-  "search": "\uE466",
-  "settings": "\uE560",
-  "sound": "\uE590",
-  "sound-filled": "\uE8A1",
-  "spinner-cycle": "\uE465",
-  "download-filled": "\uE8A4",
-  "personadd-filled": "\uE132",
-  "videocam-filled": "\uE8AF",
-  "personadd": "\uE102",
-  "upload": "\uE402",
-  "upload-filled": "\uE8B1",
-  "starhalf": "\uE463",
-  "star-filled": "\uE438",
-  "star": "\uE408",
-  "trash": "\uE401",
-  "phone-filled": "\uE230",
-  "compose": "\uE400",
-  "videocam": "\uE300",
-  "trash-filled": "\uE8DC",
-  "download": "\uE403",
-  "chatbubble-filled": "\uE232",
-  "chatbubble": "\uE202",
-  "cloud-download": "\uE8E4",
-  "cloud-upload-filled": "\uE8E5",
-  "cloud-upload": "\uE8E6",
-  "cloud-download-filled": "\uE8E9",
-  "headphones": "\uE8BF",
-  "shop": "\uE609" };exports.default = _default;
 
 /***/ }),
 
@@ -4536,12 +4798,10 @@ if (true) {
   };
 
   formatComponentName = function (vm, includeFile) {
-    {
-      if(vm.$scope && vm.$scope.is){
-        return vm.$scope.is
-      }
-    }
     if (vm.$root === vm) {
+      if (vm.$options && vm.$options.__file) { // fixed by xxxxxx
+        return ('') + vm.$options.__file
+      }
       return '<Root>'
     }
     var options = typeof vm === 'function' && vm.cid != null
@@ -4576,7 +4836,7 @@ if (true) {
     if (vm._isVue && vm.$parent) {
       var tree = [];
       var currentRecursiveSequence = 0;
-      while (vm) {
+      while (vm && vm.$options.name !== 'PageBody') {
         if (tree.length > 0) {
           var last = tree[tree.length - 1];
           if (last.constructor === vm.constructor) {
@@ -4588,7 +4848,7 @@ if (true) {
             currentRecursiveSequence = 0;
           }
         }
-        tree.push(vm);
+        !vm.$options.isReserved && tree.push(vm);
         vm = vm.$parent;
       }
       return '\n\nfound in\n\n' + tree
@@ -4611,13 +4871,7 @@ var uid = 0;
  * directives subscribing to it.
  */
 var Dep = function Dep () {
-  // fixed by xxxxxx (nvue vuex)
-  /* eslint-disable no-undef */
-  if(typeof SharedObject !== 'undefined'){
-    this.id = SharedObject.uid++;
-  } else {
-    this.id = uid++;
-  }
+  this.id = uid++;
   this.subs = [];
 };
 
@@ -4654,18 +4908,20 @@ Dep.prototype.notify = function notify () {
 // can be evaluated at a time.
 // fixed by xxxxxx (nvue shared vuex)
 /* eslint-disable no-undef */
-Dep.SharedObject = typeof SharedObject !== 'undefined' ? SharedObject : {};
+Dep.SharedObject = {};
 Dep.SharedObject.target = null;
 Dep.SharedObject.targetStack = [];
 
 function pushTarget (target) {
   Dep.SharedObject.targetStack.push(target);
   Dep.SharedObject.target = target;
+  Dep.target = target;
 }
 
 function popTarget () {
   Dep.SharedObject.targetStack.pop();
   Dep.SharedObject.target = Dep.SharedObject.targetStack[Dep.SharedObject.targetStack.length - 1];
+  Dep.target = Dep.SharedObject.target;
 }
 
 /*  */
@@ -9434,7 +9690,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -9455,14 +9711,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9504,6 +9760,16 @@ function cloneWithData(vm) {
     ret[key] = vm[key];
     return ret
   }, ret);
+
+  // vue-composition-api
+  var compositionApiState = vm.__composition_api_state__ || vm.__secret_vfa_state__;
+  var rawBindings = compositionApiState && compositionApiState.rawBindings;
+  if (rawBindings) {
+    Object.keys(rawBindings).forEach(function (key) {
+      ret[key] = vm[key];
+    });
+  }
+
   //TODO 需要把无用数据处理掉，比如 list=>l0 则 list 需要移除，否则多传输一份数据
   Object.assign(ret, vm.$mp.data || {});
   if (
@@ -9538,7 +9804,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9710,7 +9976,8 @@ function getTarget(obj, path) {
 
 function internalMixin(Vue) {
 
-  Vue.config.errorHandler = function(err) {
+  Vue.config.errorHandler = function(err, vm, info) {
+    Vue.util.warn(("Error in " + info + ": \"" + (err.toString()) + "\""), vm);
     console.error(err);
     /* eslint-disable no-undef */
     var app = getApp();
@@ -9825,7 +10092,7 @@ function internalMixin(Vue) {
   };
 
   Vue.prototype.__map = function(val, iteratee) {
-    //TODO 暂不考虑 string,number
+    //TODO 暂不考虑 string
     var ret, i, l, keys, key;
     if (Array.isArray(val)) {
       ret = new Array(val.length);
@@ -9839,6 +10106,13 @@ function internalMixin(Vue) {
       for (i = 0, l = keys.length; i < l; i++) {
         key = keys[i];
         ret[key] = iteratee(val[key], key, i);
+      }
+      return ret
+    } else if (typeof val === 'number') {
+      ret = new Array(val);
+      for (i = 0, l = val; i < l; i++) {
+        // 第一个参数暂时仍和小程序一致
+        ret[i] = iteratee(i, i);
       }
       return ret
     }
@@ -9855,7 +10129,10 @@ var LIFECYCLE_HOOKS$1 = [
     'onShow',
     'onHide',
     'onUniNViewMessage',
+    'onPageNotFound',
+    'onThemeChange',
     'onError',
+    'onUnhandledRejection',
     //Page
     'onLoad',
     // 'onShow',
@@ -9865,6 +10142,8 @@ var LIFECYCLE_HOOKS$1 = [
     'onPullDownRefresh',
     'onReachBottom',
     'onTabItemTap',
+    'onAddToFavorites',
+    'onShareTimeline',
     'onShareAppMessage',
     'onResize',
     'onPageScroll',
@@ -9932,6 +10211,148 @@ internalMixin(Vue);
 
 /***/ }),
 
+/***/ 207:
+/*!****************************************************!*\
+  !*** C:/xcx/jhx/jhx/components/uni-icons/icons.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  "pulldown": "\uE588",
+  "refreshempty": "\uE461",
+  "back": "\uE471",
+  "forward": "\uE470",
+  "more": "\uE507",
+  "more-filled": "\uE537",
+  "scan": "\uE612",
+  "qq": "\uE264",
+  "weibo": "\uE260",
+  "weixin": "\uE261",
+  "pengyouquan": "\uE262",
+  "loop": "\uE565",
+  "refresh": "\uE407",
+  "refresh-filled": "\uE437",
+  "arrowthindown": "\uE585",
+  "arrowthinleft": "\uE586",
+  "arrowthinright": "\uE587",
+  "arrowthinup": "\uE584",
+  "undo-filled": "\uE7D6",
+  "undo": "\uE406",
+  "redo": "\uE405",
+  "redo-filled": "\uE7D9",
+  "bars": "\uE563",
+  "chatboxes": "\uE203",
+  "camera": "\uE301",
+  "chatboxes-filled": "\uE233",
+  "camera-filled": "\uE7EF",
+  "cart-filled": "\uE7F4",
+  "cart": "\uE7F5",
+  "checkbox-filled": "\uE442",
+  "checkbox": "\uE7FA",
+  "arrowleft": "\uE582",
+  "arrowdown": "\uE581",
+  "arrowright": "\uE583",
+  "smallcircle-filled": "\uE801",
+  "arrowup": "\uE580",
+  "circle": "\uE411",
+  "eye-filled": "\uE568",
+  "eye-slash-filled": "\uE822",
+  "eye-slash": "\uE823",
+  "eye": "\uE824",
+  "flag-filled": "\uE825",
+  "flag": "\uE508",
+  "gear-filled": "\uE532",
+  "reload": "\uE462",
+  "gear": "\uE502",
+  "hand-thumbsdown-filled": "\uE83B",
+  "hand-thumbsdown": "\uE83C",
+  "hand-thumbsup-filled": "\uE83D",
+  "heart-filled": "\uE83E",
+  "hand-thumbsup": "\uE83F",
+  "heart": "\uE840",
+  "home": "\uE500",
+  "info": "\uE504",
+  "home-filled": "\uE530",
+  "info-filled": "\uE534",
+  "circle-filled": "\uE441",
+  "chat-filled": "\uE847",
+  "chat": "\uE263",
+  "mail-open-filled": "\uE84D",
+  "email-filled": "\uE231",
+  "mail-open": "\uE84E",
+  "email": "\uE201",
+  "checkmarkempty": "\uE472",
+  "list": "\uE562",
+  "locked-filled": "\uE856",
+  "locked": "\uE506",
+  "map-filled": "\uE85C",
+  "map-pin": "\uE85E",
+  "map-pin-ellipse": "\uE864",
+  "map": "\uE364",
+  "minus-filled": "\uE440",
+  "mic-filled": "\uE332",
+  "minus": "\uE410",
+  "micoff": "\uE360",
+  "mic": "\uE302",
+  "clear": "\uE434",
+  "smallcircle": "\uE868",
+  "close": "\uE404",
+  "closeempty": "\uE460",
+  "paperclip": "\uE567",
+  "paperplane": "\uE503",
+  "paperplane-filled": "\uE86E",
+  "person-filled": "\uE131",
+  "contact-filled": "\uE130",
+  "person": "\uE101",
+  "contact": "\uE100",
+  "images-filled": "\uE87A",
+  "phone": "\uE200",
+  "images": "\uE87B",
+  "image": "\uE363",
+  "image-filled": "\uE877",
+  "location-filled": "\uE333",
+  "location": "\uE303",
+  "plus-filled": "\uE439",
+  "plus": "\uE409",
+  "plusempty": "\uE468",
+  "help-filled": "\uE535",
+  "help": "\uE505",
+  "navigate-filled": "\uE884",
+  "navigate": "\uE501",
+  "mic-slash-filled": "\uE892",
+  "search": "\uE466",
+  "settings": "\uE560",
+  "sound": "\uE590",
+  "sound-filled": "\uE8A1",
+  "spinner-cycle": "\uE465",
+  "download-filled": "\uE8A4",
+  "personadd-filled": "\uE132",
+  "videocam-filled": "\uE8AF",
+  "personadd": "\uE102",
+  "upload": "\uE402",
+  "upload-filled": "\uE8B1",
+  "starhalf": "\uE463",
+  "star-filled": "\uE438",
+  "star": "\uE408",
+  "trash": "\uE401",
+  "phone-filled": "\uE230",
+  "compose": "\uE400",
+  "videocam": "\uE300",
+  "trash-filled": "\uE8DC",
+  "download": "\uE403",
+  "chatbubble-filled": "\uE232",
+  "chatbubble": "\uE202",
+  "cloud-download": "\uE8E4",
+  "cloud-upload-filled": "\uE8E5",
+  "cloud-upload": "\uE8E6",
+  "cloud-download-filled": "\uE8E9",
+  "headphones": "\uE8BF",
+  "shop": "\uE609" };exports.default = _default;
+
+/***/ }),
+
 /***/ 25:
 /*!***************************************!*\
   !*** C:/xcx/jhx/jhx/utils/payment.js ***!
@@ -9940,7 +10361,7 @@ internalMixin(Vue);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 9));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 9));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var _default =
 
 
 
@@ -10108,8 +10529,8 @@ internalMixin(Vue);
 
 
 
-                  uni.requestPayment(_objectSpread({},
-                  r.data.config, {
+                  uni.requestPayment(_objectSpread(_objectSpread({},
+                  r.data.config), {}, {
                     timeStamp: r.data.config.timestamp,
                     success: function success() {
                       mHelper.toast('支付成功');
@@ -10201,7 +10622,7 @@ internalMixin(Vue);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.Adv = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _createSuper(Derived) {return function () {var Super = _getPrototypeOf(Derived),result;if (_isNativeReflectConstruct()) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}var
+Object.defineProperty(exports, "__esModule", { value: true });exports.Adv = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _createSuper(Derived) {var hasNativeReflectConstruct = _isNativeReflectConstruct();return function _createSuperInternal() {var Super = _getPrototypeOf(Derived),result;if (hasNativeReflectConstruct) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}var
 Adv = /*#__PURE__*/function (_Base) {_inherits(Adv, _Base);var _super = _createSuper(Adv);
   function Adv() {_classCallCheck(this, Adv);return _super.call(this);
 
@@ -10230,7 +10651,7 @@ Adv = /*#__PURE__*/function (_Base) {_inherits(Adv, _Base);var _super = _createS
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.System = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _createSuper(Derived) {return function () {var Super = _getPrototypeOf(Derived),result;if (_isNativeReflectConstruct()) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}var
+Object.defineProperty(exports, "__esModule", { value: true });exports.System = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _createSuper(Derived) {var hasNativeReflectConstruct = _isNativeReflectConstruct();return function _createSuperInternal() {var Super = _getPrototypeOf(Derived),result;if (hasNativeReflectConstruct) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}var
 System = /*#__PURE__*/function (_Base) {_inherits(System, _Base);var _super = _createSuper(System);
   function System() {_classCallCheck(this, System);return _super.call(this);
 
@@ -10260,7 +10681,7 @@ System = /*#__PURE__*/function (_Base) {_inherits(System, _Base);var _super = _c
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.Product = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _createSuper(Derived) {return function () {var Super = _getPrototypeOf(Derived),result;if (_isNativeReflectConstruct()) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}var
+Object.defineProperty(exports, "__esModule", { value: true });exports.Product = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _createSuper(Derived) {var hasNativeReflectConstruct = _isNativeReflectConstruct();return function _createSuperInternal() {var Super = _getPrototypeOf(Derived),result;if (hasNativeReflectConstruct) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}var
 Product = /*#__PURE__*/function (_Base) {_inherits(Product, _Base);var _super = _createSuper(Product);
   function Product() {_classCallCheck(this, Product);return _super.call(this);
 
@@ -10362,7 +10783,7 @@ Product = /*#__PURE__*/function (_Base) {_inherits(Product, _Base);var _super = 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.Public = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _createSuper(Derived) {return function () {var Super = _getPrototypeOf(Derived),result;if (_isNativeReflectConstruct()) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}var
+Object.defineProperty(exports, "__esModule", { value: true });exports.Public = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _createSuper(Derived) {var hasNativeReflectConstruct = _isNativeReflectConstruct();return function _createSuperInternal() {var Super = _getPrototypeOf(Derived),result;if (hasNativeReflectConstruct) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}var
 Public = /*#__PURE__*/function (_Base) {_inherits(Public, _Base);var _super = _createSuper(Public);
   function Public() {_classCallCheck(this, Public);return _super.call(this);
 
@@ -10450,6 +10871,1638 @@ module.exports = g;
 
 /***/ }),
 
+/***/ 30:
+/*!****************************************!*\
+  !*** C:/xcx/jhx/jhx/utils/wxqrcode.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+//---------------------------------------------------------------------
+//
+// QR Code Generator for JavaScript
+//
+// Copyright (c) 2009 Kazuhiko Arase
+//
+// URL: [url=http://www.d-project.com/]http://www.d-project.com/[/url]
+//
+// Licensed under the MIT license:
+//        [url=http://www.opensource.org/licenses/mit-license.php]http://www.opensource.org/licenses/mit-license.php[/url]
+//
+// The word 'QR Code' is registered trademark of
+// DENSO WAVE INCORPORATED
+//        [url=http://www.denso-wave.com/qrcode/faqpatent-e.html]http://www.denso-wave.com/qrcode/faqpatent-e.html[/url]
+//
+//---------------------------------------------------------------------
+
+//---------------------------------------------------------------------
+// qrcode
+//代码第1588行为补充代码
+//修改人：chenxing
+//2017-02-27 16:21:32
+//---------------------------------------------------------------------
+
+/**
+ * qrcode
+ * @param typeNumber 1 to 40
+ * @param errorCorrectLevel 'L','M','Q','H'
+ */
+var qrcode = function qrcode(typeNumber, errorCorrectLevel) {
+
+  var PAD0 = 0xEC;
+  var PAD1 = 0x11;
+
+  var _typeNumber = typeNumber;
+  var _errorCorrectLevel = QRErrorCorrectLevel[errorCorrectLevel];
+  var _modules = null;
+  var _moduleCount = 0;
+  var _dataCache = null;
+  var _dataList = new Array();
+
+  var _this = {};
+
+  var makeImpl = function makeImpl(test, maskPattern) {
+
+    _moduleCount = _typeNumber * 4 + 17;
+    _modules = function (moduleCount) {
+      var modules = new Array(moduleCount);
+      for (var row = 0; row < moduleCount; row += 1) {
+        modules[row] = new Array(moduleCount);
+        for (var col = 0; col < moduleCount; col += 1) {
+          modules[row][col] = null;
+        }
+      }
+      return modules;
+    }(_moduleCount);
+
+    setupPositionProbePattern(0, 0);
+    setupPositionProbePattern(_moduleCount - 7, 0);
+    setupPositionProbePattern(0, _moduleCount - 7);
+    setupPositionAdjustPattern();
+    setupTimingPattern();
+    setupTypeInfo(test, maskPattern);
+
+    if (_typeNumber >= 7) {
+      setupTypeNumber(test);
+    }
+
+    if (_dataCache == null) {
+      _dataCache = createData(_typeNumber, _errorCorrectLevel, _dataList);
+    }
+
+    mapData(_dataCache, maskPattern);
+  };
+
+  var setupPositionProbePattern = function setupPositionProbePattern(row, col) {
+
+    for (var r = -1; r <= 7; r += 1) {
+
+      if (row + r <= -1 || _moduleCount <= row + r) continue;
+
+      for (var c = -1; c <= 7; c += 1) {
+
+        if (col + c <= -1 || _moduleCount <= col + c) continue;
+
+        if (0 <= r && r <= 6 && (c == 0 || c == 6) ||
+        0 <= c && c <= 6 && (r == 0 || r == 6) ||
+        2 <= r && r <= 4 && 2 <= c && c <= 4) {
+          _modules[row + r][col + c] = true;
+        } else {
+          _modules[row + r][col + c] = false;
+        }
+      }
+    }
+  };
+
+  var getBestMaskPattern = function getBestMaskPattern() {
+
+    var minLostPoint = 0;
+    var pattern = 0;
+
+    for (var i = 0; i < 8; i += 1) {
+
+      makeImpl(true, i);
+
+      var lostPoint = QRUtil.getLostPoint(_this);
+
+      if (i == 0 || minLostPoint > lostPoint) {
+        minLostPoint = lostPoint;
+        pattern = i;
+      }
+    }
+
+    return pattern;
+  };
+
+  var setupTimingPattern = function setupTimingPattern() {
+
+    for (var r = 8; r < _moduleCount - 8; r += 1) {
+      if (_modules[r][6] != null) {
+        continue;
+      }
+      _modules[r][6] = r % 2 == 0;
+    }
+
+    for (var c = 8; c < _moduleCount - 8; c += 1) {
+      if (_modules[6][c] != null) {
+        continue;
+      }
+      _modules[6][c] = c % 2 == 0;
+    }
+  };
+
+  var setupPositionAdjustPattern = function setupPositionAdjustPattern() {
+
+    var pos = QRUtil.getPatternPosition(_typeNumber);
+
+    for (var i = 0; i < pos.length; i += 1) {
+
+      for (var j = 0; j < pos.length; j += 1) {
+
+        var row = pos[i];
+        var col = pos[j];
+
+        if (_modules[row][col] != null) {
+          continue;
+        }
+
+        for (var r = -2; r <= 2; r += 1) {
+
+          for (var c = -2; c <= 2; c += 1) {
+
+            if (r == -2 || r == 2 || c == -2 || c == 2 ||
+            r == 0 && c == 0) {
+              _modules[row + r][col + c] = true;
+            } else {
+              _modules[row + r][col + c] = false;
+            }
+          }
+        }
+      }
+    }
+  };
+
+  var setupTypeNumber = function setupTypeNumber(test) {
+
+    var bits = QRUtil.getBCHTypeNumber(_typeNumber);
+
+    for (var i = 0; i < 18; i += 1) {
+      var mod = !test && (bits >> i & 1) == 1;
+      _modules[Math.floor(i / 3)][i % 3 + _moduleCount - 8 - 3] = mod;
+    }
+
+    for (var i = 0; i < 18; i += 1) {
+      var mod = !test && (bits >> i & 1) == 1;
+      _modules[i % 3 + _moduleCount - 8 - 3][Math.floor(i / 3)] = mod;
+    }
+  };
+
+  var setupTypeInfo = function setupTypeInfo(test, maskPattern) {
+
+    var data = _errorCorrectLevel << 3 | maskPattern;
+    var bits = QRUtil.getBCHTypeInfo(data);
+
+    // vertical
+    for (var i = 0; i < 15; i += 1) {
+
+      var mod = !test && (bits >> i & 1) == 1;
+
+      if (i < 6) {
+        _modules[i][8] = mod;
+      } else if (i < 8) {
+        _modules[i + 1][8] = mod;
+      } else {
+        _modules[_moduleCount - 15 + i][8] = mod;
+      }
+    }
+
+    // horizontal
+    for (var i = 0; i < 15; i += 1) {
+
+      var mod = !test && (bits >> i & 1) == 1;
+
+      if (i < 8) {
+        _modules[8][_moduleCount - i - 1] = mod;
+      } else if (i < 9) {
+        _modules[8][15 - i - 1 + 1] = mod;
+      } else {
+        _modules[8][15 - i - 1] = mod;
+      }
+    }
+
+    // fixed module
+    _modules[_moduleCount - 8][8] = !test;
+  };
+
+  var mapData = function mapData(data, maskPattern) {
+
+    var inc = -1;
+    var row = _moduleCount - 1;
+    var bitIndex = 7;
+    var byteIndex = 0;
+    var maskFunc = QRUtil.getMaskFunction(maskPattern);
+
+    for (var col = _moduleCount - 1; col > 0; col -= 2) {
+
+      if (col == 6) col -= 1;
+
+      while (true) {
+
+        for (var c = 0; c < 2; c += 1) {
+
+          if (_modules[row][col - c] == null) {
+
+            var dark = false;
+
+            if (byteIndex < data.length) {
+              dark = (data[byteIndex] >>> bitIndex & 1) == 1;
+            }
+
+            var mask = maskFunc(row, col - c);
+
+            if (mask) {
+              dark = !dark;
+            }
+
+            _modules[row][col - c] = dark;
+            bitIndex -= 1;
+
+            if (bitIndex == -1) {
+              byteIndex += 1;
+              bitIndex = 7;
+            }
+          }
+        }
+
+        row += inc;
+
+        if (row < 0 || _moduleCount <= row) {
+          row -= inc;
+          inc = -inc;
+          break;
+        }
+      }
+    }
+  };
+
+  var createBytes = function createBytes(buffer, rsBlocks) {
+
+    var offset = 0;
+
+    var maxDcCount = 0;
+    var maxEcCount = 0;
+
+    var dcdata = new Array(rsBlocks.length);
+    var ecdata = new Array(rsBlocks.length);
+
+    for (var r = 0; r < rsBlocks.length; r += 1) {
+
+      var dcCount = rsBlocks[r].dataCount;
+      var ecCount = rsBlocks[r].totalCount - dcCount;
+
+      maxDcCount = Math.max(maxDcCount, dcCount);
+      maxEcCount = Math.max(maxEcCount, ecCount);
+
+      dcdata[r] = new Array(dcCount);
+
+      for (var i = 0; i < dcdata[r].length; i += 1) {
+        dcdata[r][i] = 0xff & buffer.getBuffer()[i + offset];
+      }
+      offset += dcCount;
+
+      var rsPoly = QRUtil.getErrorCorrectPolynomial(ecCount);
+      var rawPoly = qrPolynomial(dcdata[r], rsPoly.getLength() - 1);
+
+      var modPoly = rawPoly.mod(rsPoly);
+      ecdata[r] = new Array(rsPoly.getLength() - 1);
+      for (var i = 0; i < ecdata[r].length; i += 1) {
+        var modIndex = i + modPoly.getLength() - ecdata[r].length;
+        ecdata[r][i] = modIndex >= 0 ? modPoly.getAt(modIndex) : 0;
+      }
+    }
+
+    var totalCodeCount = 0;
+    for (var i = 0; i < rsBlocks.length; i += 1) {
+      totalCodeCount += rsBlocks[i].totalCount;
+    }
+
+    var data = new Array(totalCodeCount);
+    var index = 0;
+
+    for (var i = 0; i < maxDcCount; i += 1) {
+      for (var r = 0; r < rsBlocks.length; r += 1) {
+        if (i < dcdata[r].length) {
+          data[index] = dcdata[r][i];
+          index += 1;
+        }
+      }
+    }
+
+    for (var i = 0; i < maxEcCount; i += 1) {
+      for (var r = 0; r < rsBlocks.length; r += 1) {
+        if (i < ecdata[r].length) {
+          data[index] = ecdata[r][i];
+          index += 1;
+        }
+      }
+    }
+
+    return data;
+  };
+
+  var createData = function createData(typeNumber, errorCorrectLevel, dataList) {
+
+    var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, errorCorrectLevel);
+
+    var buffer = qrBitBuffer();
+
+    for (var i = 0; i < dataList.length; i += 1) {
+      var data = dataList[i];
+      buffer.put(data.getMode(), 4);
+      buffer.put(data.getLength(), QRUtil.getLengthInBits(data.getMode(), typeNumber));
+      data.write(buffer);
+    }
+
+    // calc num max data.
+    var totalDataCount = 0;
+    for (var i = 0; i < rsBlocks.length; i += 1) {
+      totalDataCount += rsBlocks[i].dataCount;
+    }
+
+    if (buffer.getLengthInBits() > totalDataCount * 8) {
+      throw new Error('code length overflow. (' +
+      buffer.getLengthInBits() +
+      '>' +
+      totalDataCount * 8 +
+      ')');
+    }
+
+    // end code
+    if (buffer.getLengthInBits() + 4 <= totalDataCount * 8) {
+      buffer.put(0, 4);
+    }
+
+    // padding
+    while (buffer.getLengthInBits() % 8 != 0) {
+      buffer.putBit(false);
+    }
+
+    // padding
+    while (true) {
+
+      if (buffer.getLengthInBits() >= totalDataCount * 8) {
+        break;
+      }
+      buffer.put(PAD0, 8);
+
+      if (buffer.getLengthInBits() >= totalDataCount * 8) {
+        break;
+      }
+      buffer.put(PAD1, 8);
+    }
+
+    return createBytes(buffer, rsBlocks);
+  };
+
+  _this.addData = function (data) {
+    var newData = qr8BitByte(data);
+    _dataList.push(newData);
+    _dataCache = null;
+  };
+
+  _this.isDark = function (row, col) {
+    if (row < 0 || _moduleCount <= row || col < 0 || _moduleCount <= col) {
+      throw new Error(row + ',' + col);
+    }
+    return _modules[row][col];
+  };
+
+  _this.getModuleCount = function () {
+    return _moduleCount;
+  };
+
+  _this.make = function () {
+    makeImpl(false, getBestMaskPattern());
+  };
+
+  _this.createTableTag = function (cellSize, margin) {
+
+    cellSize = cellSize || 2;
+    margin = typeof margin == 'undefined' ? cellSize * 4 : margin;
+
+    var qrHtml = '';
+
+    qrHtml += '<table style="';
+    qrHtml += ' border-width: 0px; border-style: none;';
+    qrHtml += ' border-collapse: collapse;';
+    qrHtml += ' padding: 0px; margin: ' + margin + 'px;';
+    qrHtml += '">';
+    qrHtml += '<tbody>';
+
+    for (var r = 0; r < _this.getModuleCount(); r += 1) {
+
+      qrHtml += '<tr>';
+
+      for (var c = 0; c < _this.getModuleCount(); c += 1) {
+        qrHtml += '<td style="';
+        qrHtml += ' border-width: 0px; border-style: none;';
+        qrHtml += ' border-collapse: collapse;';
+        qrHtml += ' padding: 0px; margin: 0px;';
+        qrHtml += ' width: ' + cellSize + 'px;';
+        qrHtml += ' height: ' + cellSize + 'px;';
+        qrHtml += ' background-color: ';
+        qrHtml += _this.isDark(r, c) ? '#000000' : '#ffffff';
+        qrHtml += ';';
+        qrHtml += '"/>';
+      }
+
+      qrHtml += '</tr>';
+    }
+
+    qrHtml += '</tbody>';
+    qrHtml += '</table>';
+
+    return qrHtml;
+  };
+
+  _this.createImgTag = function (cellSize, margin, size) {
+
+    cellSize = cellSize || 2;
+    margin = typeof margin == 'undefined' ? cellSize * 4 : margin;
+
+    var min = margin;
+    var max = _this.getModuleCount() * cellSize + margin;
+
+    return createImgTag(size, size, function (x, y) {
+      if (min <= x && x < max && min <= y && y < max) {
+        var c = Math.floor((x - min) / cellSize);
+        var r = Math.floor((y - min) / cellSize);
+        return _this.isDark(r, c) ? 0 : 1;
+      } else {
+        return 1;
+      }
+    });
+  };
+
+  return _this;
+};
+
+//---------------------------------------------------------------------
+// qrcode.stringToBytes
+//---------------------------------------------------------------------
+
+qrcode.stringToBytes = function (s) {
+  var bytes = new Array();
+  for (var i = 0; i < s.length; i += 1) {
+    var c = s.charCodeAt(i);
+    bytes.push(c & 0xff);
+  }
+  return bytes;
+};
+
+//---------------------------------------------------------------------
+// qrcode.createStringToBytes
+//---------------------------------------------------------------------
+
+/**
+ * @param unicodeData base64 string of byte array.
+ * [16bit Unicode],[16bit Bytes], ...
+ * @param numChars
+ */
+qrcode.createStringToBytes = function (unicodeData, numChars) {
+
+  // create conversion map.
+
+  var unicodeMap = function () {
+
+    var bin = base64DecodeInputStream(unicodeData);
+    var read = function read() {
+      var b = bin.read();
+      if (b == -1) throw new Error();
+      return b;
+    };
+
+    var count = 0;
+    var unicodeMap = {};
+    while (true) {
+      var b0 = bin.read();
+      if (b0 == -1) break;
+      var b1 = read();
+      var b2 = read();
+      var b3 = read();
+      var k = String.fromCharCode(b0 << 8 | b1);
+      var v = b2 << 8 | b3;
+      unicodeMap[k] = v;
+      count += 1;
+    }
+    if (count != numChars) {
+      throw new Error(count + ' != ' + numChars);
+    }
+
+    return unicodeMap;
+  }();
+
+  var unknownChar = '?'.charCodeAt(0);
+
+  return function (s) {
+    var bytes = new Array();
+    for (var i = 0; i < s.length; i += 1) {
+      var c = s.charCodeAt(i);
+      if (c < 128) {
+        bytes.push(c);
+      } else {
+        var b = unicodeMap[s.charAt(i)];
+        if (typeof b == 'number') {
+          if ((b & 0xff) == b) {
+            // 1byte
+            bytes.push(b);
+          } else {
+            // 2bytes
+            bytes.push(b >>> 8);
+            bytes.push(b & 0xff);
+          }
+        } else {
+          bytes.push(unknownChar);
+        }
+      }
+    }
+    return bytes;
+  };
+};
+
+//---------------------------------------------------------------------
+// QRMode
+//---------------------------------------------------------------------
+
+var QRMode = {
+  MODE_NUMBER: 1 << 0,
+  MODE_ALPHA_NUM: 1 << 1,
+  MODE_8BIT_BYTE: 1 << 2,
+  MODE_KANJI: 1 << 3 };
+
+
+//---------------------------------------------------------------------
+// QRErrorCorrectLevel
+//---------------------------------------------------------------------
+
+var QRErrorCorrectLevel = {
+  L: 1,
+  M: 0,
+  Q: 3,
+  H: 2 };
+
+
+//---------------------------------------------------------------------
+// QRMaskPattern
+//---------------------------------------------------------------------
+
+var QRMaskPattern = {
+  PATTERN000: 0,
+  PATTERN001: 1,
+  PATTERN010: 2,
+  PATTERN011: 3,
+  PATTERN100: 4,
+  PATTERN101: 5,
+  PATTERN110: 6,
+  PATTERN111: 7 };
+
+
+//---------------------------------------------------------------------
+// QRUtil
+//---------------------------------------------------------------------
+
+var QRUtil = function () {
+
+  var PATTERN_POSITION_TABLE = [
+  [],
+  [6, 18],
+  [6, 22],
+  [6, 26],
+  [6, 30],
+  [6, 34],
+  [6, 22, 38],
+  [6, 24, 42],
+  [6, 26, 46],
+  [6, 28, 50],
+  [6, 30, 54],
+  [6, 32, 58],
+  [6, 34, 62],
+  [6, 26, 46, 66],
+  [6, 26, 48, 70],
+  [6, 26, 50, 74],
+  [6, 30, 54, 78],
+  [6, 30, 56, 82],
+  [6, 30, 58, 86],
+  [6, 34, 62, 90],
+  [6, 28, 50, 72, 94],
+  [6, 26, 50, 74, 98],
+  [6, 30, 54, 78, 102],
+  [6, 28, 54, 80, 106],
+  [6, 32, 58, 84, 110],
+  [6, 30, 58, 86, 114],
+  [6, 34, 62, 90, 118],
+  [6, 26, 50, 74, 98, 122],
+  [6, 30, 54, 78, 102, 126],
+  [6, 26, 52, 78, 104, 130],
+  [6, 30, 56, 82, 108, 134],
+  [6, 34, 60, 86, 112, 138],
+  [6, 30, 58, 86, 114, 142],
+  [6, 34, 62, 90, 118, 146],
+  [6, 30, 54, 78, 102, 126, 150],
+  [6, 24, 50, 76, 102, 128, 154],
+  [6, 28, 54, 80, 106, 132, 158],
+  [6, 32, 58, 84, 110, 136, 162],
+  [6, 26, 54, 82, 110, 138, 166],
+  [6, 30, 58, 86, 114, 142, 170]];
+
+  var G15 = 1 << 10 | 1 << 8 | 1 << 5 | 1 << 4 | 1 << 2 | 1 << 1 | 1 << 0;
+  var G18 = 1 << 12 | 1 << 11 | 1 << 10 | 1 << 9 | 1 << 8 | 1 << 5 | 1 << 2 | 1 << 0;
+  var G15_MASK = 1 << 14 | 1 << 12 | 1 << 10 | 1 << 4 | 1 << 1;
+
+  var _this = {};
+
+  var getBCHDigit = function getBCHDigit(data) {
+    var digit = 0;
+    while (data != 0) {
+      digit += 1;
+      data >>>= 1;
+    }
+    return digit;
+  };
+
+  _this.getBCHTypeInfo = function (data) {
+    var d = data << 10;
+    while (getBCHDigit(d) - getBCHDigit(G15) >= 0) {
+      d ^= G15 << getBCHDigit(d) - getBCHDigit(G15);
+    }
+    return (data << 10 | d) ^ G15_MASK;
+  };
+
+  _this.getBCHTypeNumber = function (data) {
+    var d = data << 12;
+    while (getBCHDigit(d) - getBCHDigit(G18) >= 0) {
+      d ^= G18 << getBCHDigit(d) - getBCHDigit(G18);
+    }
+    return data << 12 | d;
+  };
+
+  _this.getPatternPosition = function (typeNumber) {
+    return PATTERN_POSITION_TABLE[typeNumber - 1];
+  };
+
+  _this.getMaskFunction = function (maskPattern) {
+
+    switch (maskPattern) {
+
+      case QRMaskPattern.PATTERN000:
+        return function (i, j) {return (i + j) % 2 == 0;};
+      case QRMaskPattern.PATTERN001:
+        return function (i, j) {return i % 2 == 0;};
+      case QRMaskPattern.PATTERN010:
+        return function (i, j) {return j % 3 == 0;};
+      case QRMaskPattern.PATTERN011:
+        return function (i, j) {return (i + j) % 3 == 0;};
+      case QRMaskPattern.PATTERN100:
+        return function (i, j) {return (Math.floor(i / 2) + Math.floor(j / 3)) % 2 == 0;};
+      case QRMaskPattern.PATTERN101:
+        return function (i, j) {return i * j % 2 + i * j % 3 == 0;};
+      case QRMaskPattern.PATTERN110:
+        return function (i, j) {return (i * j % 2 + i * j % 3) % 2 == 0;};
+      case QRMaskPattern.PATTERN111:
+        return function (i, j) {return (i * j % 3 + (i + j) % 2) % 2 == 0;};
+
+      default:
+        throw new Error('bad maskPattern:' + maskPattern);}
+
+  };
+
+  _this.getErrorCorrectPolynomial = function (errorCorrectLength) {
+    var a = qrPolynomial([1], 0);
+    for (var i = 0; i < errorCorrectLength; i += 1) {
+      a = a.multiply(qrPolynomial([1, QRMath.gexp(i)], 0));
+    }
+    return a;
+  };
+
+  _this.getLengthInBits = function (mode, type) {
+
+    if (1 <= type && type < 10) {
+
+      // 1 - 9
+
+      switch (mode) {
+        case QRMode.MODE_NUMBER:return 10;
+        case QRMode.MODE_ALPHA_NUM:return 9;
+        case QRMode.MODE_8BIT_BYTE:return 8;
+        case QRMode.MODE_KANJI:return 8;
+        default:
+          throw new Error('mode:' + mode);}
+
+
+    } else if (type < 27) {
+
+      // 10 - 26
+
+      switch (mode) {
+        case QRMode.MODE_NUMBER:return 12;
+        case QRMode.MODE_ALPHA_NUM:return 11;
+        case QRMode.MODE_8BIT_BYTE:return 16;
+        case QRMode.MODE_KANJI:return 10;
+        default:
+          throw new Error('mode:' + mode);}
+
+
+    } else if (type < 41) {
+
+      // 27 - 40
+
+      switch (mode) {
+        case QRMode.MODE_NUMBER:return 14;
+        case QRMode.MODE_ALPHA_NUM:return 13;
+        case QRMode.MODE_8BIT_BYTE:return 16;
+        case QRMode.MODE_KANJI:return 12;
+        default:
+          throw new Error('mode:' + mode);}
+
+
+    } else {
+      throw new Error('type:' + type);
+    }
+  };
+
+  _this.getLostPoint = function (qrcode) {
+
+    var moduleCount = qrcode.getModuleCount();
+
+    var lostPoint = 0;
+
+    // LEVEL1
+
+    for (var row = 0; row < moduleCount; row += 1) {
+      for (var col = 0; col < moduleCount; col += 1) {
+
+        var sameCount = 0;
+        var dark = qrcode.isDark(row, col);
+
+        for (var r = -1; r <= 1; r += 1) {
+
+          if (row + r < 0 || moduleCount <= row + r) {
+            continue;
+          }
+
+          for (var c = -1; c <= 1; c += 1) {
+
+            if (col + c < 0 || moduleCount <= col + c) {
+              continue;
+            }
+
+            if (r == 0 && c == 0) {
+              continue;
+            }
+
+            if (dark == qrcode.isDark(row + r, col + c)) {
+              sameCount += 1;
+            }
+          }
+        }
+
+        if (sameCount > 5) {
+          lostPoint += 3 + sameCount - 5;
+        }
+      }
+    };
+
+    // LEVEL2
+
+    for (var row = 0; row < moduleCount - 1; row += 1) {
+      for (var col = 0; col < moduleCount - 1; col += 1) {
+        var count = 0;
+        if (qrcode.isDark(row, col)) count += 1;
+        if (qrcode.isDark(row + 1, col)) count += 1;
+        if (qrcode.isDark(row, col + 1)) count += 1;
+        if (qrcode.isDark(row + 1, col + 1)) count += 1;
+        if (count == 0 || count == 4) {
+          lostPoint += 3;
+        }
+      }
+    }
+
+    // LEVEL3
+
+    for (var row = 0; row < moduleCount; row += 1) {
+      for (var col = 0; col < moduleCount - 6; col += 1) {
+        if (qrcode.isDark(row, col) &&
+        !qrcode.isDark(row, col + 1) &&
+        qrcode.isDark(row, col + 2) &&
+        qrcode.isDark(row, col + 3) &&
+        qrcode.isDark(row, col + 4) &&
+        !qrcode.isDark(row, col + 5) &&
+        qrcode.isDark(row, col + 6)) {
+          lostPoint += 40;
+        }
+      }
+    }
+
+    for (var col = 0; col < moduleCount; col += 1) {
+      for (var row = 0; row < moduleCount - 6; row += 1) {
+        if (qrcode.isDark(row, col) &&
+        !qrcode.isDark(row + 1, col) &&
+        qrcode.isDark(row + 2, col) &&
+        qrcode.isDark(row + 3, col) &&
+        qrcode.isDark(row + 4, col) &&
+        !qrcode.isDark(row + 5, col) &&
+        qrcode.isDark(row + 6, col)) {
+          lostPoint += 40;
+        }
+      }
+    }
+
+    // LEVEL4
+
+    var darkCount = 0;
+
+    for (var col = 0; col < moduleCount; col += 1) {
+      for (var row = 0; row < moduleCount; row += 1) {
+        if (qrcode.isDark(row, col)) {
+          darkCount += 1;
+        }
+      }
+    }
+
+    var ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
+    lostPoint += ratio * 10;
+
+    return lostPoint;
+  };
+
+  return _this;
+}();
+
+//---------------------------------------------------------------------
+// QRMath
+//---------------------------------------------------------------------
+
+var QRMath = function () {
+
+  var EXP_TABLE = new Array(256);
+  var LOG_TABLE = new Array(256);
+
+  // initialize tables
+  for (var i = 0; i < 8; i += 1) {
+    EXP_TABLE[i] = 1 << i;
+  }
+  for (var i = 8; i < 256; i += 1) {
+    EXP_TABLE[i] = EXP_TABLE[i - 4] ^
+    EXP_TABLE[i - 5] ^
+    EXP_TABLE[i - 6] ^
+    EXP_TABLE[i - 8];
+  }
+  for (var i = 0; i < 255; i += 1) {
+    LOG_TABLE[EXP_TABLE[i]] = i;
+  }
+
+  var _this = {};
+
+  _this.glog = function (n) {
+
+    if (n < 1) {
+      throw new Error('glog(' + n + ')');
+    }
+
+    return LOG_TABLE[n];
+  };
+
+  _this.gexp = function (n) {
+
+    while (n < 0) {
+      n += 255;
+    }
+
+    while (n >= 256) {
+      n -= 255;
+    }
+
+    return EXP_TABLE[n];
+  };
+
+  return _this;
+}();
+
+//---------------------------------------------------------------------
+// qrPolynomial
+//---------------------------------------------------------------------
+
+function qrPolynomial(num, shift) {
+
+  if (typeof num.length == 'undefined') {
+    throw new Error(num.length + '/' + shift);
+  }
+
+  var _num = function () {
+    var offset = 0;
+    while (offset < num.length && num[offset] == 0) {
+      offset += 1;
+    }
+    var _num = new Array(num.length - offset + shift);
+    for (var i = 0; i < num.length - offset; i += 1) {
+      _num[i] = num[i + offset];
+    }
+    return _num;
+  }();
+
+  var _this = {};
+
+  _this.getAt = function (index) {
+    return _num[index];
+  };
+
+  _this.getLength = function () {
+    return _num.length;
+  };
+
+  _this.multiply = function (e) {
+
+    var num = new Array(_this.getLength() + e.getLength() - 1);
+
+    for (var i = 0; i < _this.getLength(); i += 1) {
+      for (var j = 0; j < e.getLength(); j += 1) {
+        num[i + j] ^= QRMath.gexp(QRMath.glog(_this.getAt(i)) + QRMath.glog(e.getAt(j)));
+      }
+    }
+
+    return qrPolynomial(num, 0);
+  };
+
+  _this.mod = function (e) {
+
+    if (_this.getLength() - e.getLength() < 0) {
+      return _this;
+    }
+
+    var ratio = QRMath.glog(_this.getAt(0)) - QRMath.glog(e.getAt(0));
+
+    var num = new Array(_this.getLength());
+    for (var i = 0; i < _this.getLength(); i += 1) {
+      num[i] = _this.getAt(i);
+    }
+
+    for (var i = 0; i < e.getLength(); i += 1) {
+      num[i] ^= QRMath.gexp(QRMath.glog(e.getAt(i)) + ratio);
+    }
+
+    // recursive call
+    return qrPolynomial(num, 0).mod(e);
+  };
+
+  return _this;
+};
+
+//---------------------------------------------------------------------
+// QRRSBlock
+//---------------------------------------------------------------------
+
+var QRRSBlock = function () {
+
+
+  // [1: [L, M, Q, H], ..]
+  var RS_BLOCK_TABLE = [[1, 26, 19], [1, 26, 16], [1, 26, 13], [1, 26, 9], [1, 44, 34], [1, 44, 28], [1, 44, 22], [1, 44, 16], [1, 70, 55], [1, 70, 44], [2, 35, 17], [2, 35, 13], [1, 100, 80], [2, 50, 32], [2, 50, 24], [4, 25, 9], [1, 134, 108], [2, 67, 43], [2, 33, 15, 2, 34, 16], [2, 33, 11, 2, 34, 12], [2, 86, 68], [4, 43, 27], [4, 43, 19], [4, 43, 15], [2, 98, 78], [4, 49, 31], [2, 32, 14, 4, 33, 15], [4, 39, 13, 1, 40, 14], [2, 121, 97], [2, 60, 38, 2, 61, 39], [4, 40, 18, 2, 41, 19], [4, 40, 14, 2, 41, 15], [2, 146, 116], [3, 58, 36, 2, 59, 37], [4, 36, 16, 4, 37, 17], [4, 36, 12, 4, 37, 13], [2, 86, 68, 2, 87, 69], [4, 69, 43, 1, 70, 44], [6, 43, 19, 2, 44, 20], [6, 43, 15, 2, 44, 16], [4, 101, 81], [1, 80, 50, 4, 81, 51], [4, 50, 22, 4, 51, 23], [3, 36, 12, 8, 37, 13], [2, 116, 92, 2, 117, 93], [6, 58, 36, 2, 59, 37], [4, 46, 20, 6, 47, 21], [7, 42, 14, 4, 43, 15], [4, 133, 107], [8, 59, 37, 1, 60, 38], [8, 44, 20, 4, 45, 21], [12, 33, 11, 4, 34, 12], [3, 145, 115, 1, 146, 116], [4, 64, 40, 5, 65, 41], [11, 36, 16, 5, 37, 17], [11, 36, 12, 5, 37, 13], [5, 109, 87, 1, 110, 88], [5, 65, 41, 5, 66, 42], [5, 54, 24, 7, 55, 25], [11, 36, 12], [5, 122, 98, 1, 123, 99], [7, 73, 45, 3, 74, 46], [15, 43, 19, 2, 44, 20], [3, 45, 15, 13, 46, 16], [1, 135, 107, 5, 136, 108], [10, 74, 46, 1, 75, 47], [1, 50, 22, 15, 51, 23], [2, 42, 14, 17, 43, 15], [5, 150, 120, 1, 151, 121], [9, 69, 43, 4, 70, 44], [17, 50, 22, 1, 51, 23], [2, 42, 14, 19, 43, 15], [3, 141, 113, 4, 142, 114], [3, 70, 44, 11, 71, 45], [17, 47, 21, 4, 48, 22], [9, 39, 13, 16, 40, 14], [3, 135, 107, 5, 136, 108], [3, 67, 41, 13, 68, 42], [15, 54, 24, 5, 55, 25], [15, 43, 15, 10, 44, 16], [4, 144, 116, 4, 145, 117], [17, 68, 42], [17, 50, 22, 6, 51, 23], [19, 46, 16, 6, 47, 17], [2, 139, 111, 7, 140, 112], [17, 74, 46], [7, 54, 24, 16, 55, 25], [34, 37, 13], [4, 151, 121, 5, 152, 122], [4, 75, 47, 14, 76, 48], [11, 54, 24, 14, 55, 25], [16, 45, 15, 14, 46, 16], [6, 147, 117, 4, 148, 118], [6, 73, 45, 14, 74, 46], [11, 54, 24, 16, 55, 25], [30, 46, 16, 2, 47, 17], [8, 132, 106, 4, 133, 107], [8, 75, 47, 13, 76, 48], [7, 54, 24, 22, 55, 25], [22, 45, 15, 13, 46, 16], [10, 142, 114, 2, 143, 115], [19, 74, 46, 4, 75, 47], [28, 50, 22, 6, 51, 23], [33, 46, 16, 4, 47, 17], [8, 152, 122, 4, 153, 123], [22, 73, 45, 3, 74, 46], [8, 53, 23, 26, 54, 24], [12, 45, 15, 28, 46, 16], [3, 147, 117, 10, 148, 118], [3, 73, 45, 23, 74, 46], [4, 54, 24, 31, 55, 25], [11, 45, 15, 31, 46, 16], [7, 146, 116, 7, 147, 117], [21, 73, 45, 7, 74, 46], [1, 53, 23, 37, 54, 24], [19, 45, 15, 26, 46, 16], [5, 145, 115, 10, 146, 116], [19, 75, 47, 10, 76, 48], [15, 54, 24, 25, 55, 25], [23, 45, 15, 25, 46, 16], [13, 145, 115, 3, 146, 116], [2, 74, 46, 29, 75, 47], [42, 54, 24, 1, 55, 25], [23, 45, 15, 28, 46, 16], [17, 145, 115], [10, 74, 46, 23, 75, 47], [10, 54, 24, 35, 55, 25], [19, 45, 15, 35, 46, 16], [17, 145, 115, 1, 146, 116], [14, 74, 46, 21, 75, 47], [29, 54, 24, 19, 55, 25], [11, 45, 15, 46, 46, 16], [13, 145, 115, 6, 146, 116], [14, 74, 46, 23, 75, 47], [44, 54, 24, 7, 55, 25], [59, 46, 16, 1, 47, 17], [12, 151, 121, 7, 152, 122], [12, 75, 47, 26, 76, 48], [39, 54, 24, 14, 55, 25], [22, 45, 15, 41, 46, 16], [6, 151, 121, 14, 152, 122], [6, 75, 47, 34, 76, 48], [46, 54, 24, 10, 55, 25], [2, 45, 15, 64, 46, 16], [17, 152, 122, 4, 153, 123], [29, 74, 46, 14, 75, 47], [49, 54, 24, 10, 55, 25], [24, 45, 15, 46, 46, 16], [4, 152, 122, 18, 153, 123], [13, 74, 46, 32, 75, 47], [48, 54, 24, 14, 55, 25], [42, 45, 15, 32, 46, 16], [20, 147, 117, 4, 148, 118], [40, 75, 47, 7, 76, 48], [43, 54, 24, 22, 55, 25], [10, 45, 15, 67, 46, 16], [19, 148, 118, 6, 149, 119], [18, 75, 47, 31, 76, 48], [34, 54, 24, 34, 55, 25], [20, 45, 15, 61, 46, 16]];
+
+  var qrRSBlock = function qrRSBlock(totalCount, dataCount) {
+    var _this = {};
+    _this.totalCount = totalCount;
+    _this.dataCount = dataCount;
+    return _this;
+  };
+
+  var _this = {};
+
+  var getRsBlockTable = function getRsBlockTable(typeNumber, errorCorrectLevel) {
+
+    switch (errorCorrectLevel) {
+      case QRErrorCorrectLevel.L:
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 0];
+      case QRErrorCorrectLevel.M:
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 1];
+      case QRErrorCorrectLevel.Q:
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 2];
+      case QRErrorCorrectLevel.H:
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 3];
+      default:
+        return undefined;}
+
+  };
+
+  _this.getRSBlocks = function (typeNumber, errorCorrectLevel) {
+
+    var rsBlock = getRsBlockTable(typeNumber, errorCorrectLevel);
+
+    if (typeof rsBlock == 'undefined') {
+      throw new Error('bad rs block [url=home.php?mod=space&uid=5302]@[/url] typeNumber:' + typeNumber +
+      '/errorCorrectLevel:' + errorCorrectLevel);
+    }
+
+    var length = rsBlock.length / 3;
+
+    var list = new Array();
+
+    for (var i = 0; i < length; i += 1) {
+
+      var count = rsBlock[i * 3 + 0];
+      var totalCount = rsBlock[i * 3 + 1];
+      var dataCount = rsBlock[i * 3 + 2];
+
+      for (var j = 0; j < count; j += 1) {
+        list.push(qrRSBlock(totalCount, dataCount));
+      }
+    }
+
+    return list;
+  };
+
+  return _this;
+}();
+
+//---------------------------------------------------------------------
+// qrBitBuffer
+//---------------------------------------------------------------------
+
+var qrBitBuffer = function qrBitBuffer() {
+
+  var _buffer = new Array();
+  var _length = 0;
+
+  var _this = {};
+
+  _this.getBuffer = function () {
+    return _buffer;
+  };
+
+  _this.getAt = function (index) {
+    var bufIndex = Math.floor(index / 8);
+    return (_buffer[bufIndex] >>> 7 - index % 8 & 1) == 1;
+  };
+
+  _this.put = function (num, length) {
+    for (var i = 0; i < length; i += 1) {
+      _this.putBit((num >>> length - i - 1 & 1) == 1);
+    }
+  };
+
+  _this.getLengthInBits = function () {
+    return _length;
+  };
+
+  _this.putBit = function (bit) {
+
+    var bufIndex = Math.floor(_length / 8);
+    if (_buffer.length <= bufIndex) {
+      _buffer.push(0);
+    }
+
+    if (bit) {
+      _buffer[bufIndex] |= 0x80 >>> _length % 8;
+    }
+
+    _length += 1;
+  };
+
+  return _this;
+};
+
+//---------------------------------------------------------------------
+// qr8BitByte
+//---------------------------------------------------------------------
+
+var qr8BitByte = function qr8BitByte(data) {
+
+  var _mode = QRMode.MODE_8BIT_BYTE;
+  var _data = data;
+  var _parsedData = [];
+
+  var _this = {};
+
+
+  // Added to support UTF-8 Characters
+  for (var i = 0, l = _data.length; i < l; i++) {
+    var byteArray = [];
+    var code = _data.charCodeAt(i);
+
+    if (code > 0x10000) {
+      byteArray[0] = 0xF0 | (code & 0x1C0000) >>> 18;
+      byteArray[1] = 0x80 | (code & 0x3F000) >>> 12;
+      byteArray[2] = 0x80 | (code & 0xFC0) >>> 6;
+      byteArray[3] = 0x80 | code & 0x3F;
+    } else if (code > 0x800) {
+      byteArray[0] = 0xE0 | (code & 0xF000) >>> 12;
+      byteArray[1] = 0x80 | (code & 0xFC0) >>> 6;
+      byteArray[2] = 0x80 | code & 0x3F;
+    } else if (code > 0x80) {
+      byteArray[0] = 0xC0 | (code & 0x7C0) >>> 6;
+      byteArray[1] = 0x80 | code & 0x3F;
+    } else {
+      byteArray[0] = code;
+    }
+
+    // Fix Unicode corruption bug
+    _parsedData.push(byteArray);
+  }
+
+  _parsedData = Array.prototype.concat.apply([], _parsedData);
+
+  if (_parsedData.length != _data.length) {
+    _parsedData.unshift(191);
+    _parsedData.unshift(187);
+    _parsedData.unshift(239);
+  }
+
+  var _bytes = _parsedData;
+
+  _this.getMode = function () {
+    return _mode;
+  };
+
+  _this.getLength = function (buffer) {
+    return _bytes.length;
+  };
+
+  _this.write = function (buffer) {
+    for (var i = 0; i < _bytes.length; i += 1) {
+      buffer.put(_bytes[i], 8);
+    }
+  };
+
+  return _this;
+};
+
+//=====================================================================
+// GIF Support etc.
+//
+
+//---------------------------------------------------------------------
+// byteArrayOutputStream
+//---------------------------------------------------------------------
+
+var byteArrayOutputStream = function byteArrayOutputStream() {
+
+  var _bytes = new Array();
+
+  var _this = {};
+
+  _this.writeByte = function (b) {
+    _bytes.push(b & 0xff);
+  };
+
+  _this.writeShort = function (i) {
+    _this.writeByte(i);
+    _this.writeByte(i >>> 8);
+  };
+
+  _this.writeBytes = function (b, off, len) {
+    off = off || 0;
+    len = len || b.length;
+    for (var i = 0; i < len; i += 1) {
+      _this.writeByte(b[i + off]);
+    }
+  };
+
+  _this.writeString = function (s) {
+    for (var i = 0; i < s.length; i += 1) {
+      _this.writeByte(s.charCodeAt(i));
+    }
+  };
+
+  _this.toByteArray = function () {
+    return _bytes;
+  };
+
+  _this.toString = function () {
+    var s = '';
+    s += '[';
+    for (var i = 0; i < _bytes.length; i += 1) {
+      if (i > 0) {
+        s += ',';
+      }
+      s += _bytes[i];
+    }
+    s += ']';
+    return s;
+  };
+
+  return _this;
+};
+
+//---------------------------------------------------------------------
+// base64EncodeOutputStream
+//---------------------------------------------------------------------
+
+var base64EncodeOutputStream = function base64EncodeOutputStream() {
+
+  var _buffer = 0;
+  var _buflen = 0;
+  var _length = 0;
+  var _base64 = '';
+
+  var _this = {};
+
+  var writeEncoded = function writeEncoded(b) {
+    _base64 += String.fromCharCode(encode(b & 0x3f));
+  };
+
+  var encode = function encode(n) {
+    if (n < 0) {
+      // error.
+    } else if (n < 26) {
+      return 0x41 + n;
+    } else if (n < 52) {
+      return 0x61 + (n - 26);
+    } else if (n < 62) {
+      return 0x30 + (n - 52);
+    } else if (n == 62) {
+      return 0x2b;
+    } else if (n == 63) {
+      return 0x2f;
+    }
+    throw new Error('n:' + n);
+  };
+
+  _this.writeByte = function (n) {
+
+    _buffer = _buffer << 8 | n & 0xff;
+    _buflen += 8;
+    _length += 1;
+
+    while (_buflen >= 6) {
+      writeEncoded(_buffer >>> _buflen - 6);
+      _buflen -= 6;
+    }
+  };
+
+  _this.flush = function () {
+
+    if (_buflen > 0) {
+      writeEncoded(_buffer << 6 - _buflen);
+      _buffer = 0;
+      _buflen = 0;
+    }
+
+    if (_length % 3 != 0) {
+      // padding
+      var padlen = 3 - _length % 3;
+      for (var i = 0; i < padlen; i += 1) {
+        _base64 += '=';
+      }
+    }
+  };
+
+  _this.toString = function () {
+    return _base64;
+  };
+
+  return _this;
+};
+
+//---------------------------------------------------------------------
+// base64DecodeInputStream
+//---------------------------------------------------------------------
+
+var base64DecodeInputStream = function base64DecodeInputStream(str) {
+
+  var _str = str;
+  var _pos = 0;
+  var _buffer = 0;
+  var _buflen = 0;
+
+  var _this = {};
+
+  _this.read = function () {
+
+    while (_buflen < 8) {
+
+      if (_pos >= _str.length) {
+        if (_buflen == 0) {
+          return -1;
+        }
+        throw new Error('unexpected end of file./' + _buflen);
+      }
+
+      var c = _str.charAt(_pos);
+      _pos += 1;
+
+      if (c == '=') {
+        _buflen = 0;
+        return -1;
+      } else if (c.match(/^\s$/)) {
+        // ignore if whitespace.
+        continue;
+      }
+
+      _buffer = _buffer << 6 | decode(c.charCodeAt(0));
+      _buflen += 6;
+    }
+
+    var n = _buffer >>> _buflen - 8 & 0xff;
+    _buflen -= 8;
+    return n;
+  };
+
+  var decode = function decode(c) {
+    if (0x41 <= c && c <= 0x5a) {
+      return c - 0x41;
+    } else if (0x61 <= c && c <= 0x7a) {
+      return c - 0x61 + 26;
+    } else if (0x30 <= c && c <= 0x39) {
+      return c - 0x30 + 52;
+    } else if (c == 0x2b) {
+      return 62;
+    } else if (c == 0x2f) {
+      return 63;
+    } else {
+      throw new Error('c:' + c);
+    }
+  };
+
+  return _this;
+};
+
+//---------------------------------------------------------------------
+// gifImage (B/W)
+//---------------------------------------------------------------------
+
+var gifImage = function gifImage(width, height) {
+
+  var _width = width;
+  var _height = height;
+  var _data = new Array(width * height);
+
+  var _this = {};
+
+  _this.setPixel = function (x, y, pixel) {
+    _data[y * _width + x] = pixel;
+  };
+
+  _this.write = function (out) {
+
+    //---------------------------------
+    // GIF Signature
+
+    out.writeString('GIF87a');
+
+    //---------------------------------
+    // Screen Descriptor
+
+    out.writeShort(_width);
+    out.writeShort(_height);
+
+    out.writeByte(0x80); // 2bit
+    out.writeByte(0);
+    out.writeByte(0);
+
+    //---------------------------------
+    // Global Color Map
+
+    // black
+    out.writeByte(0x00);
+    out.writeByte(0x00);
+    out.writeByte(0x00);
+
+    // white
+    out.writeByte(0xff);
+    out.writeByte(0xff);
+    out.writeByte(0xff);
+
+    //---------------------------------
+    // Image Descriptor
+
+    out.writeString(',');
+    out.writeShort(0);
+    out.writeShort(0);
+    out.writeShort(_width);
+    out.writeShort(_height);
+    out.writeByte(0);
+
+    //---------------------------------
+    // Local Color Map
+
+    //---------------------------------
+    // Raster Data
+
+    var lzwMinCodeSize = 2;
+    var raster = getLZWRaster(lzwMinCodeSize);
+
+    out.writeByte(lzwMinCodeSize);
+
+    var offset = 0;
+
+    while (raster.length - offset > 255) {
+      out.writeByte(255);
+      out.writeBytes(raster, offset, 255);
+      offset += 255;
+    }
+
+    out.writeByte(raster.length - offset);
+    out.writeBytes(raster, offset, raster.length - offset);
+    out.writeByte(0x00);
+
+    //---------------------------------
+    // GIF Terminator
+    out.writeString(';');
+  };
+
+  var bitOutputStream = function bitOutputStream(out) {
+
+    var _out = out;
+    var _bitLength = 0;
+    var _bitBuffer = 0;
+
+    var _this = {};
+
+    _this.write = function (data, length) {
+
+      if (data >>> length != 0) {
+        throw new Error('length over');
+      }
+
+      while (_bitLength + length >= 8) {
+        _out.writeByte(0xff & (data << _bitLength | _bitBuffer));
+        length -= 8 - _bitLength;
+        data >>>= 8 - _bitLength;
+        _bitBuffer = 0;
+        _bitLength = 0;
+      }
+
+      _bitBuffer = data << _bitLength | _bitBuffer;
+      _bitLength = _bitLength + length;
+    };
+
+    _this.flush = function () {
+      if (_bitLength > 0) {
+        _out.writeByte(_bitBuffer);
+      }
+    };
+
+    return _this;
+  };
+
+  var getLZWRaster = function getLZWRaster(lzwMinCodeSize) {
+
+    var clearCode = 1 << lzwMinCodeSize;
+    var endCode = (1 << lzwMinCodeSize) + 1;
+    var bitLength = lzwMinCodeSize + 1;
+
+    // Setup LZWTable
+    var table = lzwTable();
+
+    for (var i = 0; i < clearCode; i += 1) {
+      table.add(String.fromCharCode(i));
+    }
+    table.add(String.fromCharCode(clearCode));
+    table.add(String.fromCharCode(endCode));
+
+    var byteOut = byteArrayOutputStream();
+    var bitOut = bitOutputStream(byteOut);
+
+    // clear code
+    bitOut.write(clearCode, bitLength);
+
+    var dataIndex = 0;
+
+    var s = String.fromCharCode(_data[dataIndex]);
+    dataIndex += 1;
+
+    while (dataIndex < _data.length) {
+
+      var c = String.fromCharCode(_data[dataIndex]);
+      dataIndex += 1;
+
+      if (table.contains(s + c)) {
+
+        s = s + c;
+
+      } else {
+
+        bitOut.write(table.indexOf(s), bitLength);
+
+        if (table.size() < 0xfff) {
+
+          if (table.size() == 1 << bitLength) {
+            bitLength += 1;
+          }
+
+          table.add(s + c);
+        }
+
+        s = c;
+      }
+    }
+
+    bitOut.write(table.indexOf(s), bitLength);
+
+    // end code
+    bitOut.write(endCode, bitLength);
+
+    bitOut.flush();
+
+    return byteOut.toByteArray();
+  };
+
+  var lzwTable = function lzwTable() {
+
+    var _map = {};
+    var _size = 0;
+
+    var _this = {};
+
+    _this.add = function (key) {
+      if (_this.contains(key)) {
+        throw new Error('dup key:' + key);
+      }
+      _map[key] = _size;
+      _size += 1;
+    };
+
+    _this.size = function () {
+      return _size;
+    };
+
+    _this.indexOf = function (key) {
+      return _map[key];
+    };
+
+    _this.contains = function (key) {
+      return typeof _map[key] != 'undefined';
+    };
+
+    return _this;
+  };
+
+  return _this;
+};
+
+var createImgTag = function createImgTag(width, height, getPixel, alt) {
+
+  var gif = gifImage(width, height);
+  for (var y = 0; y < height; y += 1) {
+    for (var x = 0; x < width; x += 1) {
+      gif.setPixel(x, y, getPixel(x, y));
+    }
+  }
+
+  var b = byteArrayOutputStream();
+  gif.write(b);
+
+  var base64 = base64EncodeOutputStream();
+  var bytes = b.toByteArray();
+  for (var i = 0; i < bytes.length; i += 1) {
+    base64.writeByte(bytes[i]);
+  }
+  base64.flush();
+
+  var img = '';
+  img += 'data:image/gif;base64,';
+  img += base64;
+
+  return img;
+};
+
+//---------------------------------------------------------------------
+// returns qrcode function.
+
+var createQrCodeImg = function createQrCodeImg(text, options) {
+  options = options || {};
+  var typeNumber = options.typeNumber || 4;
+  var errorCorrectLevel = options.errorCorrectLevel || 'M';
+  var size = options.size || 500;
+
+  var qr;
+
+  try {
+    qr = qrcode(typeNumber, errorCorrectLevel || 'M');
+    qr.addData(text);
+    qr.make();
+  } catch (e) {
+    if (typeNumber >= 40) {
+      throw new Error('Text too long to encode');
+    } else {
+      return gen(text, {
+        size: size,
+        errorCorrectLevel: errorCorrectLevel,
+        typeNumber: typeNumber + 1 });
+
+    }
+  }
+
+  // calc cellsize and margin
+  var cellsize = parseInt(size / qr.getModuleCount());
+  var margin = parseInt((size - qr.getModuleCount() * cellsize) / 2);
+
+  return qr.createImgTag(cellsize, margin, size);
+};
+// var module = {}; 需要注释这一行，否则微信小程序无法使用
+module.exports = {
+  createQrCodeImg: createQrCodeImg };
+
+/***/ }),
+
 /***/ 4:
 /*!*********************************!*\
   !*** C:/xcx/jhx/jhx/pages.json ***!
@@ -10461,7 +12514,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 43:
+/***/ 44:
 /*!**************************************!*\
   !*** C:/xcx/jhx/jhx/utils/moment.js ***!
   \**************************************/
@@ -10469,11 +12522,11 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {!function (e, t) { true ? module.exports = t() : undefined;}(this, function () {'use strict';var e, i;function c() {return e.apply(null, arguments);}function o(e) {return e instanceof Array || '[object Array]' === Object.prototype.toString.call(e);}function u(e) {return null != e && '[object Object]' === Object.prototype.toString.call(e);}function l(e) {return void 0 === e;}function h(e) {return 'number' === typeof e || '[object Number]' === Object.prototype.toString.call(e);}function d(e) {return e instanceof Date || '[object Date]' === Object.prototype.toString.call(e);}function f(e, t) {var n,s = [];for (n = 0; n < e.length; ++n) {s.push(t(e[n], n));}return s;}function m(e, t) {return Object.prototype.hasOwnProperty.call(e, t);}function _(e, t) {for (var _n2 in t) {m(t, _n2) && (e[_n2] = t[_n2]);}return m(t, 'toString') && (e.toString = t.toString), m(t, 'valueOf') && (e.valueOf = t.valueOf), e;}function y(e, t, n, s) {return Tt(e, t, n, s, !0).utc();}function g(e) {return null == e._pf && (e._pf = { empty: !1, unusedTokens: [], unusedInput: [], overflow: -2, charsLeftOver: 0, nullInput: !1, invalidMonth: null, invalidFormat: !1, userInvalidated: !1, iso: !1, parsedDateParts: [], meridiem: null, rfc2822: !1, weekdayMismatch: !1 }), e._pf;}function v(e) {if (null == e._isValid) {var _t2 = g(e),_n3 = i.call(_t2.parsedDateParts, function (e) {return null != e;}),_s = !isNaN(e._d.getTime()) && _t2.overflow < 0 && !_t2.empty && !_t2.invalidMonth && !_t2.invalidWeekday && !_t2.weekdayMismatch && !_t2.nullInput && !_t2.invalidFormat && !_t2.userInvalidated && (!_t2.meridiem || _t2.meridiem && _n3);if (e._strict && (_s = _s && 0 === _t2.charsLeftOver && 0 === _t2.unusedTokens.length && void 0 === _t2.bigHour), null != Object.isFrozen && Object.isFrozen(e)) return _s;e._isValid = _s;}return e._isValid;}function p(e) {var t = y(NaN);return null != e ? _(g(t), e) : g(t).userInvalidated = !0, t;}i = Array.prototype.some ? Array.prototype.some : function (e) {for (var _t3 = Object(this), _n4 = _t3.length >>> 0, _s2 = 0; _s2 < _n4; _s2++) {if (_s2 in _t3 && e.call(this, _t3[_s2], _s2, _t3)) return !0;}return !1;};var r = c.momentProperties = [];function w(e, t) {var n, s, i;if (l(t._isAMomentObject) || (e._isAMomentObject = t._isAMomentObject), l(t._i) || (e._i = t._i), l(t._f) || (e._f = t._f), l(t._l) || (e._l = t._l), l(t._strict) || (e._strict = t._strict), l(t._tzm) || (e._tzm = t._tzm), l(t._isUTC) || (e._isUTC = t._isUTC), l(t._offset) || (e._offset = t._offset), l(t._pf) || (e._pf = g(t)), l(t._locale) || (e._locale = t._locale), 0 < r.length) for (n = 0; n < r.length; n++) {l(i = t[s = r[n]]) || (e[s] = i);}return e;}var t = !1;function M(e) {w(this, e), this._d = new Date(null != e._d ? e._d.getTime() : NaN), this.isValid() || (this._d = new Date(NaN)), !1 === t && (t = !0, c.updateOffset(this), t = !1);}function k(e) {return e instanceof M || null != e && null != e._isAMomentObject;}function S(e) {return e < 0 ? Math.ceil(e) || 0 : Math.floor(e);}function D(e) {var t = +e,n = 0;return 0 !== t && isFinite(t) && (n = S(t)), n;}function a(e, t, n) {var s,i = Math.min(e.length, t.length),r = Math.abs(e.length - t.length),a = 0;for (s = 0; s < i; s++) {(n && e[s] !== t[s] || !n && D(e[s]) !== D(t[s])) && a++;}return a + r;}function Y(e) {!1 === c.suppressDeprecationWarnings && 'undefined' !== typeof console && console.warn && console.warn('Deprecation warning: ' + e);}function n(i, r) {var a = !0;return _(function () {if (null != c.deprecationHandler && c.deprecationHandler(null, i), a) {for (var e, t = [], n = 0; n < arguments.length; n++) {if (e = '', 'object' === typeof arguments[n]) {for (var _s3 in e += '\n[' + n + '] ', arguments[0]) {e += _s3 + ': ' + arguments[0][_s3] + ', ';}e = e.slice(0, -2);} else e = arguments[n];t.push(e);}Y(i + '\nArguments: ' + Array.prototype.slice.call(t).join('') + '\n' + new Error().stack), a = !1;}return r.apply(this, arguments);}, r);}var s,O = {};function T(e, t) {null != c.deprecationHandler && c.deprecationHandler(e, t), O[e] || (Y(t), O[e] = !0);}function b(e) {return e instanceof Function || '[object Function]' === Object.prototype.toString.call(e);}function x(e, t) {var n,s = _({}, e);for (n in t) {m(t, n) && (u(e[n]) && u(t[n]) ? (s[n] = {}, _(s[n], e[n]), _(s[n], t[n])) : null != t[n] ? s[n] = t[n] : delete s[n]);}for (n in e) {m(e, n) && !m(t, n) && u(e[n]) && (s[n] = _({}, s[n]));}return s;}function P(e) {null != e && this.set(e);}c.suppressDeprecationWarnings = !1, c.deprecationHandler = null, s = Object.keys ? Object.keys : function (e) {var t,n = [];for (t in e) {m(e, t) && n.push(t);}return n;};var W = {};function C(e, t) {var n = e.toLowerCase();W[n] = W[n + 's'] = W[t] = e;}function H(e) {return 'string' === typeof e ? W[e] || W[e.toLowerCase()] : void 0;}function R(e) {var t,n,s = {};for (n in e) {m(e, n) && (t = H(n)) && (s[t] = e[n]);}return s;}var U = {};function F(e, t) {U[e] = t;}function L(e, t, n) {var s = '' + Math.abs(e),i = t - s.length;return (0 <= e ? n ? '+' : '' : '-') + Math.pow(10, Math.max(0, i)).toString().substr(1) + s;}var N = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,G = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,V = {},E = {};function I(e, t, n, s) {var i = s;'string' === typeof s && (i = function i() {return this[s]();}), e && (E[e] = i), t && (E[t[0]] = function () {return L(i.apply(this, arguments), t[1], t[2]);}), n && (E[n] = function () {return this.localeData().ordinal(i.apply(this, arguments), e);});}function A(e, t) {return e.isValid() ? (t = j(t, e.localeData()), V[t] = V[t] || function (s) {var e,i,t,r = s.match(N);for (e = 0, i = r.length; e < i; e++) {E[r[e]] ? r[e] = E[r[e]] : r[e] = (t = r[e]).match(/\[[\s\S]/) ? t.replace(/^\[|\]$/g, '') : t.replace(/\\/g, '');}return function (e) {var t,n = '';for (t = 0; t < i; t++) {n += b(r[t]) ? r[t].call(e, s) : r[t];}return n;};}(t), V[t](e)) : e.localeData().invalidDate();}function j(e, t) {var n = 5;function s(e) {return t.longDateFormat(e) || e;}for (G.lastIndex = 0; 0 <= n && G.test(e);) {e = e.replace(G, s), G.lastIndex = 0, n -= 1;}return e;}var Z = /\d/,z = /\d\d/,$ = /\d{3}/,q = /\d{4}/,J = /[+-]?\d{6}/,B = /\d\d?/,Q = /\d\d\d\d?/,X = /\d\d\d\d\d\d?/,K = /\d{1,3}/,ee = /\d{1,4}/,te = /[+-]?\d{1,6}/,ne = /\d+/,se = /[+-]?\d+/,ie = /Z|[+-]\d\d:?\d\d/gi,re = /Z|[+-]\d\d(?::?\d\d)?/gi,ae = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i,oe = {};function ue(e, n, s) {oe[e] = b(n) ? n : function (e, t) {return e && s ? s : n;};}function le(e, t) {return m(oe, e) ? oe[e](t._strict, t._locale) : new RegExp(he(e.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (e, t, n, s, i) {return t || n || s || i;})));}function he(e) {return e.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');}var de = {};function ce(e, n) {var t,s = n;for ('string' === typeof e && (e = [e]), h(n) && (s = function s(e, t) {t[n] = D(e);}), t = 0; t < e.length; t++) {de[e[t]] = s;}}function fe(e, i) {ce(e, function (e, t, n, s) {n._w = n._w || {}, i(e, n._w, n, s);});}var me = 0,_e = 1,ye = 2,ge = 3,ve = 4,pe = 5,we = 6,Me = 7,ke = 8;function Se(e) {return De(e) ? 366 : 365;}function De(e) {return e % 4 == 0 && e % 100 != 0 || e % 400 == 0;}I('Y', 0, 0, function () {var e = this.year();return e <= 9999 ? '' + e : '+' + e;}), I(0, ['YY', 2], 0, function () {return this.year() % 100;}), I(0, ['YYYY', 4], 0, 'year'), I(0, ['YYYYY', 5], 0, 'year'), I(0, ['YYYYYY', 6, !0], 0, 'year'), C('year', 'y'), F('year', 1), ue('Y', se), ue('YY', B, z), ue('YYYY', ee, q), ue('YYYYY', te, J), ue('YYYYYY', te, J), ce(['YYYYY', 'YYYYYY'], me), ce('YYYY', function (e, t) {t[me] = 2 === e.length ? c.parseTwoDigitYear(e) : D(e);}), ce('YY', function (e, t) {t[me] = c.parseTwoDigitYear(e);}), ce('Y', function (e, t) {t[me] = parseInt(e, 10);}), c.parseTwoDigitYear = function (e) {return D(e) + (68 < D(e) ? 1900 : 2e3);};var Ye,Oe = Te('FullYear', !0);function Te(t, n) {return function (e) {return null != e ? (xe(this, t, e), c.updateOffset(this, n), this) : be(this, t);};}function be(e, t) {return e.isValid() ? e._d['get' + (e._isUTC ? 'UTC' : '') + t]() : NaN;}function xe(e, t, n) {e.isValid() && !isNaN(n) && ('FullYear' === t && De(e.year()) && 1 === e.month() && 29 === e.date() ? e._d['set' + (e._isUTC ? 'UTC' : '') + t](n, e.month(), Pe(n, e.month())) : e._d['set' + (e._isUTC ? 'UTC' : '') + t](n));}function Pe(e, t) {if (isNaN(e) || isNaN(t)) return NaN;var n,s = (t % (n = 12) + n) % n;return e += (t - s) / 12, 1 === s ? De(e) ? 29 : 28 : 31 - s % 7 % 2;}Ye = Array.prototype.indexOf ? Array.prototype.indexOf : function (e) {var t;for (t = 0; t < this.length; ++t) {if (this[t] === e) return t;}return -1;}, I('M', ['MM', 2], 'Mo', function () {return this.month() + 1;}), I('MMM', 0, 0, function (e) {return this.localeData().monthsShort(this, e);}), I('MMMM', 0, 0, function (e) {return this.localeData().months(this, e);}), C('month', 'M'), F('month', 8), ue('M', B), ue('MM', B, z), ue('MMM', function (e, t) {return t.monthsShortRegex(e);}), ue('MMMM', function (e, t) {return t.monthsRegex(e);}), ce(['M', 'MM'], function (e, t) {t[_e] = D(e) - 1;}), ce(['MMM', 'MMMM'], function (e, t, n, s) {var i = n._locale.monthsParse(e, s, n._strict);null != i ? t[_e] = i : g(n).invalidMonth = e;});var We = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,Ce = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');var He = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_');function Re(e, t) {var n;if (!e.isValid()) return e;if ('string' === typeof t) if (/^\d+$/.test(t)) t = D(t);else if (!h(t = e.localeData().monthsParse(t))) return e;return n = Math.min(e.date(), Pe(e.year(), t)), e._d['set' + (e._isUTC ? 'UTC' : '') + 'Month'](t, n), e;}function Ue(e) {return null != e ? (Re(this, e), c.updateOffset(this, !0), this) : be(this, 'Month');}var Fe = ae;var Le = ae;function Ne() {function e(e, t) {return t.length - e.length;}var t,n,s = [],i = [],r = [];for (t = 0; t < 12; t++) {n = y([2e3, t]), s.push(this.monthsShort(n, '')), i.push(this.months(n, '')), r.push(this.months(n, '')), r.push(this.monthsShort(n, ''));}for (s.sort(e), i.sort(e), r.sort(e), t = 0; t < 12; t++) {s[t] = he(s[t]), i[t] = he(i[t]);}for (t = 0; t < 24; t++) {r[t] = he(r[t]);}this._monthsRegex = new RegExp('^(' + r.join('|') + ')', 'i'), this._monthsShortRegex = this._monthsRegex, this._monthsStrictRegex = new RegExp('^(' + i.join('|') + ')', 'i'), this._monthsShortStrictRegex = new RegExp('^(' + s.join('|') + ')', 'i');}function Ge(e) {var t;if (e < 100 && 0 <= e) {var _n5 = Array.prototype.slice.call(arguments);_n5[0] = e + 400, t = new Date(Date.UTC.apply(null, _n5)), isFinite(t.getUTCFullYear()) && t.setUTCFullYear(e);} else t = new Date(Date.UTC.apply(null, arguments));return t;}function Ve(e, t, n) {var s = 7 + t - n;return -((7 + Ge(e, 0, s).getUTCDay() - t) % 7) + s - 1;}function Ee(e, t, n, s, i) {var r,a,o = 1 + 7 * (t - 1) + (7 + n - s) % 7 + Ve(e, s, i);return a = o <= 0 ? Se(r = e - 1) + o : o > Se(e) ? (r = e + 1, o - Se(e)) : (r = e, o), { year: r, dayOfYear: a };}function Ie(e, t, n) {var s,i,r = Ve(e.year(), t, n),a = Math.floor((e.dayOfYear() - r - 1) / 7) + 1;return a < 1 ? s = a + Ae(i = e.year() - 1, t, n) : a > Ae(e.year(), t, n) ? (s = a - Ae(e.year(), t, n), i = e.year() + 1) : (i = e.year(), s = a), { week: s, year: i };}function Ae(e, t, n) {var s = Ve(e, t, n),i = Ve(e + 1, t, n);return (Se(e) - s + i) / 7;}I('w', ['ww', 2], 'wo', 'week'), I('W', ['WW', 2], 'Wo', 'isoWeek'), C('week', 'w'), C('isoWeek', 'W'), F('week', 5), F('isoWeek', 5), ue('w', B), ue('ww', B, z), ue('W', B), ue('WW', B, z), fe(['w', 'ww', 'W', 'WW'], function (e, t, n, s) {t[s.substr(0, 1)] = D(e);});function je(e, t) {return e.slice(t, 7).concat(e.slice(0, t));}I('d', 0, 'do', 'day'), I('dd', 0, 0, function (e) {return this.localeData().weekdaysMin(this, e);}), I('ddd', 0, 0, function (e) {return this.localeData().weekdaysShort(this, e);}), I('dddd', 0, 0, function (e) {return this.localeData().weekdays(this, e);}), I('e', 0, 0, 'weekday'), I('E', 0, 0, 'isoWeekday'), C('day', 'd'), C('weekday', 'e'), C('isoWeekday', 'E'), F('day', 11), F('weekday', 11), F('isoWeekday', 11), ue('d', B), ue('e', B), ue('E', B), ue('dd', function (e, t) {return t.weekdaysMinRegex(e);}), ue('ddd', function (e, t) {return t.weekdaysShortRegex(e);}), ue('dddd', function (e, t) {return t.weekdaysRegex(e);}), fe(['dd', 'ddd', 'dddd'], function (e, t, n, s) {var i = n._locale.weekdaysParse(e, s, n._strict);null != i ? t.d = i : g(n).invalidWeekday = e;}), fe(['d', 'e', 'E'], function (e, t, n, s) {t[s] = D(e);});var Ze = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');var ze = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');var $e = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');var qe = ae;var Je = ae;var Be = ae;function Qe() {function e(e, t) {return t.length - e.length;}var t,n,s,i,r,a = [],o = [],u = [],l = [];for (t = 0; t < 7; t++) {n = y([2e3, 1]).day(t), s = this.weekdaysMin(n, ''), i = this.weekdaysShort(n, ''), r = this.weekdays(n, ''), a.push(s), o.push(i), u.push(r), l.push(s), l.push(i), l.push(r);}for (a.sort(e), o.sort(e), u.sort(e), l.sort(e), t = 0; t < 7; t++) {o[t] = he(o[t]), u[t] = he(u[t]), l[t] = he(l[t]);}this._weekdaysRegex = new RegExp('^(' + l.join('|') + ')', 'i'), this._weekdaysShortRegex = this._weekdaysRegex, this._weekdaysMinRegex = this._weekdaysRegex, this._weekdaysStrictRegex = new RegExp('^(' + u.join('|') + ')', 'i'), this._weekdaysShortStrictRegex = new RegExp('^(' + o.join('|') + ')', 'i'), this._weekdaysMinStrictRegex = new RegExp('^(' + a.join('|') + ')', 'i');}function Xe() {return this.hours() % 12 || 12;}function Ke(e, t) {I(e, 0, 0, function () {return this.localeData().meridiem(this.hours(), this.minutes(), t);});}function et(e, t) {return t._meridiemParse;}I('H', ['HH', 2], 0, 'hour'), I('h', ['hh', 2], 0, Xe), I('k', ['kk', 2], 0, function () {return this.hours() || 24;}), I('hmm', 0, 0, function () {return '' + Xe.apply(this) + L(this.minutes(), 2);}), I('hmmss', 0, 0, function () {return '' + Xe.apply(this) + L(this.minutes(), 2) + L(this.seconds(), 2);}), I('Hmm', 0, 0, function () {return '' + this.hours() + L(this.minutes(), 2);}), I('Hmmss', 0, 0, function () {return '' + this.hours() + L(this.minutes(), 2) + L(this.seconds(), 2);}), Ke('a', !0), Ke('A', !1), C('hour', 'h'), F('hour', 13), ue('a', et), ue('A', et), ue('H', B), ue('h', B), ue('k', B), ue('HH', B, z), ue('hh', B, z), ue('kk', B, z), ue('hmm', Q), ue('hmmss', X), ue('Hmm', Q), ue('Hmmss', X), ce(['H', 'HH'], ge), ce(['k', 'kk'], function (e, t, n) {var s = D(e);t[ge] = 24 === s ? 0 : s;}), ce(['a', 'A'], function (e, t, n) {n._isPm = n._locale.isPM(e), n._meridiem = e;}), ce(['h', 'hh'], function (e, t, n) {t[ge] = D(e), g(n).bigHour = !0;}), ce('hmm', function (e, t, n) {var s = e.length - 2;t[ge] = D(e.substr(0, s)), t[ve] = D(e.substr(s)), g(n).bigHour = !0;}), ce('hmmss', function (e, t, n) {var s = e.length - 4,i = e.length - 2;t[ge] = D(e.substr(0, s)), t[ve] = D(e.substr(s, 2)), t[pe] = D(e.substr(i)), g(n).bigHour = !0;}), ce('Hmm', function (e, t, n) {var s = e.length - 2;t[ge] = D(e.substr(0, s)), t[ve] = D(e.substr(s));}), ce('Hmmss', function (e, t, n) {var s = e.length - 4,i = e.length - 2;t[ge] = D(e.substr(0, s)), t[ve] = D(e.substr(s, 2)), t[pe] = D(e.substr(i));});var tt,nt = Te('Hours', !0),st = { calendar: { sameDay: '[Today at] LT', nextDay: '[Tomorrow at] LT', nextWeek: 'dddd [at] LT', lastDay: '[Yesterday at] LT', lastWeek: '[Last] dddd [at] LT', sameElse: 'L' }, longDateFormat: { LTS: 'h:mm:ss A', LT: 'h:mm A', L: 'MM/DD/YYYY', LL: 'MMMM D, YYYY', LLL: 'MMMM D, YYYY h:mm A', LLLL: 'dddd, MMMM D, YYYY h:mm A' }, invalidDate: 'Invalid date', ordinal: '%d', dayOfMonthOrdinalParse: /\d{1,2}/, relativeTime: { future: 'in %s', past: '%s ago', s: 'a few seconds', ss: '%d seconds', m: 'a minute', mm: '%d minutes', h: 'an hour', hh: '%d hours', d: 'a day', dd: '%d days', M: 'a month', MM: '%d months', y: 'a year', yy: '%d years' }, months: Ce, monthsShort: He, week: { dow: 0, doy: 6 }, weekdays: Ze, weekdaysMin: $e, weekdaysShort: ze, meridiemParse: /[ap]\.?m?\.?/i },it = {},rt = {};function at(e) {return e ? e.toLowerCase().replace('_', '-') : e;}function ot(e) {var t = null;if (!it[e] && 'undefined' !== typeof module && module && module.exports) try {t = tt._abbr, ut(t);} catch (e) {}return it[e];}function ut(e, t) {var n;return e && ((n = l(t) ? ht(e) : lt(e, t)) ? tt = n : 'undefined' !== typeof console && console.warn && console.warn('Locale ' + e + ' not found. Did you forget to load it?')), tt._abbr;}function lt(e, t) {if (null === t) return delete it[e], null;var n,s = st;if (t.abbr = e, null != it[e]) T('defineLocaleOverride', 'use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.'), s = it[e]._config;else if (null != t.parentLocale) if (null != it[t.parentLocale]) s = it[t.parentLocale]._config;else {if (null == (n = ot(t.parentLocale))) return rt[t.parentLocale] || (rt[t.parentLocale] = []), rt[t.parentLocale].push({ name: e, config: t }), null;s = n._config;}return it[e] = new P(x(s, t)), rt[e] && rt[e].forEach(function (e) {lt(e.name, e.config);}), ut(e), it[e];}function ht(e) {var t;if (e && e._locale && e._locale._abbr && (e = e._locale._abbr), !e) return tt;if (!o(e)) {if (t = ot(e)) return t;e = [e];}return function (e) {for (var t, n, s, i, r = 0; r < e.length;) {for (t = (i = at(e[r]).split('-')).length, n = (n = at(e[r + 1])) ? n.split('-') : null; 0 < t;) {if (s = ot(i.slice(0, t).join('-'))) return s;if (n && n.length >= t && a(i, n, !0) >= t - 1) break;t--;}r++;}return tt;}(e);}function dt(e) {var t,n = e._a;return n && -2 === g(e).overflow && (t = n[_e] < 0 || 11 < n[_e] ? _e : n[ye] < 1 || n[ye] > Pe(n[me], n[_e]) ? ye : n[ge] < 0 || 24 < n[ge] || 24 === n[ge] && (0 !== n[ve] || 0 !== n[pe] || 0 !== n[we]) ? ge : n[ve] < 0 || 59 < n[ve] ? ve : n[pe] < 0 || 59 < n[pe] ? pe : n[we] < 0 || 999 < n[we] ? we : -1, g(e)._overflowDayOfYear && (t < me || ye < t) && (t = ye), g(e)._overflowWeeks && -1 === t && (t = Me), g(e)._overflowWeekday && -1 === t && (t = ke), g(e).overflow = t), e;}function ct(e, t, n) {return null != e ? e : null != t ? t : n;}function ft(e) {var t,n,s,i,r,a = [];if (!e._d) {var _o, _u;for (_o = e, _u = new Date(c.now()), s = _o._useUTC ? [_u.getUTCFullYear(), _u.getUTCMonth(), _u.getUTCDate()] : [_u.getFullYear(), _u.getMonth(), _u.getDate()], e._w && null == e._a[ye] && null == e._a[_e] && function (e) {var t, n, s, i, r, a, o, u;if (null != (t = e._w).GG || null != t.W || null != t.E) r = 1, a = 4, n = ct(t.GG, e._a[me], Ie(bt(), 1, 4).year), s = ct(t.W, 1), ((i = ct(t.E, 1)) < 1 || 7 < i) && (u = !0);else {r = e._locale._week.dow, a = e._locale._week.doy;var _l = Ie(bt(), r, a);n = ct(t.gg, e._a[me], _l.year), s = ct(t.w, _l.week), null != t.d ? ((i = t.d) < 0 || 6 < i) && (u = !0) : null != t.e ? (i = t.e + r, (t.e < 0 || 6 < t.e) && (u = !0)) : i = r;}s < 1 || s > Ae(n, r, a) ? g(e)._overflowWeeks = !0 : null != u ? g(e)._overflowWeekday = !0 : (o = Ee(n, s, i, r, a), e._a[me] = o.year, e._dayOfYear = o.dayOfYear);}(e), null != e._dayOfYear && (r = ct(e._a[me], s[me]), (e._dayOfYear > Se(r) || 0 === e._dayOfYear) && (g(e)._overflowDayOfYear = !0), n = Ge(r, 0, e._dayOfYear), e._a[_e] = n.getUTCMonth(), e._a[ye] = n.getUTCDate()), t = 0; t < 3 && null == e._a[t]; ++t) {e._a[t] = a[t] = s[t];}for (; t < 7; t++) {e._a[t] = a[t] = null == e._a[t] ? 2 === t ? 1 : 0 : e._a[t];}24 === e._a[ge] && 0 === e._a[ve] && 0 === e._a[pe] && 0 === e._a[we] && (e._nextDay = !0, e._a[ge] = 0), e._d = (e._useUTC ? Ge : function (e, t, n, s, i, r, a) {var o;return e < 100 && 0 <= e ? (o = new Date(e + 400, t, n, s, i, r, a), isFinite(o.getFullYear()) && o.setFullYear(e)) : o = new Date(e, t, n, s, i, r, a), o;}).apply(null, a), i = e._useUTC ? e._d.getUTCDay() : e._d.getDay(), null != e._tzm && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[ge] = 24), e._w && void 0 !== e._w.d && e._w.d !== i && (g(e).weekdayMismatch = !0);}}var mt = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,_t = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,yt = /Z|[+-]\d\d(?::?\d\d)?/,gt = [['YYYYYY-MM-DD', /[+-]\d{6}-\d\d-\d\d/], ['YYYY-MM-DD', /\d{4}-\d\d-\d\d/], ['GGGG-[W]WW-E', /\d{4}-W\d\d-\d/], ['GGGG-[W]WW', /\d{4}-W\d\d/, !1], ['YYYY-DDD', /\d{4}-\d{3}/], ['YYYY-MM', /\d{4}-\d\d/, !1], ['YYYYYYMMDD', /[+-]\d{10}/], ['YYYYMMDD', /\d{8}/], ['GGGG[W]WWE', /\d{4}W\d{3}/], ['GGGG[W]WW', /\d{4}W\d{2}/, !1], ['YYYYDDD', /\d{7}/]],vt = [['HH:mm:ss.SSSS', /\d\d:\d\d:\d\d\.\d+/], ['HH:mm:ss,SSSS', /\d\d:\d\d:\d\d,\d+/], ['HH:mm:ss', /\d\d:\d\d:\d\d/], ['HH:mm', /\d\d:\d\d/], ['HHmmss.SSSS', /\d\d\d\d\d\d\.\d+/], ['HHmmss,SSSS', /\d\d\d\d\d\d,\d+/], ['HHmmss', /\d\d\d\d\d\d/], ['HHmm', /\d\d\d\d/], ['HH', /\d\d/]],pt = /^\/?Date\((\-?\d+)/i;function wt(e) {var t,n,s,i,r,a,o = e._i,u = mt.exec(o) || _t.exec(o);if (u) {for (g(e).iso = !0, t = 0, n = gt.length; t < n; t++) {if (gt[t][1].exec(u[1])) {i = gt[t][0], s = !1 !== gt[t][2];break;}}if (null == i) return void (e._isValid = !1);if (u[3]) {for (t = 0, n = vt.length; t < n; t++) {if (vt[t][1].exec(u[3])) {r = (u[2] || ' ') + vt[t][0];break;}}if (null == r) return void (e._isValid = !1);}if (!s && null != r) return void (e._isValid = !1);if (u[4]) {if (!yt.exec(u[4])) return void (e._isValid = !1);a = 'Z';}e._f = i + (r || '') + (a || ''), Yt(e);} else e._isValid = !1;}var Mt = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/;function kt(e, t, n, s, i, r) {var a = [function (e) {var t = parseInt(e, 10);{if (t <= 49) return 2e3 + t;if (t <= 999) return 1900 + t;}return t;}(e), He.indexOf(t), parseInt(n, 10), parseInt(s, 10), parseInt(i, 10)];return r && a.push(parseInt(r, 10)), a;}var St = { UT: 0, GMT: 0, EDT: -240, EST: -300, CDT: -300, CST: -360, MDT: -360, MST: -420, PDT: -420, PST: -480 };function Dt(e) {var t,n,s,i = Mt.exec(e._i.replace(/\([^)]*\)|[\n\t]/g, ' ').replace(/(\s\s+)/g, ' ').replace(/^\s\s*/, '').replace(/\s\s*$/, ''));if (i) {var _r = kt(i[4], i[3], i[2], i[5], i[6], i[7]);if (t = i[1], n = _r, s = e, t && ze.indexOf(t) !== new Date(n[0], n[1], n[2]).getDay() && (g(s).weekdayMismatch = !0, !(s._isValid = !1))) return;e._a = _r, e._tzm = function (e, t, n) {if (e) return St[e];if (t) return 0;var s = parseInt(n, 10),i = s % 100;return (s - i) / 100 * 60 + i;}(i[8], i[9], i[10]), e._d = Ge.apply(null, e._a), e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), g(e).rfc2822 = !0;} else e._isValid = !1;}function Yt(e) {if (e._f !== c.ISO_8601) {if (e._f !== c.RFC_2822) {e._a = [], g(e).empty = !0;var _t4,_n6,_s4,_i,_r2,_a,_o2,_u2,_l2 = '' + e._i,_h = _l2.length,_d = 0;for (_s4 = j(e._f, e._locale).match(N) || [], _t4 = 0; _t4 < _s4.length; _t4++) {_i = _s4[_t4], (_n6 = (_l2.match(le(_i, e)) || [])[0]) && (0 < (_r2 = _l2.substr(0, _l2.indexOf(_n6))).length && g(e).unusedInput.push(_r2), _l2 = _l2.slice(_l2.indexOf(_n6) + _n6.length), _d += _n6.length), E[_i] ? (_n6 ? g(e).empty = !1 : g(e).unusedTokens.push(_i), _a = _i, _u2 = e, null != (_o2 = _n6) && m(de, _a) && de[_a](_o2, _u2._a, _u2, _a)) : e._strict && !_n6 && g(e).unusedTokens.push(_i);}g(e).charsLeftOver = _h - _d, 0 < _l2.length && g(e).unusedInput.push(_l2), e._a[ge] <= 12 && !0 === g(e).bigHour && 0 < e._a[ge] && (g(e).bigHour = void 0), g(e).parsedDateParts = e._a.slice(0), g(e).meridiem = e._meridiem, e._a[ge] = function (e, t, n) {var s;if (null == n) return t;return null != e.meridiemHour ? e.meridiemHour(t, n) : (null != e.isPM && ((s = e.isPM(n)) && t < 12 && (t += 12), s || 12 !== t || (t = 0)), t);}(e._locale, e._a[ge], e._meridiem), ft(e), dt(e);} else Dt(e);} else wt(e);}function Ot(e) {var t,n,s,i,r = e._i,a = e._f;return e._locale = e._locale || ht(e._l), null === r || void 0 === a && '' === r ? p({ nullInput: !0 }) : ('string' === typeof r && (e._i = r = e._locale.preparse(r)), k(r) ? new M(dt(r)) : (d(r) ? e._d = r : o(a) ? function (e) {var t, n, s, i, r;if (0 === e._f.length) return g(e).invalidFormat = !0, e._d = new Date(NaN);for (i = 0; i < e._f.length; i++) {r = 0, t = w({}, e), null != e._useUTC && (t._useUTC = e._useUTC), t._f = e._f[i], Yt(t), v(t) && (r += g(t).charsLeftOver, r += 10 * g(t).unusedTokens.length, g(t).score = r, (null == s || r < s) && (s = r, n = t));}_(e, n || t);}(e) : a ? Yt(e) : l(n = (t = e)._i) ? t._d = new Date(c.now()) : d(n) ? t._d = new Date(n.valueOf()) : 'string' === typeof n ? (s = t, null === (i = pt.exec(s._i)) ? (wt(s), !1 === s._isValid && (delete s._isValid, Dt(s), !1 === s._isValid && (delete s._isValid, c.createFromInputFallback(s)))) : s._d = new Date(+i[1])) : o(n) ? (t._a = f(n.slice(0), function (e) {return parseInt(e, 10);}), ft(t)) : u(n) ? function (e) {if (!e._d) {var _t5 = R(e._i);e._a = f([_t5.year, _t5.month, _t5.day || _t5.date, _t5.hour, _t5.minute, _t5.second, _t5.millisecond], function (e) {return e && parseInt(e, 10);}), ft(e);}}(t) : h(n) ? t._d = new Date(n) : c.createFromInputFallback(t), v(e) || (e._d = null), e));}function Tt(e, t, n, s, i) {var r,a = {};return !0 !== n && !1 !== n || (s = n, n = void 0), (u(e) && function (e) {if (Object.getOwnPropertyNames) return 0 === Object.getOwnPropertyNames(e).length;var t;for (t in e) {if (e.hasOwnProperty(t)) return !1;}return !0;}(e) || o(e) && 0 === e.length) && (e = void 0), a._isAMomentObject = !0, a._useUTC = a._isUTC = i, a._l = n, a._i = e, a._f = t, a._strict = s, (r = new M(dt(Ot(a))))._nextDay && (r.add(1, 'd'), r._nextDay = void 0), r;}function bt(e, t, n, s) {return Tt(e, t, n, s, !1);}c.createFromInputFallback = n('value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.', function (e) {e._d = new Date(e._i + (e._useUTC ? ' UTC' : ''));}), c.ISO_8601 = function () {}, c.RFC_2822 = function () {};var xt = n('moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/', function () {var e = bt.apply(null, arguments);return this.isValid() && e.isValid() ? e < this ? this : e : p();}),Pt = n('moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/', function () {var e = bt.apply(null, arguments);return this.isValid() && e.isValid() ? this < e ? this : e : p();});function Wt(e, t) {var n, s;if (1 === t.length && o(t[0]) && (t = t[0]), !t.length) return bt();for (n = t[0], s = 1; s < t.length; ++s) {t[s].isValid() && !t[s][e](n) || (n = t[s]);}return n;}var Ct = ['year', 'quarter', 'month', 'week', 'day', 'hour', 'minute', 'second', 'millisecond'];function Ht(e) {var t = R(e),n = t.year || 0,s = t.quarter || 0,i = t.month || 0,r = t.week || t.isoWeek || 0,a = t.day || 0,o = t.hour || 0,u = t.minute || 0,l = t.second || 0,h = t.millisecond || 0;this._isValid = function (e) {for (var _t6 in e) {if (-1 === Ye.call(Ct, _t6) || null != e[_t6] && isNaN(e[_t6])) return !1;}for (var _n7 = !1, _s5 = 0; _s5 < Ct.length; ++_s5) {if (e[Ct[_s5]]) {if (_n7) return !1;parseFloat(e[Ct[_s5]]) !== D(e[Ct[_s5]]) && (_n7 = !0);}}return !0;}(t), this._milliseconds = +h + 1e3 * l + 6e4 * u + 1e3 * o * 60 * 60, this._days = +a + 7 * r, this._months = +i + 3 * s + 12 * n, this._data = {}, this._locale = ht(), this._bubble();}function Rt(e) {return e instanceof Ht;}function Ut(e) {return e < 0 ? -1 * Math.round(-1 * e) : Math.round(e);}function Ft(e, n) {I(e, 0, 0, function () {var e = this.utcOffset(),t = '+';return e < 0 && (e = -e, t = '-'), t + L(~~(e / 60), 2) + n + L(~~e % 60, 2);});}Ft('Z', ':'), Ft('ZZ', ''), ue('Z', re), ue('ZZ', re), ce(['Z', 'ZZ'], function (e, t, n) {n._useUTC = !0, n._tzm = Nt(re, e);});var Lt = /([\+\-]|\d\d)/gi;function Nt(e, t) {var n = (t || '').match(e);if (null === n) return null;var s = ((n[n.length - 1] || []) + '').match(Lt) || ['-', 0, 0],i = 60 * s[1] + D(s[2]);return 0 === i ? 0 : '+' === s[0] ? i : -i;}function Gt(e, t) {var n, s;return t._isUTC ? (n = t.clone(), s = (k(e) || d(e) ? e.valueOf() : bt(e).valueOf()) - n.valueOf(), n._d.setTime(n._d.valueOf() + s), c.updateOffset(n, !1), n) : bt(e).local();}function Vt(e) {return 15 * -Math.round(e._d.getTimezoneOffset() / 15);}function Et() {return !!this.isValid() && this._isUTC && 0 === this._offset;}c.updateOffset = function () {};var It = /^(\-|\+)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/,At = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;function jt(e, t) {var n,s,i,r = e,a = null;return Rt(e) ? r = { ms: e._milliseconds, d: e._days, M: e._months } : h(e) ? (r = {}, t ? r[t] = e : r.milliseconds = e) : (a = It.exec(e)) ? (n = '-' === a[1] ? -1 : 1, r = { y: 0, d: D(a[ye]) * n, h: D(a[ge]) * n, m: D(a[ve]) * n, s: D(a[pe]) * n, ms: D(Ut(1e3 * a[we])) * n }) : (a = At.exec(e)) ? (n = '-' === a[1] ? -1 : 1, r = { y: Zt(a[2], n), M: Zt(a[3], n), w: Zt(a[4], n), d: Zt(a[5], n), h: Zt(a[6], n), m: Zt(a[7], n), s: Zt(a[8], n) }) : null == r ? r = {} : 'object' === typeof r && ('from' in r || 'to' in r) && (i = function (e, t) {var n;if (!e.isValid() || !t.isValid()) return { milliseconds: 0, months: 0 };t = Gt(t, e), e.isBefore(t) ? n = zt(e, t) : ((n = zt(t, e)).milliseconds = -n.milliseconds, n.months = -n.months);return n;}(bt(r.from), bt(r.to)), (r = {}).ms = i.milliseconds, r.M = i.months), s = new Ht(r), Rt(e) && m(e, '_locale') && (s._locale = e._locale), s;}function Zt(e, t) {var n = e && parseFloat(e.replace(',', '.'));return (isNaN(n) ? 0 : n) * t;}function zt(e, t) {var n = {};return n.months = t.month() - e.month() + 12 * (t.year() - e.year()), e.clone().add(n.months, 'M').isAfter(t) && --n.months, n.milliseconds = +t - +e.clone().add(n.months, 'M'), n;}function $t(s, i) {return function (e, t) {var n;return null === t || isNaN(+t) || (T(i, 'moment().' + i + '(period, number) is deprecated. Please use moment().' + i + '(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.'), n = e, e = t, t = n), qt(this, jt(e = 'string' === typeof e ? +e : e, t), s), this;};}function qt(e, t, n, s) {var i = t._milliseconds,r = Ut(t._days),a = Ut(t._months);e.isValid() && (s = null == s || s, a && Re(e, be(e, 'Month') + a * n), r && xe(e, 'Date', be(e, 'Date') + r * n), i && e._d.setTime(e._d.valueOf() + i * n), s && c.updateOffset(e, r || a));}jt.fn = Ht.prototype, jt.invalid = function () {return jt(NaN);};var Jt = $t(1, 'add'),Bt = $t(-1, 'subtract');function Qt(e, t) {var n = 12 * (t.year() - e.year()) + (t.month() - e.month()),s = e.clone().add(n, 'months');return -(n + (t - s < 0 ? (t - s) / (s - e.clone().add(n - 1, 'months')) : (t - s) / (e.clone().add(n + 1, 'months') - s))) || 0;}function Xt(e) {var t;return void 0 === e ? this._locale._abbr : (null != (t = ht(e)) && (this._locale = t), this);}c.defaultFormat = 'YYYY-MM-DDTHH:mm:ssZ', c.defaultFormatUtc = 'YYYY-MM-DDTHH:mm:ss[Z]';var Kt = n('moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.', function (e) {return void 0 === e ? this.localeData() : this.locale(e);});function en() {return this._locale;}var tn = 126227808e5;function nn(e, t) {return (e % t + t) % t;}function sn(e, t, n) {return e < 100 && 0 <= e ? new Date(e + 400, t, n) - tn : new Date(e, t, n).valueOf();}function rn(e, t, n) {return e < 100 && 0 <= e ? Date.UTC(e + 400, t, n) - tn : Date.UTC(e, t, n);}function an(e, t) {I(0, [e, e.length], 0, t);}function on(e, t, n, s, i) {var r;return null == e ? Ie(this, s, i).year : ((r = Ae(e, s, i)) < t && (t = r), function (e, t, n, s, i) {var r = Ee(e, t, n, s, i),a = Ge(r.year, 0, r.dayOfYear);return this.year(a.getUTCFullYear()), this.month(a.getUTCMonth()), this.date(a.getUTCDate()), this;}.call(this, e, t, n, s, i));}I(0, ['gg', 2], 0, function () {return this.weekYear() % 100;}), I(0, ['GG', 2], 0, function () {return this.isoWeekYear() % 100;}), an('gggg', 'weekYear'), an('ggggg', 'weekYear'), an('GGGG', 'isoWeekYear'), an('GGGGG', 'isoWeekYear'), C('weekYear', 'gg'), C('isoWeekYear', 'GG'), F('weekYear', 1), F('isoWeekYear', 1), ue('G', se), ue('g', se), ue('GG', B, z), ue('gg', B, z), ue('GGGG', ee, q), ue('gggg', ee, q), ue('GGGGG', te, J), ue('ggggg', te, J), fe(['gggg', 'ggggg', 'GGGG', 'GGGGG'], function (e, t, n, s) {t[s.substr(0, 2)] = D(e);}), fe(['gg', 'GG'], function (e, t, n, s) {t[s] = c.parseTwoDigitYear(e);}), I('Q', 0, 'Qo', 'quarter'), C('quarter', 'Q'), F('quarter', 7), ue('Q', Z), ce('Q', function (e, t) {t[_e] = 3 * (D(e) - 1);}), I('D', ['DD', 2], 'Do', 'date'), C('date', 'D'), F('date', 9), ue('D', B), ue('DD', B, z), ue('Do', function (e, t) {return e ? t._dayOfMonthOrdinalParse || t._ordinalParse : t._dayOfMonthOrdinalParseLenient;}), ce(['D', 'DD'], ye), ce('Do', function (e, t) {t[ye] = D(e.match(B)[0]);});var un = Te('Date', !0);I('DDD', ['DDDD', 3], 'DDDo', 'dayOfYear'), C('dayOfYear', 'DDD'), F('dayOfYear', 4), ue('DDD', K), ue('DDDD', $), ce(['DDD', 'DDDD'], function (e, t, n) {n._dayOfYear = D(e);}), I('m', ['mm', 2], 0, 'minute'), C('minute', 'm'), F('minute', 14), ue('m', B), ue('mm', B, z), ce(['m', 'mm'], ve);var ln = Te('Minutes', !1);I('s', ['ss', 2], 0, 'second'), C('second', 's'), F('second', 15), ue('s', B), ue('ss', B, z), ce(['s', 'ss'], pe);var hn,dn = Te('Seconds', !1);for (I('S', 0, 0, function () {return ~~(this.millisecond() / 100);}), I(0, ['SS', 2], 0, function () {return ~~(this.millisecond() / 10);}), I(0, ['SSS', 3], 0, 'millisecond'), I(0, ['SSSS', 4], 0, function () {return 10 * this.millisecond();}), I(0, ['SSSSS', 5], 0, function () {return 100 * this.millisecond();}), I(0, ['SSSSSS', 6], 0, function () {return 1e3 * this.millisecond();}), I(0, ['SSSSSSS', 7], 0, function () {return 1e4 * this.millisecond();}), I(0, ['SSSSSSSS', 8], 0, function () {return 1e5 * this.millisecond();}), I(0, ['SSSSSSSSS', 9], 0, function () {return 1e6 * this.millisecond();}), C('millisecond', 'ms'), F('millisecond', 16), ue('S', K, Z), ue('SS', K, z), ue('SSS', K, $), hn = 'SSSS'; hn.length <= 9; hn += 'S') {ue(hn, ne);}function cn(e, t) {t[we] = D(1e3 * ('0.' + e));}for (hn = 'S'; hn.length <= 9; hn += 'S') {ce(hn, cn);}var fn = Te('Milliseconds', !1);I('z', 0, 0, 'zoneAbbr'), I('zz', 0, 0, 'zoneName');var mn = M.prototype;function _n(e) {return e;}mn.add = Jt, mn.calendar = function (e, t) {var n = e || bt(),s = Gt(n, this).startOf('day'),i = c.calendarFormat(this, s) || 'sameElse',r = t && (b(t[i]) ? t[i].call(this, n) : t[i]);return this.format(r || this.localeData().calendar(i, this, bt(n)));}, mn.clone = function () {return new M(this);}, mn.diff = function (e, t, n) {var s, i, r;if (!this.isValid()) return NaN;if (!(s = Gt(e, this)).isValid()) return NaN;switch (i = 6e4 * (s.utcOffset() - this.utcOffset()), t = H(t)) {case 'year':r = Qt(this, s) / 12;break;case 'month':r = Qt(this, s);break;case 'quarter':r = Qt(this, s) / 3;break;case 'second':r = (this - s) / 1e3;break;case 'minute':r = (this - s) / 6e4;break;case 'hour':r = (this - s) / 36e5;break;case 'day':r = (this - s - i) / 864e5;break;case 'week':r = (this - s - i) / 6048e5;break;default:r = this - s;}return n ? r : S(r);}, mn.endOf = function (e) {var t;if (void 0 === (e = H(e)) || 'millisecond' === e || !this.isValid()) return this;var n = this._isUTC ? rn : sn;switch (e) {case 'year':t = n(this.year() + 1, 0, 1) - 1;break;case 'quarter':t = n(this.year(), this.month() - this.month() % 3 + 3, 1) - 1;break;case 'month':t = n(this.year(), this.month() + 1, 1) - 1;break;case 'week':t = n(this.year(), this.month(), this.date() - this.weekday() + 7) - 1;break;case 'isoWeek':t = n(this.year(), this.month(), this.date() - (this.isoWeekday() - 1) + 7) - 1;break;case 'day':case 'date':t = n(this.year(), this.month(), this.date() + 1) - 1;break;case 'hour':t = this._d.valueOf(), t += 36e5 - nn(t + (this._isUTC ? 0 : 6e4 * this.utcOffset()), 36e5) - 1;break;case 'minute':t = this._d.valueOf(), t += 6e4 - nn(t, 6e4) - 1;break;case 'second':t = this._d.valueOf(), t += 1e3 - nn(t, 1e3) - 1;break;}return this._d.setTime(t), c.updateOffset(this, !0), this;}, mn.format = function (e) {e || (e = this.isUtc() ? c.defaultFormatUtc : c.defaultFormat);var t = A(this, e);return this.localeData().postformat(t);}, mn.from = function (e, t) {return this.isValid() && (k(e) && e.isValid() || bt(e).isValid()) ? jt({ to: this, from: e }).locale(this.locale()).humanize(!t) : this.localeData().invalidDate();}, mn.fromNow = function (e) {return this.from(bt(), e);}, mn.to = function (e, t) {return this.isValid() && (k(e) && e.isValid() || bt(e).isValid()) ? jt({ from: this, to: e }).locale(this.locale()).humanize(!t) : this.localeData().invalidDate();}, mn.toNow = function (e) {return this.to(bt(), e);}, mn.get = function (e) {return b(this[e = H(e)]) ? this[e]() : this;}, mn.invalidAt = function () {return g(this).overflow;}, mn.isAfter = function (e, t) {var n = k(e) ? e : bt(e);return !(!this.isValid() || !n.isValid()) && ('millisecond' === (t = H(t) || 'millisecond') ? this.valueOf() > n.valueOf() : n.valueOf() < this.clone().startOf(t).valueOf());}, mn.isBefore = function (e, t) {var n = k(e) ? e : bt(e);return !(!this.isValid() || !n.isValid()) && ('millisecond' === (t = H(t) || 'millisecond') ? this.valueOf() < n.valueOf() : this.clone().endOf(t).valueOf() < n.valueOf());}, mn.isBetween = function (e, t, n, s) {var i = k(e) ? e : bt(e),r = k(t) ? t : bt(t);return !!(this.isValid() && i.isValid() && r.isValid()) && ('(' === (s = s || '()')[0] ? this.isAfter(i, n) : !this.isBefore(i, n)) && (')' === s[1] ? this.isBefore(r, n) : !this.isAfter(r, n));}, mn.isSame = function (e, t) {var n,s = k(e) ? e : bt(e);return !(!this.isValid() || !s.isValid()) && ('millisecond' === (t = H(t) || 'millisecond') ? this.valueOf() === s.valueOf() : (n = s.valueOf(), this.clone().startOf(t).valueOf() <= n && n <= this.clone().endOf(t).valueOf()));}, mn.isSameOrAfter = function (e, t) {return this.isSame(e, t) || this.isAfter(e, t);}, mn.isSameOrBefore = function (e, t) {return this.isSame(e, t) || this.isBefore(e, t);}, mn.isValid = function () {return v(this);}, mn.lang = Kt, mn.locale = Xt, mn.localeData = en, mn.max = Pt, mn.min = xt, mn.parsingFlags = function () {return _({}, g(this));}, mn.set = function (e, t) {if ('object' === typeof e) for (var _n8 = function (e) {var t = [];for (var _n9 in e) {t.push({ unit: _n9, priority: U[_n9] });}return t.sort(function (e, t) {return e.priority - t.priority;}), t;}(e = R(e)), _s6 = 0; _s6 < _n8.length; _s6++) {this[_n8[_s6].unit](e[_n8[_s6].unit]);} else if (b(this[e = H(e)])) return this[e](t);return this;}, mn.startOf = function (e) {var t;if (void 0 === (e = H(e)) || 'millisecond' === e || !this.isValid()) return this;var n = this._isUTC ? rn : sn;switch (e) {case 'year':t = n(this.year(), 0, 1);break;case 'quarter':t = n(this.year(), this.month() - this.month() % 3, 1);break;case 'month':t = n(this.year(), this.month(), 1);break;case 'week':t = n(this.year(), this.month(), this.date() - this.weekday());break;case 'isoWeek':t = n(this.year(), this.month(), this.date() - (this.isoWeekday() - 1));break;case 'day':case 'date':t = n(this.year(), this.month(), this.date());break;case 'hour':t = this._d.valueOf(), t -= nn(t + (this._isUTC ? 0 : 6e4 * this.utcOffset()), 36e5);break;case 'minute':t = this._d.valueOf(), t -= nn(t, 6e4);break;case 'second':t = this._d.valueOf(), t -= nn(t, 1e3);break;}return this._d.setTime(t), c.updateOffset(this, !0), this;}, mn.subtract = Bt, mn.toArray = function () {var e = this;return [e.year(), e.month(), e.date(), e.hour(), e.minute(), e.second(), e.millisecond()];}, mn.toObject = function () {var e = this;return { years: e.year(), months: e.month(), date: e.date(), hours: e.hours(), minutes: e.minutes(), seconds: e.seconds(), milliseconds: e.milliseconds() };}, mn.toDate = function () {return new Date(this.valueOf());}, mn.toISOString = function (e) {if (!this.isValid()) return null;var t = !0 !== e,n = t ? this.clone().utc() : this;return n.year() < 0 || 9999 < n.year() ? A(n, t ? 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYYYY-MM-DD[T]HH:mm:ss.SSSZ') : b(Date.prototype.toISOString) ? t ? this.toDate().toISOString() : new Date(this.valueOf() + 60 * this.utcOffset() * 1e3).toISOString().replace('Z', A(n, 'Z')) : A(n, t ? 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYY-MM-DD[T]HH:mm:ss.SSSZ');}, mn.inspect = function () {if (!this.isValid()) return 'moment.invalid(/* ' + this._i + ' */)';var e = 'moment',t = '';this.isLocal() || (e = 0 === this.utcOffset() ? 'moment.utc' : 'moment.parseZone', t = 'Z');var n = '[' + e + '("]',s = 0 <= this.year() && this.year() <= 9999 ? 'YYYY' : 'YYYYYY',i = t + '[")]';return this.format(n + s + '-MM-DD[T]HH:mm:ss.SSS' + i);}, mn.toJSON = function () {return this.isValid() ? this.toISOString() : null;}, mn.toString = function () {return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');}, mn.unix = function () {return Math.floor(this.valueOf() / 1e3);}, mn.valueOf = function () {return this._d.valueOf() - 6e4 * (this._offset || 0);}, mn.creationData = function () {return { input: this._i, format: this._f, locale: this._locale, isUTC: this._isUTC, strict: this._strict };}, mn.year = Oe, mn.isLeapYear = function () {return De(this.year());}, mn.weekYear = function (e) {return on.call(this, e, this.week(), this.weekday(), this.localeData()._week.dow, this.localeData()._week.doy);}, mn.isoWeekYear = function (e) {return on.call(this, e, this.isoWeek(), this.isoWeekday(), 1, 4);}, mn.quarter = mn.quarters = function (e) {return null == e ? Math.ceil((this.month() + 1) / 3) : this.month(3 * (e - 1) + this.month() % 3);}, mn.month = Ue, mn.daysInMonth = function () {return Pe(this.year(), this.month());}, mn.week = mn.weeks = function (e) {var t = this.localeData().week(this);return null == e ? t : this.add(7 * (e - t), 'd');}, mn.isoWeek = mn.isoWeeks = function (e) {var t = Ie(this, 1, 4).week;return null == e ? t : this.add(7 * (e - t), 'd');}, mn.weeksInYear = function () {var e = this.localeData()._week;return Ae(this.year(), e.dow, e.doy);}, mn.isoWeeksInYear = function () {return Ae(this.year(), 1, 4);}, mn.date = un, mn.day = mn.days = function (e) {if (!this.isValid()) return null != e ? this : NaN;var t,n,s = this._isUTC ? this._d.getUTCDay() : this._d.getDay();return null != e ? (t = e, n = this.localeData(), e = 'string' !== typeof t ? t : isNaN(t) ? 'number' === typeof (t = n.weekdaysParse(t)) ? t : null : parseInt(t, 10), this.add(e - s, 'd')) : s;}, mn.weekday = function (e) {if (!this.isValid()) return null != e ? this : NaN;var t = (this.day() + 7 - this.localeData()._week.dow) % 7;return null == e ? t : this.add(e - t, 'd');}, mn.isoWeekday = function (e) {if (!this.isValid()) return null != e ? this : NaN;if (null == e) return this.day() || 7;var t,n,s = (t = e, n = this.localeData(), 'string' === typeof t ? n.weekdaysParse(t) % 7 || 7 : isNaN(t) ? null : t);return this.day(this.day() % 7 ? s : s - 7);}, mn.dayOfYear = function (e) {var t = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 864e5) + 1;return null == e ? t : this.add(e - t, 'd');}, mn.hour = mn.hours = nt, mn.minute = mn.minutes = ln, mn.second = mn.seconds = dn, mn.millisecond = mn.milliseconds = fn, mn.utcOffset = function (e, t, n) {var s,i = this._offset || 0;if (!this.isValid()) return null != e ? this : NaN;if (null == e) return this._isUTC ? i : Vt(this);if ('string' === typeof e) {if (null === (e = Nt(re, e))) return this;} else Math.abs(e) < 16 && !n && (e *= 60);return !this._isUTC && t && (s = Vt(this)), this._offset = e, this._isUTC = !0, null != s && this.add(s, 'm'), i !== e && (!t || this._changeInProgress ? qt(this, jt(e - i, 'm'), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, c.updateOffset(this, !0), this._changeInProgress = null)), this;}, mn.utc = function (e) {return this.utcOffset(0, e);}, mn.local = function (e) {return this._isUTC && (this.utcOffset(0, e), this._isUTC = !1, e && this.subtract(Vt(this), 'm')), this;}, mn.parseZone = function () {if (null != this._tzm) this.utcOffset(this._tzm, !1, !0);else if ('string' === typeof this._i) {var _e2 = Nt(ie, this._i);null != _e2 ? this.utcOffset(_e2) : this.utcOffset(0, !0);}return this;}, mn.hasAlignedHourOffset = function (e) {return !!this.isValid() && (e = e ? bt(e).utcOffset() : 0, (this.utcOffset() - e) % 60 == 0);}, mn.isDST = function () {return this.utcOffset() > this.clone().month(0).utcOffset() || this.utcOffset() > this.clone().month(5).utcOffset();}, mn.isLocal = function () {return !!this.isValid() && !this._isUTC;}, mn.isUtcOffset = function () {return !!this.isValid() && this._isUTC;}, mn.isUtc = Et, mn.isUTC = Et, mn.zoneAbbr = function () {return this._isUTC ? 'UTC' : '';}, mn.zoneName = function () {return this._isUTC ? 'Coordinated Universal Time' : '';}, mn.dates = n('dates accessor is deprecated. Use date instead.', un), mn.months = n('months accessor is deprecated. Use month instead', Ue), mn.years = n('years accessor is deprecated. Use year instead', Oe), mn.zone = n('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', function (e, t) {return null != e ? ('string' !== typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset();}), mn.isDSTShifted = n('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', function () {if (!l(this._isDSTShifted)) return this._isDSTShifted;var e = {};if (w(e, this), (e = Ot(e))._a) {var _t7 = e._isUTC ? y(e._a) : bt(e._a);this._isDSTShifted = this.isValid() && 0 < a(e._a, _t7.toArray());} else this._isDSTShifted = !1;return this._isDSTShifted;});var yn = P.prototype;function gn(e, t, n, s) {var i = ht(),r = y().set(s, t);return i[n](r, e);}function vn(e, t, n) {if (h(e) && (t = e, e = void 0), e = e || '', null != t) return gn(e, t, n, 'month');var s,i = [];for (s = 0; s < 12; s++) {i[s] = gn(e, s, n, 'month');}return i;}function pn(e, t, n, s) {t = ('boolean' === typeof e ? h(t) && (n = t, t = void 0) : (t = e, e = !1, h(n = t) && (n = t, t = void 0)), t || '');var i,r = ht(),a = e ? r._week.dow : 0;if (null != n) return gn(t, (n + a) % 7, s, 'day');var o = [];for (i = 0; i < 7; i++) {o[i] = gn(t, (i + a) % 7, s, 'day');}return o;}yn.calendar = function (e, t, n) {var s = this._calendar[e] || this._calendar.sameElse;return b(s) ? s.call(t, n) : s;}, yn.longDateFormat = function (e) {var t = this._longDateFormat[e],n = this._longDateFormat[e.toUpperCase()];return t || !n ? t : (this._longDateFormat[e] = n.replace(/MMMM|MM|DD|dddd/g, function (e) {return e.slice(1);}), this._longDateFormat[e]);}, yn.invalidDate = function () {return this._invalidDate;}, yn.ordinal = function (e) {return this._ordinal.replace('%d', e);}, yn.preparse = _n, yn.postformat = _n, yn.relativeTime = function (e, t, n, s) {var i = this._relativeTime[n];return b(i) ? i(e, t, n, s) : i.replace(/%d/i, e);}, yn.pastFuture = function (e, t) {var n = this._relativeTime[0 < e ? 'future' : 'past'];return b(n) ? n(t) : n.replace(/%s/i, t);}, yn.set = function (e) {var t, n;for (n in e) {b(t = e[n]) ? this[n] = t : this['_' + n] = t;}this._config = e, this._dayOfMonthOrdinalParseLenient = new RegExp((this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) + '|' + /\d{1,2}/.source);}, yn.months = function (e, t) {return e ? o(this._months) ? this._months[e.month()] : this._months[(this._months.isFormat || We).test(t) ? 'format' : 'standalone'][e.month()] : o(this._months) ? this._months : this._months.standalone;}, yn.monthsShort = function (e, t) {return e ? o(this._monthsShort) ? this._monthsShort[e.month()] : this._monthsShort[We.test(t) ? 'format' : 'standalone'][e.month()] : o(this._monthsShort) ? this._monthsShort : this._monthsShort.standalone;}, yn.monthsParse = function (e, t, n) {var s, i, r;if (this._monthsParseExact) return function (e, t, n) {var s,i,r,a = e.toLocaleLowerCase();if (!this._monthsParse) for (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = [], s = 0; s < 12; ++s) {r = y([2e3, s]), this._shortMonthsParse[s] = this.monthsShort(r, '').toLocaleLowerCase(), this._longMonthsParse[s] = this.months(r, '').toLocaleLowerCase();}return n ? 'MMM' === t ? -1 !== (i = Ye.call(this._shortMonthsParse, a)) ? i : null : -1 !== (i = Ye.call(this._longMonthsParse, a)) ? i : null : 'MMM' === t ? -1 !== (i = Ye.call(this._shortMonthsParse, a)) ? i : -1 !== (i = Ye.call(this._longMonthsParse, a)) ? i : null : -1 !== (i = Ye.call(this._longMonthsParse, a)) ? i : -1 !== (i = Ye.call(this._shortMonthsParse, a)) ? i : null;}.call(this, e, t, n);for (this._monthsParse || (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = []), s = 0; s < 12; s++) {if (i = y([2e3, s]), n && !this._longMonthsParse[s] && (this._longMonthsParse[s] = new RegExp('^' + this.months(i, '').replace('.', '') + '$', 'i'), this._shortMonthsParse[s] = new RegExp('^' + this.monthsShort(i, '').replace('.', '') + '$', 'i')), n || this._monthsParse[s] || (r = '^' + this.months(i, '') + '|^' + this.monthsShort(i, ''), this._monthsParse[s] = new RegExp(r.replace('.', ''), 'i')), n && 'MMMM' === t && this._longMonthsParse[s].test(e)) return s;if (n && 'MMM' === t && this._shortMonthsParse[s].test(e)) return s;if (!n && this._monthsParse[s].test(e)) return s;}}, yn.monthsRegex = function (e) {return this._monthsParseExact ? (m(this, '_monthsRegex') || Ne.call(this), e ? this._monthsStrictRegex : this._monthsRegex) : (m(this, '_monthsRegex') || (this._monthsRegex = Le), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex);}, yn.monthsShortRegex = function (e) {return this._monthsParseExact ? (m(this, '_monthsRegex') || Ne.call(this), e ? this._monthsShortStrictRegex : this._monthsShortRegex) : (m(this, '_monthsShortRegex') || (this._monthsShortRegex = Fe), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex);}, yn.week = function (e) {return Ie(e, this._week.dow, this._week.doy).week;}, yn.firstDayOfYear = function () {return this._week.doy;}, yn.firstDayOfWeek = function () {return this._week.dow;}, yn.weekdays = function (e, t) {var n = o(this._weekdays) ? this._weekdays : this._weekdays[e && !0 !== e && this._weekdays.isFormat.test(t) ? 'format' : 'standalone'];return !0 === e ? je(n, this._week.dow) : e ? n[e.day()] : n;}, yn.weekdaysMin = function (e) {return !0 === e ? je(this._weekdaysMin, this._week.dow) : e ? this._weekdaysMin[e.day()] : this._weekdaysMin;}, yn.weekdaysShort = function (e) {return !0 === e ? je(this._weekdaysShort, this._week.dow) : e ? this._weekdaysShort[e.day()] : this._weekdaysShort;}, yn.weekdaysParse = function (e, t, n) {var s, i, r;if (this._weekdaysParseExact) return function (e, t, n) {var s,i,r,a = e.toLocaleLowerCase();if (!this._weekdaysParse) for (this._weekdaysParse = [], this._shortWeekdaysParse = [], this._minWeekdaysParse = [], s = 0; s < 7; ++s) {r = y([2e3, 1]).day(s), this._minWeekdaysParse[s] = this.weekdaysMin(r, '').toLocaleLowerCase(), this._shortWeekdaysParse[s] = this.weekdaysShort(r, '').toLocaleLowerCase(), this._weekdaysParse[s] = this.weekdays(r, '').toLocaleLowerCase();}return n ? 'dddd' === t ? -1 !== (i = Ye.call(this._weekdaysParse, a)) ? i : null : 'ddd' === t ? -1 !== (i = Ye.call(this._shortWeekdaysParse, a)) ? i : null : -1 !== (i = Ye.call(this._minWeekdaysParse, a)) ? i : null : 'dddd' === t ? -1 !== (i = Ye.call(this._weekdaysParse, a)) ? i : -1 !== (i = Ye.call(this._shortWeekdaysParse, a)) ? i : -1 !== (i = Ye.call(this._minWeekdaysParse, a)) ? i : null : 'ddd' === t ? -1 !== (i = Ye.call(this._shortWeekdaysParse, a)) ? i : -1 !== (i = Ye.call(this._weekdaysParse, a)) ? i : -1 !== (i = Ye.call(this._minWeekdaysParse, a)) ? i : null : -1 !== (i = Ye.call(this._minWeekdaysParse, a)) ? i : -1 !== (i = Ye.call(this._weekdaysParse, a)) ? i : -1 !== (i = Ye.call(this._shortWeekdaysParse, a)) ? i : null;}.call(this, e, t, n);for (this._weekdaysParse || (this._weekdaysParse = [], this._minWeekdaysParse = [], this._shortWeekdaysParse = [], this._fullWeekdaysParse = []), s = 0; s < 7; s++) {if (i = y([2e3, 1]).day(s), n && !this._fullWeekdaysParse[s] && (this._fullWeekdaysParse[s] = new RegExp('^' + this.weekdays(i, '').replace('.', '\\.?') + '$', 'i'), this._shortWeekdaysParse[s] = new RegExp('^' + this.weekdaysShort(i, '').replace('.', '\\.?') + '$', 'i'), this._minWeekdaysParse[s] = new RegExp('^' + this.weekdaysMin(i, '').replace('.', '\\.?') + '$', 'i')), this._weekdaysParse[s] || (r = '^' + this.weekdays(i, '') + '|^' + this.weekdaysShort(i, '') + '|^' + this.weekdaysMin(i, ''), this._weekdaysParse[s] = new RegExp(r.replace('.', ''), 'i')), n && 'dddd' === t && this._fullWeekdaysParse[s].test(e)) return s;if (n && 'ddd' === t && this._shortWeekdaysParse[s].test(e)) return s;if (n && 'dd' === t && this._minWeekdaysParse[s].test(e)) return s;if (!n && this._weekdaysParse[s].test(e)) return s;}}, yn.weekdaysRegex = function (e) {return this._weekdaysParseExact ? (m(this, '_weekdaysRegex') || Qe.call(this), e ? this._weekdaysStrictRegex : this._weekdaysRegex) : (m(this, '_weekdaysRegex') || (this._weekdaysRegex = qe), this._weekdaysStrictRegex && e ? this._weekdaysStrictRegex : this._weekdaysRegex);}, yn.weekdaysShortRegex = function (e) {return this._weekdaysParseExact ? (m(this, '_weekdaysRegex') || Qe.call(this), e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex) : (m(this, '_weekdaysShortRegex') || (this._weekdaysShortRegex = Je), this._weekdaysShortStrictRegex && e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex);}, yn.weekdaysMinRegex = function (e) {return this._weekdaysParseExact ? (m(this, '_weekdaysRegex') || Qe.call(this), e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex) : (m(this, '_weekdaysMinRegex') || (this._weekdaysMinRegex = Be), this._weekdaysMinStrictRegex && e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex);}, yn.isPM = function (e) {return 'p' === (e + '').toLowerCase().charAt(0);}, yn.meridiem = function (e, t, n) {return 11 < e ? n ? 'pm' : 'PM' : n ? 'am' : 'AM';}, ut('en', { dayOfMonthOrdinalParse: /\d{1,2}(th|st|nd|rd)/, ordinal: function ordinal(e) {var t = e % 10;return e + (1 === D(e % 100 / 10) ? 'th' : 1 === t ? 'st' : 2 === t ? 'nd' : 3 === t ? 'rd' : 'th');} }), c.lang = n('moment.lang is deprecated. Use moment.locale instead.', ut), c.langData = n('moment.langData is deprecated. Use moment.localeData instead.', ht);var wn = Math.abs;function Mn(e, t, n, s) {var i = jt(t, n);return e._milliseconds += s * i._milliseconds, e._days += s * i._days, e._months += s * i._months, e._bubble();}function kn(e) {return e < 0 ? Math.floor(e) : Math.ceil(e);}function Sn(e) {return 4800 * e / 146097;}function Dn(e) {return 146097 * e / 4800;}function Yn(e) {return function () {return this.as(e);};}var On = Yn('ms'),Tn = Yn('s'),bn = Yn('m'),xn = Yn('h'),Pn = Yn('d'),Wn = Yn('w'),Cn = Yn('M'),Hn = Yn('Q'),Rn = Yn('y');function Un(e) {return function () {return this.isValid() ? this._data[e] : NaN;};}var Fn = Un('milliseconds'),Ln = Un('seconds'),Nn = Un('minutes'),Gn = Un('hours'),Vn = Un('days'),En = Un('months'),In = Un('years');var An = Math.round,jn = { ss: 44, s: 45, m: 45, h: 22, d: 26, M: 11 };var Zn = Math.abs;function zn(e) {return (0 < e) - (e < 0) || +e;}function $n() {if (!this.isValid()) return this.localeData().invalidDate();var e,t,n = Zn(this._milliseconds) / 1e3,s = Zn(this._days),i = Zn(this._months);t = S((e = S(n / 60)) / 60), n %= 60, e %= 60;var r = S(i / 12),a = i %= 12,o = s,u = t,l = e,h = n ? n.toFixed(3).replace(/\.?0+$/, '') : '',d = this.asSeconds();if (!d) return 'P0D';var c = d < 0 ? '-' : '',f = zn(this._months) !== zn(d) ? '-' : '',m = zn(this._days) !== zn(d) ? '-' : '',_ = zn(this._milliseconds) !== zn(d) ? '-' : '';return c + 'P' + (r ? f + r + 'Y' : '') + (a ? f + a + 'M' : '') + (o ? m + o + 'D' : '') + (u || l || h ? 'T' : '') + (u ? _ + u + 'H' : '') + (l ? _ + l + 'M' : '') + (h ? _ + h + 'S' : '');}var qn = Ht.prototype;return qn.isValid = function () {return this._isValid;}, qn.abs = function () {var e = this._data;return this._milliseconds = wn(this._milliseconds), this._days = wn(this._days), this._months = wn(this._months), e.milliseconds = wn(e.milliseconds), e.seconds = wn(e.seconds), e.minutes = wn(e.minutes), e.hours = wn(e.hours), e.months = wn(e.months), e.years = wn(e.years), this;}, qn.add = function (e, t) {return Mn(this, e, t, 1);}, qn.subtract = function (e, t) {return Mn(this, e, t, -1);}, qn.as = function (e) {if (!this.isValid()) return NaN;var t,n,s = this._milliseconds;if ('month' === (e = H(e)) || 'quarter' === e || 'year' === e) switch (t = this._days + s / 864e5, n = this._months + Sn(t), e) {case 'month':return n;case 'quarter':return n / 3;case 'year':return n / 12;} else switch (t = this._days + Math.round(Dn(this._months)), e) {case 'week':return t / 7 + s / 6048e5;case 'day':return t + s / 864e5;case 'hour':return 24 * t + s / 36e5;case 'minute':return 1440 * t + s / 6e4;case 'second':return 86400 * t + s / 1e3;case 'millisecond':return Math.floor(864e5 * t) + s;default:throw new Error('Unknown unit ' + e);}}, qn.asMilliseconds = On, qn.asSeconds = Tn, qn.asMinutes = bn, qn.asHours = xn, qn.asDays = Pn, qn.asWeeks = Wn, qn.asMonths = Cn, qn.asQuarters = Hn, qn.asYears = Rn, qn.valueOf = function () {return this.isValid() ? this._milliseconds + 864e5 * this._days + this._months % 12 * 2592e6 + 31536e6 * D(this._months / 12) : NaN;}, qn._bubble = function () {var e,t,n,s,i,r = this._milliseconds,a = this._days,o = this._months,u = this._data;return 0 <= r && 0 <= a && 0 <= o || r <= 0 && a <= 0 && o <= 0 || (r += 864e5 * kn(Dn(o) + a), o = a = 0), u.milliseconds = r % 1e3, e = S(r / 1e3), u.seconds = e % 60, t = S(e / 60), u.minutes = t % 60, n = S(t / 60), u.hours = n % 24, o += i = S(Sn(a += S(n / 24))), a -= kn(Dn(i)), s = S(o / 12), o %= 12, u.days = a, u.months = o, u.years = s, this;}, qn.clone = function () {return jt(this);}, qn.get = function (e) {return e = H(e), this.isValid() ? this[e + 's']() : NaN;}, qn.milliseconds = Fn, qn.seconds = Ln, qn.minutes = Nn, qn.hours = Gn, qn.days = Vn, qn.weeks = function () {return S(this.days() / 7);}, qn.months = En, qn.years = In, qn.humanize = function (e) {if (!this.isValid()) return this.localeData().invalidDate();var t,n,s,i,r,a,o,u,l,h,d,c = this.localeData(),f = (n = !e, s = c, i = jt(t = this).abs(), r = An(i.as('s')), a = An(i.as('m')), o = An(i.as('h')), u = An(i.as('d')), l = An(i.as('M')), h = An(i.as('y')), (d = r <= jn.ss && ['s', r] || r < jn.s && ['ss', r] || a <= 1 && ['m'] || a < jn.m && ['mm', a] || o <= 1 && ['h'] || o < jn.h && ['hh', o] || u <= 1 && ['d'] || u < jn.d && ['dd', u] || l <= 1 && ['M'] || l < jn.M && ['MM', l] || h <= 1 && ['y'] || ['yy', h])[2] = n, d[3] = 0 < +t, d[4] = s, function (e, t, n, s, i) {return i.relativeTime(t || 1, !!n, e, s);}.apply(null, d));return e && (f = c.pastFuture(+this, f)), c.postformat(f);}, qn.toISOString = $n, qn.toString = $n, qn.toJSON = $n, qn.locale = Xt, qn.localeData = en, qn.toIsoString = n('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', $n), qn.lang = Kt, I('X', 0, 0, 'unix'), I('x', 0, 0, 'valueOf'), ue('x', se), ue('X', /[+-]?\d+(\.\d{1,3})?/), ce('X', function (e, t, n) {n._d = new Date(1e3 * parseFloat(e, 10));}), ce('x', function (e, t, n) {n._d = new Date(D(e));}), c.version = '2.24.0', e = bt, c.fn = mn, c.min = function () {return Wt('isBefore', [].slice.call(arguments, 0));}, c.max = function () {return Wt('isAfter', [].slice.call(arguments, 0));}, c.now = function () {return Date.now ? Date.now() : +new Date();}, c.utc = y, c.unix = function (e) {return bt(1e3 * e);}, c.months = function (e, t) {return vn(e, t, 'months');}, c.isDate = d, c.locale = ut, c.invalid = p, c.duration = jt, c.isMoment = k, c.weekdays = function (e, t, n) {return pn(e, t, n, 'weekdays');}, c.parseZone = function () {return bt.apply(null, arguments).parseZone();}, c.localeData = ht, c.isDuration = Rt, c.monthsShort = function (e, t) {return vn(e, t, 'monthsShort');}, c.weekdaysMin = function (e, t, n) {return pn(e, t, n, 'weekdaysMin');}, c.defineLocale = lt, c.updateLocale = function (e, t) {if (null != t) {var _n10,_s7,_i2 = st;null != (_s7 = ot(e)) && (_i2 = _s7._config), (_n10 = new P(t = x(_i2, t))).parentLocale = it[e], it[e] = _n10, ut(e);} else null != it[e] && (null != it[e].parentLocale ? it[e] = it[e].parentLocale : null != it[e] && delete it[e]);return it[e];}, c.locales = function () {return s(it);}, c.weekdaysShort = function (e, t, n) {return pn(e, t, n, 'weekdaysShort');}, c.normalizeUnits = H, c.relativeTimeRounding = function (e) {return void 0 === e ? An : 'function' === typeof e && (An = e, !0);}, c.relativeTimeThreshold = function (e, t) {return void 0 !== jn[e] && (void 0 === t ? jn[e] : (jn[e] = t, 's' === e && (jn.ss = t - 1), !0));}, c.calendarFormat = function (e, t) {var n = e.diff(t, 'days', !0);return n < -6 ? 'sameElse' : n < -1 ? 'lastWeek' : n < 0 ? 'lastDay' : n < 1 ? 'sameDay' : n < 2 ? 'nextDay' : n < 7 ? 'nextWeek' : 'sameElse';}, c.prototype = mn, c.HTML5_FMT = { DATETIME_LOCAL: 'YYYY-MM-DDTHH:mm', DATETIME_LOCAL_SECONDS: 'YYYY-MM-DDTHH:mm:ss', DATETIME_LOCAL_MS: 'YYYY-MM-DDTHH:mm:ss.SSS', DATE: 'YYYY-MM-DD', TIME: 'HH:mm', TIME_SECONDS: 'HH:mm:ss', TIME_MS: 'HH:mm:ss.SSS', WEEK: 'GGGG-[W]WW', MONTH: 'YYYY-MM' }, c;});
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../Program Files/HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/module.js */ 44)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../Program Files/HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/module.js */ 45)(module)))
 
 /***/ }),
 
-/***/ 44:
+/***/ 45:
 /*!***********************************!*\
   !*** (webpack)/buildin/module.js ***!
   \***********************************/
@@ -10506,7 +12559,7 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 47:
+/***/ 48:
 /*!************************************!*\
   !*** C:/xcx/jhx/jhx/model/user.js ***!
   \************************************/
@@ -10514,7 +12567,7 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.User = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _createSuper(Derived) {return function () {var Super = _getPrototypeOf(Derived),result;if (_isNativeReflectConstruct()) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}var
+Object.defineProperty(exports, "__esModule", { value: true });exports.User = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _createSuper(Derived) {var hasNativeReflectConstruct = _isNativeReflectConstruct();return function _createSuperInternal() {var Super = _getPrototypeOf(Derived),result;if (hasNativeReflectConstruct) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}var
 User = /*#__PURE__*/function (_Base) {_inherits(User, _Base);var _super = _createSuper(User);
   function User() {_classCallCheck(this, User);return _super.call(this);
 
@@ -10607,7 +12660,7 @@ User = /*#__PURE__*/function (_Base) {_inherits(User, _Base);var _super = _creat
 
 /***/ }),
 
-/***/ 63:
+/***/ 64:
 /*!*************************************!*\
   !*** C:/xcx/jhx/jhx/model/order.js ***!
   \*************************************/
@@ -10615,7 +12668,7 @@ User = /*#__PURE__*/function (_Base) {_inherits(User, _Base);var _super = _creat
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.Order = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _createSuper(Derived) {return function () {var Super = _getPrototypeOf(Derived),result;if (_isNativeReflectConstruct()) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}var
+Object.defineProperty(exports, "__esModule", { value: true });exports.Order = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _createSuper(Derived) {var hasNativeReflectConstruct = _isNativeReflectConstruct();return function _createSuperInternal() {var Super = _getPrototypeOf(Derived),result;if (hasNativeReflectConstruct) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}var
 Order = /*#__PURE__*/function (_Base) {_inherits(Order, _Base);var _super = _createSuper(Order);
   function Order() {_classCallCheck(this, Order);return _super.call(this);
 
@@ -10672,7 +12725,7 @@ Order = /*#__PURE__*/function (_Base) {_inherits(Order, _Base);var _super = _cre
 
 /***/ }),
 
-/***/ 72:
+/***/ 73:
 /*!************************************!*\
   !*** C:/xcx/jhx/jhx/model/cate.js ***!
   \************************************/
@@ -10680,7 +12733,7 @@ Order = /*#__PURE__*/function (_Base) {_inherits(Order, _Base);var _super = _cre
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.Cate = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _createSuper(Derived) {return function () {var Super = _getPrototypeOf(Derived),result;if (_isNativeReflectConstruct()) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}var
+Object.defineProperty(exports, "__esModule", { value: true });exports.Cate = void 0;var _base = __webpack_require__(/*! @/utils/base.js */ 8);function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _createSuper(Derived) {var hasNativeReflectConstruct = _isNativeReflectConstruct();return function _createSuperInternal() {var Super = _getPrototypeOf(Derived),result;if (hasNativeReflectConstruct) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}var
 Cate = /*#__PURE__*/function (_Base) {_inherits(Cate, _Base);var _super = _createSuper(Cate);
   function Cate() {_classCallCheck(this, Cate);return _super.call(this);
 
@@ -10709,7 +12762,7 @@ Cate = /*#__PURE__*/function (_Base) {_inherits(Cate, _Base);var _super = _creat
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.Base = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 9));var _config = __webpack_require__(/*! ../config.js */ 12);
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.Base = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 9));var _config = __webpack_require__(/*! ../config.js */ 12);
 var _common = __webpack_require__(/*! @/utils/common.js */ 13);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}
 var common = new _common.Common();var
 Base = /*#__PURE__*/function () {
@@ -10740,11 +12793,11 @@ Base = /*#__PURE__*/function () {
               }
               break;
             case 500:
-              uni.showToast({
-                icon: 'none',
-                title: '服务器异常，请稍后重试',
-                duration: 2000 });
-
+              // uni.showToast({
+              // 	icon:'none',
+              // 	title: '服务器异常，请稍后重试',
+              // 	duration: 2000
+              // });
               params.sCallback && params.sCallback(res.data);
               break;
             case 400:
@@ -10800,7 +12853,7 @@ Base = /*#__PURE__*/function () {
               uni.setStorageSync('accessToken', _userInfo.access_token);
               uni.setStorageSync('refreshToken', _userInfo.refresh_token);
               uni.setStorageSync('userInfo', _userInfo.member);
-            } else {
+            } else if (res.data.user_info) {
               var _userInfo2 = res.data.user_info;
               uni.setStorageSync('userInfo', _userInfo2.original);
               uni.showModal({
@@ -10894,9 +12947,9 @@ Base = /*#__PURE__*/function () {
 /***/ }),
 
 /***/ 9:
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator/index.js ***!
-  \*********************************************************************************************/
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

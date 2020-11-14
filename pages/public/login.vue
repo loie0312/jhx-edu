@@ -56,15 +56,15 @@
       <view @tap="showLoginBySmsCode" class="forget-section">
         {{ loginByPass ? "验证码登录" : "密码登录" }}
       </view>
-      <view class="forget-section" @tap="navTo('/pages/public/password')">
+      <view class="forget-section" @tap="goto('/pages/public/password')">
         忘记密码?
       </view>
     </view>
     <view class="register-section">
       还没有账号?
-      <text @tap="navTo('/pages/public/register')">马上注册</text>
+      <text @tap="goto('/pages/public/register')">马上注册</text>
       或者
-      <text @tap="toHome">返回主页</text>
+      <text @tap="goto('/pages/index/index')">返回主页</text>
     </view>
   </view>
 </template>
@@ -115,11 +115,12 @@
 					this.$mHelper.toast(this.$mGraceChecker.error);
 					return;
 				}
-				await this.$http.post(smsCode, {
+				var param = {
 					mobile: this.loginParams.mobile,
 					usage: 'login'
-				}).then(r => {
-					this.$mHelper.toast(`验证码发送成功, 验证码是${r.data}`);
+				}
+				publicModel.smsSend(param,(data) => {
+					this.$mHelper.toast("测试时验证码为：1234");
 					this.smsCodeBtnDisabled = true;
 					uni.setStorageSync('loginSmsCodeTime', moment().valueOf() / 1000);
 					this.handleSmsCodeTime(59);
@@ -145,21 +146,17 @@
 			showLoginBySmsCode() {
 				this.loginByPass = !this.loginByPass;
 			},
-			navTo(url){
-				uni.navigateTo({
-					url:url
-				})
-			},
 			// 提交表单
 			async toLogin() {
 				this.reqBody['mobile'] = this.loginParams['mobile'];
 				let cheRes, loginApi;
 				if (this.loginByPass) {
+					this.reqBody['url'] = "site/login";
 					this.reqBody['password'] = this.loginParams['password'];
 					cheRes = this.$mGraceChecker.check(this.reqBody, this.$mFormRule.loginByPassRule);
 				} else {
 					this.reqBody['code'] = this.loginParams['code'];
-					loginApi = loginBySmsCode;
+					this.reqBody['url'] = "site/mobile-login";
 					cheRes = this.$mGraceChecker.check(this.reqBody, this.$mFormRule.loginByCodeRule);
 				}
 				if (!cheRes) {
@@ -220,20 +217,9 @@
 					if (backToPage) {
 						var route = JSON.parse(backToPage);
 						var url = this.createUrl(route.route,route.query);
-						if (backToPage.indexOf('/pages/user/user') !== -1
-							|| backToPage.indexOf('/pages/cart/cart') !== -1
-							|| backToPage.indexOf('/pages/index/index') !== -1
-							|| backToPage.indexOf('/pages/category/category') !== -1) {
-							uni.switchTab({
-								url:url
-							})
-						} else {
-							uni.redirectTo({
-								url:url
-							})
-						}
 						uni.removeStorageSync('backToPage');
 						uni.removeStorageSync('wechatUserInfo');
+						this.goto(url);
 						return;
 					} else {
 						uni.switchTab({

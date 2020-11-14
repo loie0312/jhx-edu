@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "课程购买",
   "usingComponents": {
-    "jhx-order-product": "/components/jhx-order-product/jhx-order-product"
+    "jhx-order-product": "/components/jhx-order-product/jhx-order-product",
+    "jhx-order-product-list": "/components/jhx-order-product/jhx-order-product"
   }
 }

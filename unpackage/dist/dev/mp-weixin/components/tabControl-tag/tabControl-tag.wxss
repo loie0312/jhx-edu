@@ -24,28 +24,28 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.fxied.data-v-578622f0 {
+.fxied.data-v-32a952a4 {
   position: fixed;
   z-index: 2;
 }
-.tabList.data-v-578622f0 {
+.tabList.data-v-32a952a4 {
   padding-top: 24rpx;
   padding-left: 24rpx;
   white-space: nowrap;
   text-align: center;
 }
-.tabList .tabItem.data-v-578622f0 {
+.tabList .tabItem.data-v-32a952a4 {
   margin-right: 40rpx;
   display: inline-block;
   position: relative;
 }
-.tabList .tabItem text.data-v-578622f0 {
+.tabList .tabItem text.data-v-32a952a4 {
   line-height: 44rpx;
   color: #666;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.tabList .tabItem .activeLine.data-v-578622f0 {
+.tabList .tabItem .activeLine.data-v-32a952a4 {
   height: 8rpx;
   border-radius: 4rpx;
   background-color: #F57341;
@@ -57,14 +57,14 @@
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.tabList .tabItem.data-v-578622f0:last-child {
+.tabList .tabItem.data-v-32a952a4:last-child {
   margin-right: 24rpx;
 }
-.tabList .thisOpenSelect text.data-v-578622f0 {
+.tabList .thisOpenSelect text.data-v-32a952a4 {
   color: #333;
   font-weight: 600;
 }
-.tabList .thisOpenSelect .activeLine.data-v-578622f0 {
+.tabList .thisOpenSelect .activeLine.data-v-32a952a4 {
   opacity: 1;
 }
 

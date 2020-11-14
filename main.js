@@ -3,8 +3,10 @@ import App from './App'
 //表单验证
 import $mGraceChecker from '@/utils/graceChecker';
 import $mFormRule from '@/config/formRule.config.js';
+import $mHelper from '@/utils/helper.js';
 Vue.prototype.$mGraceChecker = $mGraceChecker;
 Vue.prototype.$mFormRule = $mFormRule;
+Vue.prototype.$mHelper = $mHelper;
 
 Vue.config.productionTip = false
 Vue.prototype.getUrlParam = function(name) {

@@ -136,7 +136,7 @@ var component = Object(_Program_Files_HBuilderX_plugins_uniapp_cli_node_modules_
   renderjs
 )
 
-component.options.__file = "xcx/jhx/jhx/App.vue"
+component.options.__file = "App.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),

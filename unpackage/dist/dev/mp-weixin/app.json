@@ -14,7 +14,8 @@
     "pages/user/distribute",
     "pages/user/collect",
     "pages/order/order",
-    "pages/user/vipbuy"
+    "pages/user/vipbuy",
+    "pages/copyright/support"
   ],
   "subPackages": [],
   "window": {
@@ -50,5 +51,5 @@
     ]
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap92.json"
+  "sitemapLocation": "sitemap98.json"
 }

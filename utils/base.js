@@ -29,11 +29,11 @@ class Base {
 						}
 						break;
 					case 500:
-						uni.showToast({
-							icon:'none',
-							title: '服务器异常，请稍后重试',
-							duration: 2000
-						});
+						// uni.showToast({
+						// 	icon:'none',
+						// 	title: '服务器异常，请稍后重试',
+						// 	duration: 2000
+						// });
 						params.sCallback && params.sCallback(res.data);
 						break;
 					case 400:
@@ -89,7 +89,7 @@ class Base {
 						uni.setStorageSync('accessToken', userInfo.access_token);
 						uni.setStorageSync('refreshToken', userInfo.refresh_token);
 						uni.setStorageSync('userInfo', userInfo.member);
-					}else{
+					}else if(res.data.user_info){
 						const userInfo = res.data.user_info;
 						uni.setStorageSync('userInfo', userInfo.original);
 						uni.showModal({

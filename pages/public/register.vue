@@ -130,11 +130,12 @@
 					this.$mHelper.toast(this.$mGraceChecker.error);
 					return;
 				}
-				this.$http.post(smsCode, {
+				var param = {
 					mobile: this.registerParams.mobile,
-					usage: 'register'
-				}).then(r => {
-					this.$mHelper.toast(`验证码发送成功, 验证码是${r.data}`);
+					usage: 'login'
+				}
+				publicModel.smsSend(param,(data) => {
+					this.$mHelper.toast("测试时验证码为：1234");
 					this.smsCodeBtnDisabled = true;
 					uni.setStorageSync('registerSmsCodeTime', moment().valueOf() / 1000);
 					this.handleSmsCodeTime(59);
