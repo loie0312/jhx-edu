@@ -54,7 +54,7 @@
 			<jhx-product-list :status='nostatus' :productList="cate" :column="2"></jhx-product-list>
 		</view>
 		
-		<view class="copyright" @click="goto('/pages/copyright/support')">几何线系统提供技术支持</view>
+		<view class="copyright" @click="goto('/pages/copyright/support')">几何线科技版权所有</view>
 		<!-- #ifdef H5 -->
 		<view style="width: 100%;height: 80rpx;"></view>
 		<!-- #endif -->

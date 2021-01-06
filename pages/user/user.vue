@@ -54,7 +54,7 @@
 			    <text class="text">联系客服</text>
 			</uni-grid-item>
 		</uni-grid>
-		<view class="copyright" @click="goto('/pages/copyright/support')">技术支持：广西几何线科技有限公司</view>
+		<view class="copyright" @click="goto('/pages/copyright/support')">版权所有：广西几何线科技有限公司</view>
 	</view>
 </template>
 <script>
