@@ -627,7 +627,7 @@
 	.detail-item .text{line-height: 80rpx;padding: 20rpx 0; }
 	.active .text{border-bottom: 4rpx solid $uni-color-base;}
 	.detail{background-color: #fff;padding: 10rpx 0;margin-top: 15rpx;}
-	.detail-content{padding: 20rpx 0 0 0 ;}
+	.detail-content{padding: 20rpx 20rpx 0 20rpx ;}
 	.row{background-color: #fff;padding: 0 3%;}
 	.product-name{padding: 20rpx 0 0 0;font-size: $uni-font-size-lg;font-weight: bold;}
 	.price-line{color: $uni-color-base;padding: 20rpx 0 0 0;}

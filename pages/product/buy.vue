@@ -32,12 +32,16 @@
 		methods: {
 			//订单基础信息
 			async getData(){
+				uni.showLoading({
+					title:"加载中..."
+				})
 				// #ifdef H5
 					await payment.wxConfigH5();
 				// #endif
 				var that = this;
 				var param = {'product_id':this.$data.product_id};
 				order.productCalc(param,(data) => {
+					uni.hideLoading();
 					that.$data.products = data.data.product;
 					that.$data.money = data.data.money;
 					that.$data.is_vip = data.data.is_vip;

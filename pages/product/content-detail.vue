@@ -14,11 +14,16 @@
 			   </view>
 	        </view>
 	    </view>
+		<view class="pre_time" v-if="info.price_type == 2  && !is_vip && info.pre_time > 0"  @click="openVip()">试看{{info.pre_time}}秒，开通会员观看完整版</view>
+		<view class="pre_time" v-if="info.price_type == 3 && !buyed && info.pre_time > 0"  @click="buy()">
+			<view>试看{{info.pre_time}}秒，购买专栏观看完整版</view>
+			<view @click="buy()" class="buy-btn">立即购买</view>
+		</view>
 		<view class="row">
 			<view class="product-name">{{info.name}}</view>
 			<view class="attr-line">
 				<span>{{info.created_at | time}}</span>
-				<span>{{info.view}}次观看</span>
+				<span>{{info.view}}次学习</span>
 			</view>
 		</view>
 		<view v-if="must_vip" class="open-vip" @click="openVip()">
@@ -39,7 +44,7 @@
 		<uni-popup ref="popup" type="bottom">
 			<view class="content-list">
 				<view class="content-head">
-					<view>返回专栏</view>
+					<view @click="toProduct">返回专栏</view>
 					<view class="content-title">课程目录</view>
 					<view></view>
 				</view>
@@ -69,6 +74,7 @@
 	    data() {
 	        return {
 				page : 1, //目录页码
+				must_buy:false,
 				buyed:false,
 				contentStatus:'more',
 				items: ['详情'],
@@ -147,9 +153,16 @@
 			getDetail:function(){
 				var that = this;
 				var param = {'id':this.id};
+				uni.showLoading({
+					title:"加载中..."
+				})
 				productModel.contentView(param,(data) => {
+					uni.hideLoading();
 					if(data.code == 432){
 						that.$data.must_vip = true;
+					}
+					if(data.code == 433){
+						that.$data.must_buy = true;
 					}
 					that.$data.info = data.data;
 					that.getContent(data.data.product_id);
@@ -181,12 +194,10 @@
 				this.getContent();
 			},
 			//去购买
-			buttonClick (e) {
-				if(e.index == 0){
-					uni.navigateTo({
-						url:'buy?product_id='+this.$data.id
-					})
-				}
+			buy (e) {
+				uni.navigateTo({
+					url:'buy?product_id='+this.info.product_id
+				})
 			},
 			//详情和目录切换
 			onClickItem(val) {
@@ -202,6 +213,12 @@
 			//关闭目录
 			closeContent(){
 				this.$refs.popup.close();
+			},
+			//返回专栏
+			toProduct(){
+				uni.navigateTo({
+					url:'detail?id='+this.info.product_id
+				})
 			}
 		}
 	}
@@ -223,4 +240,6 @@
 	.content-title{text-align: center;}
 	.close-content{border-top: 1px solid #ececec;text-align: center; padding: 25rpx 0;position: fixed;bottom: 0;z-index: 9;width: 100%;background-color: #fff;color: #999;}
 	.content-items{max-height: 50vh;}
+	.pre_time{background-color: #fff;color: #ff6600;padding: 10rpx 3%;display: flex;justify-content: space-between;align-items: center;}
+	.buy-btn{background-color: #ff6600;color: #fff;padding: 6rpx 15rpx;border-radius: 30rpx;}
 </style>

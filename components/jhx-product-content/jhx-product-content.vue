@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view v-for="c in contents" class="content-item" data-id="c.id" data-price_type="c.price_type" @click="toContent(c.id,c.price_type)">
+		<view v-for="c in contents" class="content-item" data-id="c.id" data-price_type="c.price_type" @click="toContent(c.id,c.price_type,c.pre_time)">
 			<view class="content-left">
 				<span class="tag">{{c.type | contentType}}</span>
 				<view>
@@ -9,13 +9,15 @@
 						<span>{{c.created_at | time}}</span>
 						<span v-if="c.price_type == 1">免费</span>
 						<span v-else-if="c.price_type == 2">vip免费</span>
+						<span v-else-if="c.price_type == 3">购买专栏后学习</span>
 					</view>
+					<view class="pre_time" v-if="c.pre_time > 0">免费试看<text class="second">{{c.pre_time}}秒</text></view>
 				</view>
 			</view>
 			<view>
 				<view v-if="!buyed">
-					<uni-icons type="locked" v-if="c.price_type == 2 && !is_vip"></uni-icons>
-					<uni-icons type="locked" v-else-if="c.price_type == 3"></uni-icons>
+					<uni-icons type="locked" v-if="c.price_type == 2 && !is_vip && c.pre_time < 0"></uni-icons>
+					<uni-icons type="locked" v-else-if="c.price_type == 3 && c.pre_time < 0"></uni-icons>
 				</view>
 				
 			</view>
@@ -68,15 +70,15 @@
 		},
 		methods: {
 			//跳转到目录详情
-			toContent(id,price_type){
+			toContent(id,price_type,pre_time = 0){
 				if(!this.buyed){
-					if(price_type == 2 && (!this.$data.is_vip )){
+					if(price_type == 2 && (!this.$data.is_vip ) && pre_time <= 0){
 						uni.showToast({
 							icon:'none',
 							title:'该章节开通vip后可免费观看'
 						})
 						return ;
-					}else if(price_type == 3){
+					}else if(price_type == 3  && pre_time <= 0){
 						uni.showToast({
 							icon:'none',
 							title:'该章节购买专栏后可免费观看'
@@ -99,4 +101,6 @@
 .content-date{color: $uni-text-color-grey;font-size: $uni-font-size-sm;margin-top: 10rpx;}
 .content-date span{margin-right: 40rpx;}
 .content-left{display: flex;align-items: center;}
+.pre_time{font-size: 24rpx;color: #ff6600;margin-top: 10rpx;}
+.second{color: #ff6600;}
 </style>
