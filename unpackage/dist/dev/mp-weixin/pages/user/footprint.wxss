@@ -81,7 +81,8 @@ page.data-v-2020d618 {
   opacity: 0.8;
   font-size: 24rpx;
   padding: 4rpx 10rpx;
-  border-radius: 6rpx;
+  -webkit-border-radius: 6rpx;
+          border-radius: 6rpx;
 }
 .footprint .mid .bottom.data-v-2020d618 {
   width: 100%;

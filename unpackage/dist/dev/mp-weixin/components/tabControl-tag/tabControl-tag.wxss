@@ -47,7 +47,8 @@
 }
 .tabList .tabItem .activeLine.data-v-32a952a4 {
   height: 8rpx;
-  border-radius: 4rpx;
+  -webkit-border-radius: 4rpx;
+          border-radius: 4rpx;
   background-color: #F57341;
   margin-top: 8rpx;
   margin-left: 50%;

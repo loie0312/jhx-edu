@@ -1,6 +1,6 @@
 {
   "enablePullDownRefresh": true,
-  "navigationBarTitleText": "以墨文化",
+  "navigationBarTitleText": "几何线知识付费",
   "usingComponents": {
     "uni-grid": "/components/uni-grid/uni-grid",
     "uni-grid-item": "/components/uni-grid-item/uni-grid-item",

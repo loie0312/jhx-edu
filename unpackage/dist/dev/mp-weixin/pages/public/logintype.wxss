@@ -36,7 +36,8 @@ page {
   margin: 0 7% 50rpx;
   height: 84rpx;
   line-height: 84rpx;
-  border-radius: 12rpx;
+  -webkit-border-radius: 12rpx;
+          border-radius: 12rpx;
   background-color: #ef7c38;
   color: #fff;
   font-size: 32rpx;
@@ -60,7 +61,8 @@ page {
 .logo {
   width: 80rpx;
   height: 80rpx;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   margin-bottom: 15rpx;
   margin-top: 80rpx;
 }

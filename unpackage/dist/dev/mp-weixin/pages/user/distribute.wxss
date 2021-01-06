@@ -36,7 +36,8 @@ page.data-v-22309cbc {
 .image.data-v-22309cbc {
   width: 120rpx;
   height: 120rpx;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 .left.data-v-22309cbc {
   margin-right: 40rpx;

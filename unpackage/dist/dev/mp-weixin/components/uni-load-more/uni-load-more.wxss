@@ -191,10 +191,12 @@
 }
 .uni-load-more__img--android-MP>view.data-v-5f6e5104 {
 	position: absolute;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	width: 100%;
 	height: 100%;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	border: solid 2px transparent;
 	border-top: solid 2px #777777;
 	-webkit-transform-origin: center;

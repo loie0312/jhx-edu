@@ -35,7 +35,8 @@
 .avatar.data-v-80842834 {
   width: 90rpx;
   height: 90rpx;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 .name.data-v-80842834 {
   margin-left: 30rpx;
@@ -43,7 +44,8 @@
 .edit.data-v-80842834 {
   font-size: 20rpx;
   border: 1px solid #f1f1f1;
-  border-radius: 30px;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
   padding: 4rpx 10rpx;
   margin-top: 15rpx;
 }

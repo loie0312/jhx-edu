@@ -36,7 +36,8 @@
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
           justify-content: space-between;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
@@ -45,7 +46,8 @@
 .pay-btn {
   background-color: #4CD964;
   color: #fff;
-  border-radius: 30px;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
   padding: 15rpx 60rpx;
 }
 .total-money {

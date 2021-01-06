@@ -48,7 +48,8 @@
 .uni-tab__right.data-v-1afb79a4 {
 		margin: 5px 0;
 		margin-right: 10px;
-		border-radius: 100px;
+		-webkit-border-radius: 100px;
+		        border-radius: 100px;
 		overflow: hidden;
 }
 .uni-tab__cart-button-left.data-v-1afb79a4 {
@@ -147,13 +148,15 @@
 		text-align: center;
 		font-size: 12px;
 		background-color: #ff0000;
-		border-radius: 15px;
+		-webkit-border-radius: 15px;
+		        border-radius: 15px;
 }
 .uni-tab__dots.data-v-1afb79a4 {
 		padding: 0 4px;
 		/* width: auto;
  */
-		border-radius: 15px;
+		-webkit-border-radius: 15px;
+		        border-radius: 15px;
 }
 .uni-tab__color-y.data-v-1afb79a4 {
 		background-color: #ffa200;

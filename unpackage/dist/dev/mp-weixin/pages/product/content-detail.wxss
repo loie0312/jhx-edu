@@ -230,7 +230,8 @@
 .detail-content {
   padding: 20rpx 4%;
   background-color: #fff;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .foot {
   position: fixed;

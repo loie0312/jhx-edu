@@ -25,6 +25,7 @@
 /* 透明度 */
 /* 文章场景相关 */
 .wrap {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fee9a6), to(#fffdf3));
   background-image: -webkit-linear-gradient(top, #fee9a6, #fffdf3);
   background-image: linear-gradient(to bottom, #fee9a6, #fffdf3);
   height: 100vh;
@@ -41,8 +42,10 @@
   width: 92%;
   margin: 0 auto;
   padding: 20rpx 25rpx 40rpx 25rpx;
-  border-radius: 10rpx;
-  box-sizing: border-box;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .vip-items {
   overflow: scroll;
@@ -55,7 +58,8 @@
   border: 1px solid #f1f1f1;
   margin-right: 20rpx;
   padding: 20rpx 20rpx;
-  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
 }
 .vip-items .active {
   background-color: #fff9e0;
@@ -93,16 +97,19 @@
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
           justify-content: space-between;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
 }
 .pay-btn {
+  background-image: -webkit-gradient(linear, left top, right top, from(#f4cc38), to(#fae05f));
   background-image: -webkit-linear-gradient(left, #f4cc38, #fae05f);
   background-image: linear-gradient(to right, #f4cc38, #fae05f);
   color: #333;
-  border-radius: 30px;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
   padding: 15rpx 50rpx;
 }
 .note {
